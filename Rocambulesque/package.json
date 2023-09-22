@@ -16,9 +16,7 @@
   "version": "1.0.0",
   "main": "vite.config.js",
   "directories": {
-    "test": "tests",
-    "scss": "sass -w scss:css",
-    "minify": "sass -w scss:css --style=compressed"
+    "test": "tests"
   },
   "author": "",
   "license": "ISC"
