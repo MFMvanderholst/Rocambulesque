@@ -87,3 +87,17 @@ header {
     background-color: #ff6600;
 }
 
+/* Style the input element */
+input[type="text"] {
+    padding: 10px; /* Add padding for better spacing */
+    font-size: 16px; /* Adjust the font size */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Round the corners */
+}
+
+/* Style the placeholder text */
+input[type="text"]::placeholder {
+    color: #999; /* Change the color of the placeholder text */
+    font-style: italic; /* Optionally, make the placeholder italic */
+}
+
