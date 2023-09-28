@@ -4,16 +4,12 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.homepage {
-    text-align: center;
-}
-
 header {
     background-color: #333;
     color: #fff;
     padding: 10px;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -21,83 +17,99 @@ header {
     height: 100px;
 }
 
-.login input {
-    padding: 8px;
-    border: none;
-    border-radius: 3px;
-}
-
-.background-image {
-    
-    background-image: url('../images/bgimg.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
+.buttons {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-.restaurant-photo {
-    max-width: 100%; 
-    height: auto; 
-    display: block; 
-    margin: 0 auto; 
-    padding: 20px; 
+.svg-button svg {
+    width: 22px;
+    height: 28px;
+    padding: 10px 10px;
+    fill: #04BF9D;
 }
 
-
-.restaurant-photo.right {
-    float: right; 
-    clear: right; 
-}
-
-.restaurant-photo.left {
-    float: left; 
-    clear: left; 
-}
-
-
-.restaurant-photos img {
-    max-width: 100%; 
-    height: auto; 
-    margin-bottom: 20px; 
-}
-
-.restaurant-photos img:nth-child(odd) {
-    align-self: flex-start;
-}
-
-.menu-button a,
-.reservation-button a {
-    text-decoration: none;
-    background-color: #ffff;
-    color: #04BF9D;
+.logInBtn {
+    color: #11c720;
+    border-radius: 10px;
+    margin-right: 10px;
     padding: 10px 20px;
-    border-radius: 5px;
-    margin: 10px;
-    display: inline-block;
-    border-color: #333;
-    border-style:solid ;
 }
 
-.menu-button a:hover,
-.reservation-button a:hover {
-    background-color: #ff6600;
-}
 
-/* Style the input element */
-input[type="text"] {
-    padding: 10px; /* Add padding for better spacing */
-    font-size: 16px; /* Adjust the font size */
-    border: 1px solid #ccc; /* Add a border */
-    border-radius: 5px; /* Round the corners */
+.svg-button {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
+    .background-image {
+        background-image: url('../images/bgimg.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-/* Style the placeholder text */
-input[type="text"]::placeholder {
-    color: #999; /* Change the color of the placeholder text */
-    font-style: italic; /* Optionally, make the placeholder italic */
-}
+    .restaurant-photos {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start; 
+        margin: 0 auto;
+        padding: 20px;
+    }
 
+
+    .restaurant-photos img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        margin-top: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    }
+
+
+    .restaurant-photos img:nth-child(2) {
+        align-self: flex-end;
+    }
+
+
+
+    .menu-button a,
+    .reservation-button a {
+        text-decoration: none;
+        background-color: #ffff;
+        color: #11c720;
+        padding: 10px 20px;
+        border-radius: 10px;
+        margin: 10px;
+        display: inline-block;
+        border-color: #ffff;
+        border-style: solid;
+    }
+
+    .menu-button a:hover,
+    .reservation-button a:hover {
+        border-color: rgb(143, 98, 32);
+    }
+
+
+    .button-container {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .menu-button,
+    .reservation-button {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 20px;
+    }
+
+    
