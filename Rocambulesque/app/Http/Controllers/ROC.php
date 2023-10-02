@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\ReservationModel;
 
-class ReservationController extends Controller
-{   
+class ROC extends Controller
+{
     public function show()
     {
         return view('reservation');
@@ -19,14 +18,7 @@ class ReservationController extends Controller
 
     public function create(Request $request)
     {
-        $reservation = new ReservationModel();
-        $data = [
-            $choice = "",
-            $amount = "",
-            $date = "",
-            $time = "",
-            $remark = ""
-        ];
+        //
     }
         
     public function edit()

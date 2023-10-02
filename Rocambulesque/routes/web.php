@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/account_overzicht', function () {
-    return view('account_overzicht');
-});
+Route::get('/account_overzicht', [AccountOverzicht::class, "show"]);
+
+Route::get('/reservation_overview', [ROC::class, "show"]);
+
+Route::get('/reservation', [ReservationController::class, "show"]);
+
+Route::post('/add', [ReservationController::class, "create"]);

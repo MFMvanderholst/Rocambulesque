@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class AccountOverzicht extends Controller
 {
-    //
+    public function show()
+    {
+        return view('account_overzicht');
+    }
 }
