@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\AccountOverviewController;
+use App\Http\Controllers\ReservationOverviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +20,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/account_overzicht', [AccountOverzicht::class, "show"]);
+Route::get('/account_overzicht', [AccountOverviewController::class, "show"]);
 
-Route::get('/reservation_overview', [ROC::class, "show"]);
+Route::get('/account_overzicht', [AccountOverviewController::class, "get"]);
+
+Route::get('/reservation_overview', [ReservationOverviewController::class, "show"]);
+
+Route::get('/reservation_overview', [ReservationOverviewController::class, "get"]);
 
 Route::get('/reservation', [ReservationController::class, "show"]);
 

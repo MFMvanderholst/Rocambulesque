@@ -43,7 +43,7 @@
             <img class="logo" src="{{ URL('storage/background.png') }}" alt="">
 
             <!-- here comes the account information -->
-            <div class="container">
+            <form class="container" method="get" action="get">
                 <!-- title-->
                 <h1>Account overzicht</h1>
                 
@@ -55,7 +55,7 @@
                         <label for="">
                             Naam :
                         </label>
-                        <input type="text">
+                        <input type="text" value="{{ $name }}">
                     </div>
 
                     <div class="input">
@@ -63,7 +63,7 @@
                         <label for="">
                             Telefoonnummer :
                         </label>
-                        <input type="text">
+                        <input type="text" value="{{ $phone }}">
                     </div>
                 </div>
 
@@ -76,7 +76,7 @@
                         <label for="">
                             Email :
                         </label>
-                        <input type="text">
+                        <input type="text" value="{{ $email }}">
                     </div>
                     
                     <div class="input">
@@ -84,10 +84,10 @@
                         <label for="">
                             Wachtwoord :
                         </label>
-                        <input type="text">
+                        <input type="text" value="{{ $password }}">
                     </div>
                 </div>
-            </div>
+            </form>
         </main>
     </body>
 </html>

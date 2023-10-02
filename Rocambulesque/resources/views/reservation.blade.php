@@ -14,7 +14,7 @@
             <form class="container" method="post" action="add">
                 @csrf
                 <!-- title-->
-                <h1>Account overzicht</h1>
+                <h1>Reservation</h1>
                 
                 <div class="info">
                     <div class="input">
