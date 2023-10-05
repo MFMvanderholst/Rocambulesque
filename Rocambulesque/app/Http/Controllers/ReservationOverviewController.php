@@ -11,7 +11,7 @@ class ReservationOverviewController extends Controller
         return view('reservation_overview');
     }
 
-    public function get()
+    public function get(Request $request)
     {
         return view('reservation_overview', [
             "name" => "Maurits van der Holst",
