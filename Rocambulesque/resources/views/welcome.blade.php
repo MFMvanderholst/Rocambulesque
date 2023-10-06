@@ -20,20 +20,20 @@
             <!-- <div class="buttons">
                 <button class="logInBtn" onclick="location.href='loginPage'">Log In
                 </button> -->
-                <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-        @if (Route::has('login'))
-        <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
-            @auth
-            <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
-            @else
-            <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
+                <div class="buttons">
+                @if (Route::has('login'))
+                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
+                    @auth
+                    <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
+                    @else
+                    <button onclick=location.href="{{ route('login') }}" class="logInBtn">Log in</button>
 
-            @if (Route::has('register'))
-            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-            @endif
-            @endauth
-        </div>
-        @endif
+                    @if (Route::has('register'))
+                    <button onclick=location.href="{{ route('register') }}" class="RegisterBtn">Register</button>
+                    @endif
+                    @endauth
+                </div>
+                @endif
                 <button class="svg-button">
                     <svg viewBox="0 0 68 63" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_4_9)">
