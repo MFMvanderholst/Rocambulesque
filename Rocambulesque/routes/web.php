@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\RservationoverzichtController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+
     return view('welcome');
+
 });
+
+
+
+Route::get('/reservationoverzicht',[RservationoverzichtController::class,'showReservationPage']);
+Route::get('/menu',[MenuController::class,'show']);

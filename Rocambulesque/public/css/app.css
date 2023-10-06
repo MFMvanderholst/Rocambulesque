@@ -46,13 +46,13 @@ header {
     border-radius: 10px;
     margin-right: 10px;
     padding: 10px 20px;
-
-
+    font-weight: bold;
 }
 
 .logInBtn:hover {
     border-style: solid;
-    border-color: #9b5c0b;
+    border-color: #333;
+
 }
 
 .svg-button {
@@ -109,6 +109,7 @@ header {
     text-align: center;
     position: absolute;
     width: 10%;
+    font-weight: bold;
 }
 
 .menu-button {
@@ -135,5 +136,14 @@ header {
 .menu-button a:hover,
 .reservation-button a:hover {
     border-style: solid;
-    border-color: #9b5c0b;
+    border-color: #333;
+}
+
+.rpoverzicht {
+    background-color: #04BF9D;
+}
+
+rp.header {
+    color: #fff;
+   margin-top: 100px;
 }
