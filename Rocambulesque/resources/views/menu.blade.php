@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/app.css">
-    <title>Restaurant Homepage</title>
+    <title>Menu page</title>
 </head>
 
 <body>
@@ -41,35 +41,6 @@
             </div>
         </header>
 
-
-        <main>
-            <div class="background-image">
-                <div class="restaurant-photos">
-
-                    <div class="photo-column">
-                        <div class="photo1">
-                            <img src="images/img1.png" alt="Restaurant Photo 1">
-                        </div>
-                        <div class="photo2">
-                            <div class="menu-button">
-                                <a href="#">Menu</a>
-                            </div>
-                            <img src="images/img2.png" alt="Restaurant Photo 3">
-                        </div>
-                        <div class="photo3">
-                            <div class="reservation-button">
-                                <a href="Rservering">Reservation</a>
-                            </div>
-                            <img src="images/img3.png" alt="Restaurant Photo 2">
-                        </div>
-                    </div>
-
-
-
-                </div>
-            </div>
-        </main>
-    </div>
 </body>
 
 </html>
