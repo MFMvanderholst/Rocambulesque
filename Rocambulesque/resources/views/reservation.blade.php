@@ -19,23 +19,25 @@
                 <div class="info">
                     <div class="input">
                         <!--here the name information will be getting from the database bij get method-->
-                        <label for="">
+                        <label for="choice">
                             Uw keuze :
                         </label>
-                        <select name="select1">
-                            <option value=""></option>
-                            <option value=""></option>
+                        <select name="choice">
+                            <option value="diner">Diner</option>
+                            <option value="lunch">Lunch</option>
                         </select>
                     </div>
 
                     <div class="input">
                         <!--here the phone number information will be getting from the database bij get method-->
-                        <label for="">
+                        <label for="amount">
                             Aantal personen :
                         </label>
-                        <select name="select2">
-                            <option value=""></option>
-                            <option value=""></option>
+                        <select name="amount">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
                         </select>
                     </div>
                 </div>
@@ -44,18 +46,26 @@
                 <div class="info">
                     <div class="input">
                         <!--here the email information will be getting from the database bij get method-->
-                        <label for="">
+                        <label for="date">
                             Kies uw datum :
                         </label>
-                        <input id="inline-picker" type="date" value="">
+                        <input id="inline-picker" type="date" name="date">
                     </div>
                     
                     <div class="input">
-                        <!--here the Wachtwoord information will be getting from the database bij get method-->
-                        <label for="">
-                        Wachtwoord :
+                        <!--here the time information will be getting from the database bij get method-->
+                        <label for="time">
+                        time :
                         </label>
-                        <input type="time" value="">
+                        <input type="time" value="" name="time">
+                    </div>
+
+                    <div class="input">
+                        <!--here the remark information will be getting from the database bij get method-->
+                        <label for="remark">
+                        Opmerking :
+                        </label>
+                        <input type="text" value="" name="remark">
                     </div>
                 </div>
                 <div class="btnContainer">

@@ -31,6 +31,8 @@ Route::get('/reservation_overview', [ReservationOverviewController::class, "get"
 
 Route::get('/reservation', [ReservationController::class, "show"]);
 
+Route::post('/reservation', [ReservationController::class, "create"]);
+
 Route::post('/add', [ReservationController::class, "create"]);
 Route::get('/dashboard', function () {
     return view('dashboard');
