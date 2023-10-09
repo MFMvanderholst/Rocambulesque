@@ -6,12 +6,12 @@ use Illuminate\Http\Request;
 
 class AccountOverviewController extends Controller
 {
-    public function show()
+    public function index()
     {
-        return view('account_overzicht');
+        return view('account_overview');
     }
     
-    public function get()
+    public function show()
     {
         return view('account_overzicht', [
             "name" => "Maurits van der Holst",
