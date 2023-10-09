@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class AccountOverviewController extends Controller
 {
@@ -13,11 +14,10 @@ class AccountOverviewController extends Controller
     
     public function show()
     {
-        return view('account_overzicht', [
-            "name" => "Maurits van der Holst",
-            "phone" => 0655223166,
-            "email" => "lolligesmaus@live.nl",
-            "password" => "hihihaha12!"
+        $user = User::all();
+        
+        return view('profile.edit', [
+            "data" => $user
         ]);
     }
 }

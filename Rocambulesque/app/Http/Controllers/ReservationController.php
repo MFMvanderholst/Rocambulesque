@@ -7,12 +7,12 @@ use App\Models\ReservationModel;
 
 class ReservationController extends Controller
 {   
-    public function show()
+    public function index()
     {
         return view('reservation');
     }
 
-    public function index()
+    public function show()
     {
         //
     }

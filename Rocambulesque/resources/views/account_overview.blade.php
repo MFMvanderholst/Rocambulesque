@@ -55,7 +55,9 @@
                         <label for="">
                             Naam :
                         </label>
-                        <input type="text" value="{{ $name }}">
+                        @foreach ($data as $users)
+                        <input type="text" value="{{ $users->name }}">
+                        @endforeach
                     </div>
 
                     <div class="input">
@@ -63,7 +65,9 @@
                         <label for="">
                             Telefoonnummer :
                         </label>
-                        <input type="text" value="{{ $phone }}">
+                        @foreach ($data as $users)
+                        <input type="text" value="{{ $users->phone }}">
+                        @endforeach
                     </div>
                 </div>
 
@@ -76,7 +80,9 @@
                         <label for="">
                             Email :
                         </label>
-                        <input type="text" value="{{ $email }}">
+                        @foreach ($data as $users)
+                        <input type="text" value="{{ $users->email }}">
+                        @endforeach
                     </div>
                     
                     <div class="input">
@@ -84,7 +90,9 @@
                         <label for="">
                             Wachtwoord :
                         </label>
-                        <input type="text" value="{{ $password }}">
+                        @foreach ($data as $users)
+                        <input type="text" value="{{ $users->password }}">
+                        @endforeach
                     </div>
                 </div>
             </form>

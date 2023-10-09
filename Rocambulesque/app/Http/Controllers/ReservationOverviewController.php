@@ -3,30 +3,32 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\ReservationModel;
 
 class ReservationOverviewController extends Controller
 {
-    public function show()
+    public function index()
     {
         return view('reservation_overview');
     }
 
-    public function get(Request $request)
+    public function show()
     {
-        return view('reservation_overview', [
-            "name" => "Maurits van der Holst",
-            "phone" => 0655223166,
-            "email" => "lolligesmaus@live.nl",
-            "datetime" => "2023-10-2 10:12:23",
-            "amount" => 5,
-            "remark" => "Bij het reserveren van dit bedrijf wil ik graag bij het raam zitten"
+        $users = User::all();
+        
+        return view('users', [
+            "data" => $users
         ]);
 
-        // $drinks = Grocery::all();
-        // return view('drinks',["data" => $drinks]);
+        $reservation = ReservationModel::all();
+
+        return view('reservation', [
+            "data" => $reservation
+        ]);
     }
 
-    public function create(Request $request)
+    public function create()
     {
         //
     }
