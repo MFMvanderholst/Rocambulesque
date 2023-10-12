@@ -47,7 +47,7 @@ body {
 
 .photo3 {
     align-self: flex-start;
-    margin-bottom: 1em;
+    margin-bottom: 2.7em;
 }
 
 .content1,
@@ -61,11 +61,14 @@ body {
 .content1 {
     top: 8em;
     left: 50em;
+    font-family: 'GOOD BRUSH'; 
 }
 
 .content2 {
     bottom: 55em;
     left: 10em;
+    font-family: 'GOOD BRUSH'; 
+
 }
 
 .rpoverzicht {
