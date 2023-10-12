@@ -67,13 +67,13 @@
                         </div>
                         <div class="photo2">
                             <div class="menu-button">
-                                <a href="#">Menu</a>
+                                <a href="menu">Menu</a>
                             </div>
                             <img src="images/img2.png" alt="Restaurant Photo 3">
                         </div>
                         <div class="photo3">
                             <div class="reservation-button">
-                                <a href="Rservering">Reservation</a>
+                                <a href="reserveren">Reservation</a>
                             </div>
                             <img src="images/img3.png" alt="Restaurant Photo 2">
                         </div>

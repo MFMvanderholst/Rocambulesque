@@ -38,3 +38,7 @@ require __DIR__ . '/auth.php';
 Route::get('/reserveren', function () {
     return view('reserveren');
 });
+
+Route::get('/menu', function () {
+    return view('menu');
+});
