@@ -21,18 +21,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/account_overzicht', [AccountOverviewController::class, "show"]);
 Route::get('/account_overview', [AccountOverviewController::class, "index"]);
 
+Route::get('/account_overzicht', [AccountOverviewController::class, "get"]);
 Route::get('/account_overview', [AccountOverviewController::class, "show"]);
 
+Route::get('/reservation_overview', [ReservationOverviewController::class, "show"]);
 Route::get('/reservation_overview', [ReservationOverviewController::class, "index"]);
 
+Route::get('/reservation_overview', [ReservationOverviewController::class, "get"]);
 Route::get('/reservation_overview', [ReservationOverviewController::class, "show"]);
 
+Route::get('/reservation', [ReservationController::class, "show"]);
 Route::get('/reservation', [ReservationController::class, "index"]);
 
 Route::post('/reservation', [ReservationController::class, "create"]);
 
+Route::post('/add', [ReservationController::class, "create"]);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -43,4 +49,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\ReservationModel;
 
 class ReservationController extends Controller
-{   
+{
     public function index()
     {
         return view('reservation');
@@ -19,21 +19,27 @@ class ReservationController extends Controller
 
     public function create(Request $request)
     {
-        $reservation = new ReservationModel([
-            "choice" => $request->input("choice"),
-            "amount" => $request->input("amount"),
-            "date" => $request->input("date"),
-            "time" => $request->input("time"),
-            "remark" => $request->input("remark")
-        ]);
+        if ($request->isMethod('post')) {
+            // Handle the POST request for form submission
+            $validatedData = $request->validate([
+                'choice' => 'required',
+                'amount' => 'required|integer',
+                'date' => 'required|date',
+                'time' => 'required|date_format:H:i',
+                'remark' => 'nullable|string',
+            ]);
 
-        $reservation->save();
+            $reservation = new ReservationModel($validatedData);
+            $reservation->save();
 
-       echo "Reservation has been succesfully made";
-        sleep(3);
-        return redirect()->away('/reservation');
+            return redirect('/reservation')->with('success', 'Reservation has been successfully made');
+        }
+
+        // Handle the GET request to display the form
+        return view('reservation');
     }
-        
+
+
     public function edit()
     {
         //
