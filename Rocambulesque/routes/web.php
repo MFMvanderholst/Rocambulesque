@@ -7,6 +7,11 @@ use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\AccountOverviewController;
 use App\Http\Controllers\ReservationOverviewController;
 
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\RservationoverzichtController;
+use App\Http\Controllers\ReserveringklantController;
+use App\Http\Controllers\ReserveringmakenController;
+use App\Http\Controllers\WelcomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -53,3 +58,9 @@ require __DIR__ . '/auth.php';
 Route::get('/reserveren', function () {
     return view('reserveren');
 });
+Route::get('/',[WelcomeController::class,'showWelcomePage']);
+Route::get('/welcome',[WelcomeController::class,'showWelcomePage']);
+Route::get('/reservationoverzicht',[RservationoverzichtController::class,'showReservationPage']);
+Route::get('/menu',[MenuController::class,'show']);
+Route::get('/reserveringklant',[ReserveringklantController::class,'showReservationCustomer']);
+Route::get('/reserveringmaken',[ReserveringmakenController::class,'showMakeReservation']);

@@ -1,0 +1,37 @@
+.navbar {
+    background-color: #F2F2F2;
+    padding: 10px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(4, 191, 157, 0.3);
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-top: 3rem;
+    border-radius: 100px;
+}
+
+.navbar a{
+    float: right;
+    margin: 50px 30px;
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #F2F2F2;
+    border: 2px solid #04BF9D;
+    color: #40261d;
+    box-shadow: 0 0 10px rgba(4, 191, 157, 0.3);
+    transition: all 0.3s ease 0s;
+
+} 
+
+.navbar a:hover {
+    background-color: #40261d ;
+    color:#04BF9D;
+    border-radius: 50px;
+    border-color: #04BF9D ;
+    transition: all 0.3s ease 0s;
+
+}
+
+.logo {
+    width: 200px;
+}
