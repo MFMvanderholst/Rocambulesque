@@ -18,6 +18,7 @@ use App\Http\Controllers\WelcomeController;
 */
 
 Route::get('/',[WelcomeController::class,'showWelcomePage']);
+Route::get('/welcome',[WelcomeController::class,'showWelcomePage']);
 Route::get('/reservationoverzicht',[RservationoverzichtController::class,'showReservationPage']);
 Route::get('/menu',[MenuController::class,'show']);
 Route::get('/reserveringklant',[ReserveringklantController::class,'showReservationCustomer']);
