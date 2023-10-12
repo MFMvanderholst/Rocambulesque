@@ -90,6 +90,11 @@
                 <button class="btnDelete">Verwijderen</button>
                 <button class="btnChange">Wijzig</button>
             </div>
+            @if(session('success'))
+            <div class="success-message">
+                <div class="success-text"> {{ session('success') }} </div>
+            </div>
+            @endif
         </form>
     </main>
     <script src="../js/reservation.js"></script>
