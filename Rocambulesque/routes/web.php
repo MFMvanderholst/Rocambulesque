@@ -3,6 +3,9 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\AccountOverviewController;
+use App\Http\Controllers\ReservationOverviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +21,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/account_overview', [AccountOverviewController::class, "index"]);
+
+Route::get('/account_overview', [AccountOverviewController::class, "show"]);
+
+Route::get('/reservation_overview', [ReservationOverviewController::class, "index"]);
+
+Route::get('/reservation_overview', [ReservationOverviewController::class, "show"]);
+
+Route::get('/reservation', [ReservationController::class, "index"]);
+
+Route::post('/reservation', [ReservationController::class, "create"]);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

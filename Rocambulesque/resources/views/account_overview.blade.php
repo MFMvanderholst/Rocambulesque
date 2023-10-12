@@ -43,7 +43,7 @@
             <img class="logo" src="{{ URL('storage/background.png') }}" alt="">
 
             <!-- here comes the account information -->
-            <div class="container">
+            <form class="container" method="get" action="get">
                 <!-- title-->
                 <h1>Account overzicht</h1>
                 
@@ -55,7 +55,9 @@
                         <label for="">
                             Naam :
                         </label>
-                        <input type="text">
+                        @foreach ($data as $users)
+                        <input type="text" value="{{ $users->name }}">
+                        @endforeach
                     </div>
 
                     <div class="input">
@@ -63,7 +65,9 @@
                         <label for="">
                             Telefoonnummer :
                         </label>
-                        <input type="text">
+                        @foreach ($data as $users)
+                        <input type="text" value="{{ $users->phone }}">
+                        @endforeach
                     </div>
                 </div>
 
@@ -76,7 +80,9 @@
                         <label for="">
                             Email :
                         </label>
-                        <input type="text">
+                        @foreach ($data as $users)
+                        <input type="text" value="{{ $users->email }}">
+                        @endforeach
                     </div>
                     
                     <div class="input">
@@ -84,10 +90,12 @@
                         <label for="">
                             Wachtwoord :
                         </label>
-                        <input type="text">
+                        @foreach ($data as $users)
+                        <input type="text" value="{{ $users->password }}">
+                        @endforeach
                     </div>
                 </div>
-            </div>
+            </form>
         </main>
     </body>
 </html>
