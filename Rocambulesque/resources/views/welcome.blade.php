@@ -29,7 +29,7 @@
                             <div class="content1">
                                 <h2>Welkom bij Restaurant Rocambolesque
 
-                                    Ontdek onze gloednieuwe eetervaring in Utrecht. Bij Restaurant Rocambolesque combineren we eigentijdse culinaire creativiteit met een warme en gastvrije sfeer. Onze chefs, Usem en Finn, hebben hun passie voor koken samengebracht om een uniek menu te creëren dat seizoensgebonden gerechten van over de hele wereld biedt. Met acht gezellige tafels en een kindvriendelijke omgeving, heten wij zowel kleine gezinnen als groepen van harte welkom. Reserveer nu en maak deel uit van onze culinaire reis!</h2>
+                                    Ontdek onze gloednieuwe eetervaring in Utrecht. Bij Restaurant Rocambolesque combineren we eigentijdse culinaire creativiteit met een warme en gastvrije sfeer.</h2>
                             </div>
                             <img src="images/img2.png" alt="Restaurant Photo 3">
                         </div>
