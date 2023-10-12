@@ -1,0 +1,57 @@
+body {
+    font-family: 'Goodbrush';
+    background-image: url(../images/bg1.jpg);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+h1 {
+    color: #40261d;
+}
+.container {
+    background-color: rgba(255, 255, 255, 0.50);
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(4, 191, 157, 0.3);
+    margin-top: 5rem;
+
+}
+label {
+    font-weight: bold;
+}
+.customer-info {
+    margin-bottom: 3rem;
+    border-top: 1px solid #04BF9D;
+    padding-top: 20px;
+}
+.reservation-info {
+    border-top: 1px solid #04BF9D;
+    padding-top: 20px;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button.edit {
+    background-color: #D99F6C;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button.delete {
+    background-color: #690a05;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+
+}

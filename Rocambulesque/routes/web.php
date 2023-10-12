@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\RservationoverzichtController;
+use App\Http\Controllers\ReserveringklantController;
+use App\Http\Controllers\ReserveringmakenController;
+use App\Http\Controllers\WelcomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,13 +17,8 @@ use App\Http\Controllers\RservationoverzichtController;
 |
 */
 
-Route::get('/', function () {
-
-    return view('welcome');
-
-});
-
-
-
+Route::get('/',[WelcomeController::class,'showWelcomePage']);
 Route::get('/reservationoverzicht',[RservationoverzichtController::class,'showReservationPage']);
 Route::get('/menu',[MenuController::class,'show']);
+Route::get('/reserveringklant',[ReserveringklantController::class,'showReservationCustomer']);
+Route::get('/reserveringmaken',[ReserveringmakenController::class,'showMakeReservation']);
