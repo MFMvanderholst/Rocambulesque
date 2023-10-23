@@ -3,79 +3,6 @@ body {
     padding: 0;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    color: #fff;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-
-}
-
-.logo img {
-    height: 100px;
-}
-
-.buttons {
-    display: flex;
-    align-items: center;
-}
-
-.svg-button svg {
-    width: 22px;
-    height: 28px;
-    padding: 10px 10px;
-    fill: #04BF9D;
-}
-
-.logInBtn {
-    color: #11c720;
-    border-radius: 10px;
-    margin-right: 10px;
-    padding: 10px 20px;
-    font-weight: bold;
-}
-
-.logInBtn:hover {
-    border-style: solid;
-    border-color: #333;
-    background-color: #868686;
-
-}
-
-.RegisterBtn {
-    color: #11c720;
-    border-radius: 10px;
-    margin-right: 10px;
-    padding: 10px 20px;
-    font-weight: bold;
-}
-
-.RegisterBtn:hover {
-    border-style: solid;
-    border-color: #333;
-    background-color: #868686;
-
-}
-
-.svg-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
 .background-image {
     background-image: url('../images/bgimg.png');
     background-size: cover;
@@ -86,6 +13,9 @@ header {
     justify-content: center;
     align-items: center;
     margin-top: 100px;
+    box-shadow: 0 0 30px rgba(4, 191, 157, 0.3);
+    border-radius: 27%;
+
 }
 
 .photo-column {
@@ -116,50 +46,65 @@ header {
 
 .photo3 {
     align-self: flex-start;
-    margin-bottom: 1em;
+    margin-bottom: 2.7em;
 }
 
-.menu-button,
-.reservation-button {
+.content1,
+.content2 {
     text-align: center;
     position: absolute;
-    width: 10%;
+    width: 30%;
     font-weight: bold;
 }
 
-.menu-button {
-    top: 25em;
+.content1 {
+    top: 8em;
     left: 50em;
+    font-family: 'GOOD BRUSH'; 
 }
 
-.reservation-button {
+.content2 {
     bottom: 55em;
-    left: 20em;
+    left: 10em;
+    font-family: 'GOOD BRUSH'; 
 
-}
-
-.menu-button a,
-.reservation-button a {
-    text-decoration: none;
-    background-color: #fff;
-    color: #11c720;
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: block;
-}
-
-.menu-button a:hover,
-.reservation-button a:hover {
-    border-style: solid;
-    border-color: #333;
 }
 
 .rpoverzicht {
     background-color: #04BF9D;
 }
 
-rp.header {
-    color: #fff;
-   margin-top: 100px;
+.main-content {
+    padding: 3%;
+    text-align: center;
 }
 
+
+.main-content h1 {
+    font-family: 'GOOD BRUSH';
+    font-size: 24px;
+    color: #fff; 
+}
+
+
+.main-content p {
+    font-size: 18px;
+    color: #666; 
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+
+}
+
+th {
+    background-color: #fff;
+    color: #333;
+}
