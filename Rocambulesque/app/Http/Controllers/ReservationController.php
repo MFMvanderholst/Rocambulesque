@@ -3,21 +3,39 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 use App\Models\ReservationModel;
 
 class ReservationController extends Controller
 {
     public function index()
     {
-        return view('reservation');
+        return view('reservation_overview');
     }
 
     public function show()
     {
-        //
+        $users = User::all();
+        
+        return view('reservation_overview', [
+            "data" => $users
+        ]);
+
+        $reservation = ReservationModel::all();
+
+        return view('reservation_overview', [
+            "data" => $reservation
+        ]);
     }
 
-    public function create(Request $request)
+    public function create()
+    {
+        // Handle the GET request to display the form
+        return view('reservation');
+    }
+
+
+    public function store(Request $request)
     {
         if ($request->isMethod('post')) {
             // Handle the POST request for form submission
@@ -34,15 +52,6 @@ class ReservationController extends Controller
 
             return redirect('/reservation')->with('success', 'Reservation has been successfully made');
         }
-
-        // Handle the GET request to display the form
-        return view('reservation');
-    }
-
-
-    public function edit()
-    {
-        //
     }
 
     public function update()
