@@ -4,17 +4,17 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Reservation;
 
-class MenuController extends Controller
+class ReservationControllerAdmin extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('admin.menus.index');
+        return view('admin.reservations.index');
     }
-
     /**
      * Show the form for creating a new resource.
      */
@@ -62,4 +62,9 @@ class MenuController extends Controller
     {
         //
     }
+    // public function view()
+    // {
+    //     $reservation = Reservation::all();
+    //     return view('admin.reservations.index', ['reservation' => $reservation]);
+    // }
 }

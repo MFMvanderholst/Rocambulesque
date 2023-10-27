@@ -5,15 +5,16 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ReservationController extends Controller
+class MenuControllerAdmin extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('admin.reservations.index');
+        return view('admin.menus.index');
     }
+
     /**
      * Show the form for creating a new resource.
      */
