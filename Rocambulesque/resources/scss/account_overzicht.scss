@@ -8,6 +8,7 @@ body {
         top: 95%;
         left: 50%;
         transform: translate(-50%, -50%);
+
         /* image 7 */
         img {
             position: absolute;
@@ -17,6 +18,7 @@ body {
 
             background: url(image.png);
         }
+
         .container {
             display: grid;
             align-content: center;
@@ -28,23 +30,26 @@ body {
             width: 90%;
             top: 20em;
             left: 4em;
+
             h1 {
                 position: relative;
                 bottom: 10em;
             }
+
             .info {
                 position: relative;
                 bottom: 13em;
                 margin: 2em 0;
-                h3 {
-                    
-                }
+
+                h3 {}
+
                 .input {
                     position: relative;
                     padding: 5px;
                     display: flex;
                     height: 2em;
                     bottom: 8em;
+
                     input {
                         border: hidden;
                         border-radius: 1em;

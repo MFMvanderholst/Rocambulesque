@@ -1,0 +1,24 @@
+/* styles.scss */
+
+.error-message {
+    background-color: #ff3333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.error-text {
+    font-size: 14px;
+}
+
+.success-message {
+    background-color: lightgreen;
+    color: white;
+    border-color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.success-text {
+    font-size: 16px;
+}
