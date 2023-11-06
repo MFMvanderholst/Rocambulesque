@@ -55,7 +55,7 @@
                         <label for="">
                             Naam :
                         </label>
-                        <input type="text" value="{{ $name }}">
+                        <input type="text" value="{{ $users->name }}">
                     </div>
 
                     <div class="input">
@@ -63,7 +63,7 @@
                         <label for="">
                             Telefoonnummer :
                         </label>
-                        <input type="text" value="{{ $phone }}">
+                        <input type="text" value="{{ $users->phone }}">
                     </div>
 
                     <div class="input">
@@ -71,7 +71,7 @@
                         <label for="">
                             Email :
                         </label>
-                        <input type="text" value="{{ $email }}">
+                        <input type="text" value="{{ $users->email }}">
                     </div>
                 </div>
 
@@ -84,7 +84,7 @@
                         <label for="">
                             Datum en Tijd :
                         </label>
-                        <input type="datetime" value="{{ $datetime }}">
+                        <input type="datetime" value="{{ $reservation->datetime }}">
                     </div>
                     
                     <div class="input">
@@ -92,7 +92,7 @@
                         <label for="">
                             Aantal Personen :
                         </label>
-                        <input type="text" value="{{ $amount }}">
+                        <input type="text" value="{{ $reservation->amount }}">
                     </div>
 
                     <div class="input">
@@ -100,7 +100,7 @@
                         <label for="">
                             Opmerking :
                         </label>
-                        <input type="text" value="{{ $remark }}">
+                        <input type="text" value="{{ $reservation->remark }}">
                     </div>
                 </div>
             </form>

@@ -5,7 +5,6 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\AccountOverviewController;
-use App\Http\Controllers\ReservationOverviewController;
 
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\RservationoverzichtController;
@@ -29,7 +28,6 @@ Route::get('/', function () {
 
 Route::get('/account_overzicht', [AccountOverviewController::class, "show"]);
 Route::get('/account_overview', [AccountOverviewController::class, "index"]);
-
 Route::get('/account_overzicht', [AccountOverviewController::class, "get"]);
 Route::get('/account_overview', [AccountOverviewController::class, "show"]);
 
