@@ -18,7 +18,7 @@ class ReservationController extends Controller
         $users = User::all();
         $reservations = ReservationModel::all();
         
-        return view('reservation', [
+        return view('reservation_listing', [
             "data1" => $users,
             "data2" => $reservations
         ]);
@@ -38,7 +38,7 @@ class ReservationController extends Controller
     public function create()
     {
         // Handle the GET request to display the form
-        return view('reservation');
+        return view('reservation_create');
     }
 
 
