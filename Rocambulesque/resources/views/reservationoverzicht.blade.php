@@ -35,45 +35,23 @@
                         </tr>
                     </thead>
                     <tbody>
-
                         <tr>
+                            @foreach ($data1 as $users)
+                            <td>{{ $users->name }}</td>
+                            @endforeach
+                            @foreach ($data2 as $reservations)
+                            <td>{{ $reservations->date }} {{ $reservations->time }}</td>
+                            @endforeach
+                            @foreach ($data1 as $users)
+                            <td>{{ $users->phone }}</td>
+                            <td>{{ $users->email }}</td>
+                            @endforeach
+                            @foreach ($data2 as $reservations)
+                            <td>{{ $reservations->remark }}</td>
+                            <td><a href="/reservation/{{ $reservations->id }}/edit">Wijzig</a></td>
                             <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            @endforeach
                         </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
-
                     </tbody>
                 </table>
             </div>

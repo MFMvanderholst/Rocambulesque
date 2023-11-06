@@ -11,7 +11,7 @@
 <body>
     @include('navbar')
     <div class="form-container">
-        <form class="">
+        <form class="" method="post" action="add">
             <h1>Reservatie formulier</h1>
             <label for="mealType">Uw keuze:</label>
             <select required>
@@ -20,9 +20,9 @@
             </select>
 
             <label for="numberOfAdults">Aantal volwassenen (+12):</label>
-            <input type="number" min="1" required>
+            <input type="number" min="1" max="4" required>
             <label for="numberOfChildren">Aantal kinderen:</label>
-            <input type="number" min="1" required>
+            <input type="number" min="1" max="2" required>
 
             <label for="reservationDate">Kies uw datum:</label>
             <input type="date" required>

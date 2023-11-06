@@ -18,7 +18,7 @@ class ReservationController extends Controller
         $users = User::all();
         $reservations = ReservationModel::all();
         
-        return view('reservation_listing', [
+        return view('reservation', [
             "data1" => $users,
             "data2" => $reservations
         ]);
