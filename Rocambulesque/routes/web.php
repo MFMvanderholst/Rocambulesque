@@ -8,7 +8,6 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\AccountOverviewController;
-use App\Http\Controllers\ReservationOverviewController;
 
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\RservationoverzichtController;
@@ -32,22 +31,24 @@ use App\Http\Controllers\WelcomeController;
 
 Route::get('/account_overzicht', [AccountOverviewController::class, "show"]);
 Route::get('/account_overview', [AccountOverviewController::class, "index"]);
-
 Route::get('/account_overzicht', [AccountOverviewController::class, "get"]);
 Route::get('/account_overview', [AccountOverviewController::class, "show"]);
 
-Route::get('/reservation_overview', [ReservationOverviewController::class, "show"]);
-Route::get('/reservation_overview', [ReservationOverviewController::class, "index"]);
-
-Route::get('/reservation_overview', [ReservationOverviewController::class, "get"]);
-Route::get('/reservation_overview', [ReservationOverviewController::class, "show"]);
-
-Route::get('/reservation', [ReservationController::class, "show"]);
 Route::get('/reservation', [ReservationController::class, "index"]);
+Route::get('/reservation/listing', [ReservationController::class, "index_listing"]);
+Route::get('/reservation/create', [ReservationController::class, "create"]);
+Route::post('/reservation', [ReservationController::class, "store"]);
+Route::get('/reservation', [ReservationController::class, "show"]);
+Route::get('/reservation/{id}/edit', [ReservationController::class, "edit"]);
+Route::put('/reservation/{id}', [ReservationController::class, "update"]);
+Route::delete('/reservation/{id}', [ReservationController::class, "destroy"]);
 
+<<<<<<< HEAD
 Route::post('/add', [ReservationController::class, "create"]);
 
 Route::post('/add', [ReservationController::class, "create"]);
+=======
+>>>>>>> 295c5790e815fe5e8e173f4f132a81a31cbb6e98
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -72,9 +73,15 @@ require __DIR__ . '/auth.php';
 Route::get('/reserveren', function () {
     return view('reserveren');
 });
+<<<<<<< HEAD
 Route::get('/', [WelcomeController::class, 'showWelcomePage']);
 Route::get('/welcome', [WelcomeController::class, 'showWelcomePage']);
 Route::get('/reservationoverzicht', [RservationoverzichtController::class, 'showReservationPage']);
 Route::get('/menu', [MenuController::class, 'show']);
 Route::get('/reserveringklant', [ReserveringklantController::class, 'showReservationCustomer']);
 Route::get('/reserveringmaken', [ReserveringmakenController::class, 'showMakeReservation']);
+=======
+Route::get('/',[WelcomeController::class,'index']);
+Route::get('/menu',[MenuController::class,'show']);
+require __DIR__ . '/auth.php';
+>>>>>>> 295c5790e815fe5e8e173f4f132a81a31cbb6e98
