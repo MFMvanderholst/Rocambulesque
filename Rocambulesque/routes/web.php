@@ -40,7 +40,6 @@ Route::get('/reservation/{id}/edit', [ReservationController::class, "edit"]);
 Route::put('/reservation/{id}', [ReservationController::class, "update"]);
 Route::delete('/reservation/{id}', [ReservationController::class, "destroy"]);
 
-Route::post('/add', [ReservationController::class, "create"]);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -60,10 +59,6 @@ require __DIR__ . '/auth.php';
 Route::get('/reserveren', function () {
     return view('reserveren');
 });
-Route::get('/',[WelcomeController::class,'showWelcomePage']);
-Route::get('/welcome',[WelcomeController::class,'showWelcomePage']);
-Route::get('/reservationoverzicht',[RservationoverzichtController::class,'showReservationPage']);
+Route::get('/',[WelcomeController::class,'index']);
 Route::get('/menu',[MenuController::class,'show']);
-Route::get('/reserveringklant',[ReserveringklantController::class,'showReservationCustomer']);
-Route::get('/reserveringmaken',[ReserveringmakenController::class,'showMakeReservation']);
 require __DIR__ . '/auth.php';
