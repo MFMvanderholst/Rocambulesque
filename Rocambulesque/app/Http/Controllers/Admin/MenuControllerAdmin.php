@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Menu;
 use Illuminate\Http\Request;
+use App\Models\menus;
 
 class MenuControllerAdmin extends Controller
 {
@@ -12,7 +14,8 @@ class MenuControllerAdmin extends Controller
      */
     public function index()
     {
-        return view('admin.menus.index');
+        $data = Menu::all();
+        return view('admin.menus.index', ['data' => $data]);
     }
 
     /**

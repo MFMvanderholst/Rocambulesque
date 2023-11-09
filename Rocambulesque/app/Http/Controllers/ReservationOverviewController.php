@@ -16,7 +16,7 @@ class ReservationOverviewController extends Controller
     public function show()
     {
         $users = User::all();
-        
+
         return view('users', [
             "data" => $users
         ]);
@@ -32,7 +32,7 @@ class ReservationOverviewController extends Controller
     {
         //
     }
-        
+
     public function edit()
     {
         //
