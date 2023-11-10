@@ -13,6 +13,7 @@
     <header>
         @include('navbar')
     </header>
+
     <div class="form-container">
         <form class="" method="post" action="add">
             <h1>Reservatie formulier</h1>
@@ -33,19 +34,19 @@
             <label for="reservationTime">Kies uw tijd:</label>
             <input type="time" required>
 
-            <label for="note">EV. opmerkingen:</label>
+            <label for="note">EVT. opmerkingen:</label>
             <textarea rows="4" placeholder="Kinderstoelen, allergieën etc..." cols="50"></textarea>
 
             <button type="submit">Plaats Reservering</button>
         </form>
         <div class="form-container">
             <form>
-                <h1>Restaurant Information</h1>
-                <label for="openingTimes">Opening Times:</label>
+                <h1>Restaurant Informatie</h1>
+                <label for="openingTimes">Opening Tijden:</label>
                 <p id="openingTimes">Het restaurant is iedere dag van 17:00 tot 22:00 uur geopend. <br> De bar is van 22:00 tot
                     0:00 open. <br></h1>
 
-                    <label for="tablePrices"><br>Table Prices:</label>
+                    <label for="tablePrices"><br>Tafel prijzen:</label>
                 <p id="tablePrices">Maandag t/m donderdag: <br> 2 uur eten <br>
                     Volwassenen: € 35,- <br>
                     Kinderen: € 25,-
