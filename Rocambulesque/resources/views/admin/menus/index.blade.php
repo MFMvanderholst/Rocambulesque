@@ -12,6 +12,19 @@
                     {{ __("Menus") }}
                 </div>
             </div>
+
+            <table>
+
+                @foreach ($data as $item)
+                <tr>
+                    <td> {{$item->name}}</td>
+                    <td>{{$item->description}}</td>
+                    <td>{{$item->price}}</td>
+                </tr>
+                @endforeach
+
+
+            </table>
         </div>
     </div>
 </x-admin-layout>

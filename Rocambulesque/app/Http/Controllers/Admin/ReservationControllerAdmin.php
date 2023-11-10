@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Reservation;
+use App\Models\ReservationModel;
 
 class ReservationControllerAdmin extends Controller
 {
@@ -36,7 +37,8 @@ class ReservationControllerAdmin extends Controller
      */
     public function show(string $id)
     {
-        //
+        $reservation = ReservationModel::find($id);
+        dd($reservation);
     }
 
     /**
