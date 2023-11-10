@@ -32,13 +32,13 @@ Route::get('/account_overzicht', [AccountOverviewController::class, "get"]);
 Route::get('/account_overview', [AccountOverviewController::class, "show"]);
 
 Route::get('/reservation', [ReservationController::class, "index"]);
-Route::get('/reservation/listing', [ReservationController::class, "index_listing"]);
-Route::get('/reservation/create', [ReservationController::class, "create"]);
-Route::post('/reservation', [ReservationController::class, "store"]);
 Route::get('/reservation', [ReservationController::class, "show"]);
-Route::get('/reservation/{id}/edit', [ReservationController::class, "edit"]);
-Route::put('/reservation/{id}', [ReservationController::class, "update"]);
-Route::delete('/reservation/{id}', [ReservationController::class, "destroy"]);
+Route::get('/reservation/create', [ReservationController::class, "create"]);
+Route::post('/reservations', [ReservationController::class, "store"]);
+Route::get('/reservation/listing', [ReservationController::class, "index_listing"]);
+// Route::get('/reservation/{id}/edit', [ReservationController::class, "edit"]);
+// Route::put('/reservation/{id}', [ReservationController::class, "update"]);
+// Route::delete('/reservation/{id}', [ReservationController::class, "destroy"]);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -56,9 +56,6 @@ Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(fun
 
 require __DIR__ . '/auth.php';
 
-Route::get('/reserveren', function () {
-    return view('reserveren');
-});
 Route::get('/',[WelcomeController::class,'index']);
 Route::get('/menu',[MenuController::class,'show']);
 require __DIR__ . '/auth.php';
