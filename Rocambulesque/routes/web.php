@@ -43,12 +43,6 @@ Route::get('/reservation/{id}/edit', [ReservationController::class, "edit"]);
 Route::put('/reservation/{id}', [ReservationController::class, "update"]);
 Route::delete('/reservation/{id}', [ReservationController::class, "destroy"]);
 
-<<<<<<< HEAD
-Route::post('/add', [ReservationController::class, "create"]);
-
-Route::post('/add', [ReservationController::class, "create"]);
-=======
->>>>>>> 295c5790e815fe5e8e173f4f132a81a31cbb6e98
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -73,15 +67,6 @@ require __DIR__ . '/auth.php';
 Route::get('/reserveren', function () {
     return view('reserveren');
 });
-<<<<<<< HEAD
-Route::get('/', [WelcomeController::class, 'showWelcomePage']);
-Route::get('/welcome', [WelcomeController::class, 'showWelcomePage']);
-Route::get('/reservationoverzicht', [RservationoverzichtController::class, 'showReservationPage']);
-Route::get('/menu', [MenuController::class, 'show']);
-Route::get('/reserveringklant', [ReserveringklantController::class, 'showReservationCustomer']);
-Route::get('/reserveringmaken', [ReserveringmakenController::class, 'showMakeReservation']);
-=======
 Route::get('/',[WelcomeController::class,'index']);
 Route::get('/menu',[MenuController::class,'show']);
 require __DIR__ . '/auth.php';
->>>>>>> 295c5790e815fe5e8e173f4f132a81a31cbb6e98

@@ -14,7 +14,7 @@
 <body>
     <div class="homepage">
         <header>
-            @include('navbar')
+        @include('navbar')
         </header>
 
 
