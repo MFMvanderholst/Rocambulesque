@@ -16,7 +16,7 @@
             <!-- here comes the account information -->
             <form class="container" method="post" action="/reservation/{{ $reservation->id }}">
                 @csrf
-                @method('PUT')
+                
                 <!-- title-->
                 <h1>Reservation</h1>
 

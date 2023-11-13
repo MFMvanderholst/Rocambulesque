@@ -16,9 +16,10 @@ return new class extends Migration
             $table->id();
             $table->date('date');
             $table->time('time');
-            $table->tinyInteger('amount');
+            $table->tinyInteger('adults');
+            $table->tinyInteger('children');
             $table->string('remark', 300)->nullable();
-            $table->string('choice', 10);
+            $table->string('mealType', 10);
             $table->timestamps();
         });
     }
