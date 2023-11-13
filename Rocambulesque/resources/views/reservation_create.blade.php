@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="{{ asset('css/reserveringmaken.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <title>Reservatie maken</title>
 </head>
 
@@ -14,80 +13,66 @@
     <header>
         @include('navbar')
     </header>
-
     <div class="form-container">
 
         @if ($errors->any())
-            <ul>
+        <ul>
             @foreach($errors->all() as $error)
-                <li>'{{ $error }}</li>
+            <li>'{{ $error }}</li>
             @endforeach
-            </ul>
+        </ul>
         @endif
         <form method="post" action="/reservations">
             @csrf
             <h1>Reservatie formulier</h1>
             <label for="mealType"">Uw keuze:</label>
-            <select name="mealType" >
+            <select name=" mealType">
                 <option value="Dinner">Dinner</option>
                 <option value="Lunch">Lunch</option>
-            </select>
-            @error('mealType')
+                </select>
+                @error('mealType')
                 <p>{{ $message }}</p>
-            @enderror
+                @enderror
 
-            <label for="adults">Aantal volwassenen (+12):</label>
-            <input type="number" min="1" max="4" name="adults">
-            @error('adults')
+                <label for="adults">Aantal volwassenen (+12):</label>
+                <input type="number" min="1" max="4" name="adults">
+                @error('adults')
                 <p>{{ $message }}</p>
-            @enderror
-            <label for="children">Aantal kinderen:</label>
-            <input type="number" min="0" max="2" name="children">
-            @error('children')
+                @enderror
+                <label for="children">Aantal kinderen:</label>
+                <input type="number" min="0" max="2" name="children">
+                @error('children')
                 <p>{{ $message }}</p>
-            @enderror
+                @enderror
 
-            <label for="date">Kies uw datum:</label>
-            <input type="date" name="date" >
-            @error('date')
+                <label for="date">Kies uw datum:</label>
+                <input type="date" name="date">
+                @error('date')
                 <p>{{ $message }}</p>
-            @enderror
+                @enderror
 
-            <label for="time">Kies uw tijd:</label>
-            <select name="timeHour" >
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-                <option value="21">21</option>
-                <option value="22">22</option>
-            </select>
-            <select name="timeMinutes">
-                <option value="00">00</option>
-                <option value="15">15</option>
-                <option value="30">30</option>
-                <option value="45">45</option>
-            </select>
-            @error('timeHour', 'timeMinutes')
+                <label for="time">Kies uw tijd:</label>
+                <input type="time" name="time">
+                @error('time')
                 <p>{{ $message }}</p>
-            @enderror
+                @enderror
 
-            <label for="remark">EVT. opmerkingen:</label>
-            <textarea name="remark" rows="4" placeholder="Kinderstoelen, allergieën etc..." cols="50"></textarea>
-            @error('remark')
+                <label for="remark">EV. opmerkingen:</label>
+                <textarea name="remark" rows="4" placeholder="Kinderstoelen, allergieën etc..." cols="50"></textarea>
+                @error('remark')
                 <p>{{ $message }}</p>
-            @enderror
+                @enderror
 
-            <button type="submit">Plaats Reservering</button>
+                <button type="submit">Plaats Reservering</button>
         </form>
         <div class="form-container">
             <form>
-                <h1>Restaurant Informatie</h1>
-                <label for="openingTimes">Opening Tijden:</label>
+                <h1>Restaurant Information</h1>
+                <label for="openingTimes">Opening Times:</label>
                 <p id="openingTimes">Het restaurant is iedere dag van 17:00 tot 22:00 uur geopend. <br> De bar is van 22:00 tot
                     0:00 open. <br></h1>
 
-                    <label for="tablePrices"><br>Tafel prijzen:</label>
+                    <label for="tablePrices"><br>Table Prices:</label>
                 <p id="tablePrices">Maandag t/m donderdag: <br> 2 uur eten <br>
                     Volwassenen: € 35,- <br>
                     Kinderen: € 25,-

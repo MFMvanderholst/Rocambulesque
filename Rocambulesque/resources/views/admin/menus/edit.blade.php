@@ -28,7 +28,7 @@
                     @csrf
                     @method('PUT')
                     <label for="name">Verander naam</label>
-                    <input type="text" name="name" value="$data->naam"><br>
+                    <input type="text" name="name" value=""><br>
 
                     @error('name')
                     <div style="color:blue">{{$message}}</div> <br>
@@ -36,7 +36,7 @@
 
 
                     <label for="description">Verander beschrijving</label>
-                    <input type="text" name="description" value="test"><br>
+                    <input type="text" name="description" value=""><br>
 
                     @error('description')
                     <div style="color:red">{{$message}}</div><br>

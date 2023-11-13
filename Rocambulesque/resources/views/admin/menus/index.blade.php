@@ -40,6 +40,9 @@
                     <th>
                         <p>wijzig</p>
                     </th>
+                    <th>
+                        <p>Verwijder</p>
+                    </th>
                     @foreach ($data as $item)
 
                     <tr>
@@ -49,8 +52,15 @@
                         <td> {{$item->name}}</td>
                         <td>{{$item->description}}</td>
                         <td>{{$item->price}}</td>
-                        <td><a href="{{route('admin.menus.edit',$item->id)}}">wijzeg</a></td>
-                        <td><a href="{{route('admin.menus.update',$item->id)}}">test data </a></td>
+                        <td><a href="{{route('admin.menus.edit',$item->id)}}">wijzig</a></td>
+                        <td>
+                            <form action="{{route('admin.menus.destroy',$item->id)}}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" onclick="return confirm('weet je zeker dat je dit wilt verwijderen')">Verwijder</button>
+                        </td>
+                        </form>
+
                     </tr>
 
                     @endforeach

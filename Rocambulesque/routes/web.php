@@ -1,4 +1,5 @@
 <?php
+
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\MenuControllerAdmin;
@@ -62,6 +63,7 @@ Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(fun
     Route::resource('/menus', MenuControllerAdmin::class);
     Route::get(('/menus/{id}/edit'), [MenuControllerAdmin::class, 'edit']);
     Route::put('/menus/{id}', [MenuControllerAdmin::class, 'update']);
+    Route::delete('/menus/{id}', [MenuControllerAdmin::class, 'destroy']);
 
     Route::resource('/reservation', ReservationControllerAdmin::class);
     Route::resource('/tables', TableController::class);
