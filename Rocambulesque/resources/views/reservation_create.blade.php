@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="{{ asset('css/reserveringmaken.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <title>Reservatie maken</title>
 </head>
 
@@ -58,7 +59,7 @@
                 <p>{{ $message }}</p>
                 @enderror
 
-                <label for="remark">EV. opmerkingen:</label>
+                <label for="remark">EVT. opmerkingen:</label>
                 <textarea name="remark" rows="4" placeholder="Kinderstoelen, allergieën etc..." cols="50"></textarea>
                 @error('remark')
                 <p>{{ $message }}</p>

@@ -1,10 +1,7 @@
 /* Apply basic table styles */
 table {
     border-collapse: collapse;
-    width: 80%;
-    margin: auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    width: 100%;
 }
 
 /* Style table cells to look like menu items */

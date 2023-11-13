@@ -1,17 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Menu;
 
 use Illuminate\Http\Request;
 
 class MenuController extends Controller
 {
-    public function index() {
-        return view('menu');
-    }
-
-    public function show() {
-        //
+    public function show()
+    {
+        $data = Menu::all();
+        return view('menu', ['data' => $data]);
     }
 
     public function create() {

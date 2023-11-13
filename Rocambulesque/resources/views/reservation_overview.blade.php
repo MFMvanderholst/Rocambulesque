@@ -17,7 +17,7 @@
             <label for="name">Naam:</label>
             <p id="name">{{ $users->name }}</p>
 
-            <label for="mobile">Mobile nummer:</label>
+            <label for="mobile">Mobiele nummer:</label>
             <p id="mobile">{{ $users->phone }}</p>
 
             <label for="email">Email:</label>
