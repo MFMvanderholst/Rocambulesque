@@ -22,7 +22,7 @@
             @endforeach
             </ul>
         @endif
-        <form method="post" action="/reservations">
+        <form method="post" action="/reservation/{{ $reservation->id }}">
             @csrf
             @method('put')
             <h1>Reservatie formulier</h1>
@@ -72,7 +72,7 @@
             @enderror
 
             <label for="remark">EV. opmerkingen:</label>
-            <textarea name="remark" rows="4" placeholder="Kinderstoelen, allergieën etc..." cols="50" value="{{ $reservation->remark }}"></textarea>
+            <textarea name="remark" rows="4" placeholder="Kinderstoelen, allergieën etc..." cols="50"></textarea>
             @error('remark')
                 <p>{{ $message }}</p>
             @enderror

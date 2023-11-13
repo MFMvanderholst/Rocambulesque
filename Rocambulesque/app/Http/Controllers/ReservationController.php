@@ -91,7 +91,7 @@ class ReservationController extends Controller
             'date' => $validatedData['date'],
             'timeHour' => $validatedData['timeHour'],
             'timeMinutes' => $validatedData['timeMinutes'],
-            'remark' => 'remark'
+            'remark' => $validatedData['remark']
         ]);
        
         return redirect('/reservation')->with('status', 'Data is bijgewerkt');
