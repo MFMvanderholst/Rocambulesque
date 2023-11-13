@@ -50,9 +50,10 @@ class ReservationController extends Controller
             $validatedData = $request->validate([
                 'mealType' => "required",
                 'adults' => "required",
-                'children' => 'required',
-                'date' => 'required',
-                'time' => 'required',
+                'children' => "required",
+                'date' => "required",
+                'timeHour' => "required",
+                'timeMinutes' => "required",
                 'remark' => 'nullable',
             ]);
             
@@ -76,7 +77,8 @@ class ReservationController extends Controller
             'adults' => "required",
             'children' => 'required',
             'date' => 'required',
-            'time' => 'required',
+            'timeHour' => 'required',
+            'timeMinutes' => 'required',
             'remark' => 'nullable',
         ]);
 
@@ -87,8 +89,9 @@ class ReservationController extends Controller
             'adults' => $validatedData['adults'],
             'children' => $validatedData['children'],
             'date' => $validatedData['date'],
-            'time' => $validatedData['time'],
-            'remark' => 'remark'
+            'timeHour' => $validatedData['timeHour'],
+            'timeMinutes' => $validatedData['timeMinutes'],
+            'remark' => $validatedData['remark']
         ]);
        
         return redirect('/reservation')->with('status', 'Data is bijgewerkt');

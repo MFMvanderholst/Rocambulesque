@@ -4,99 +4,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @vite(["resources/scss/reservation.scss"])
-    <title>Reservation Page</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="{{ asset('css/reserveringmaken.css') }}">
+    <title>Reservatie maken</title>
 </head>
 
-    <body>
-        <main>
-            <!-- background comes here -->
-            <img class="logo" src="{{ URL('storage/background.png') }}" alt="">
+<body>
+    <header>
+        @include('navbar')
+    </header>
+    <div class="form-container">
 
-            <!-- here comes the account information -->
-            <form class="container" method="post" action="/reservation/{{ $reservation->id }}">
-                @csrf
-                
-                <!-- title-->
-                <h1>Reservation</h1>
+        @if ($errors->any())
+            <ul>
+            @foreach($errors->all() as $error)
+                <li>'{{ $error }}</li>
+            @endforeach
+            </ul>
+        @endif
+        <form method="post" action="/reservation/{{ $reservation->id }}">
+            @csrf
+            @method('put')
+            <h1>Reservatie formulier</h1>
+            <label for="mealType"">Uw keuze:</label>
+            <select name="mealType" >
+                <option value="Dinner">Dinner</option>
+                <option value="Lunch">Lunch</option>
+            </select>
+            @error('mealType')
+                <p>{{ $message }}</p>
+            @enderror
+    
+            <label for="adults">Aantal volwassenen (+12):</label>
+            <input type="number" min="1" max="4" name="adults" value="{{ $reservation->adults }}">
+            @error('adults')
+                <p>{{ $message }}</p>
+            @enderror
+            <label for="children">Aantal kinderen:</label>
+            <input type="number" min="0" max="2" name="children" value="{{ $reservation->children }}">
+            @error('children')
+                <p>{{ $message }}</p>
+            @enderror
 
-                <div class="info">
-                    <div class="input">
-                        <!--here the name information will be getting from the database bij get method-->
-                        <label for="choice">
-                            Uw keuze :
-                        </label>
-                        <select name="choice">
-                            <option value="diner">Diner</option>
-                            <option value="lunch">Lunch</option>
-                        </select>
-                    </div>
-                    @error('choice')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
-                    <div class="input">
-                        <!--here the phone number information will be getting from the database bij get method-->
-                        <label for="amount">
-                            Aantal personen :
-                        </label>
-                        <select name="amount">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
-                    </div>
-                </div>
-                @error('amount')
-                <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
+            <label for="date">Kies uw datum:</label>
+            <input type="date" name="date" value="{{ $reservation->date }}">
+            @error('date')
+                <p>{{ $message }}</p>
+            @enderror
 
+            <label for="time">Kies uw tijd:</label>
+            <select name="timeHour" >
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+            </select>
+            <select name="timeMinutes">
+                <option value="00">00</option>
+                <option value="15">15</option>
+                <option value="30">30</option>
+                <option value="45">45</option>
+            </select>
+            @error('timeHour', 'timeMinutes')
+                <p>{{ $message }}</p>
+            @enderror
 
-                <div class="info">
-                    <div class="input">
-                        <!--here the email information will be getting from the database bij get method-->
-                        <label for="date">
-                            Kies uw datum :
-                        </label>
-                        <input id="inline-picker" type="date" value="{{ $reservation->date }}" name="date">
-                    </div>
-                    @error('date')
-                    <div class="error-message">
-                        <div class="error-text">{{ $message }}</div>
-                    </div>
-                    @enderror
+            <label for="remark">EV. opmerkingen:</label>
+            <textarea name="remark" rows="4" placeholder="Kinderstoelen, allergieën etc..." cols="50"></textarea>
+            @error('remark')
+                <p>{{ $message }}</p>
+            @enderror
 
-                    <div class="input">
-                        <!--here the time information will be getting from the database bij get method-->
-                        <label for="time">
-                            time :
-                        </label>
-                        <input type="time" value="{{ $reservation->time }}" name="time">
-                    </div>
-                    @error('time')
-                    <div class="error-message">
-                        <div class="error-text">{{ $message }}</div>
-                    </div>
-                    @enderror
-                    <div class="input">
-                        <!--here the remark information will be getting from the database bij get method-->
-                        <label for="remark">
-                            Opmerking :
-                        </label>
-                        <input type="text" value="{{ $reservation->remark }}" name="remark">
-                    </div>
-                </div>
-                <div class="btnContainer">
-                    <button type="submit" class="btnChange">Wijzig</button>
-                </div>
-                @if(session('success'))
-                <div class="success-message">
-                    <div class="success-text"> {{ session('success') }} </div>
-                </div>
-                @endif
+            <button type="submit">Plaats Reservering</button>
+        </form>
+        <div class="form-container">
+            <form>
+                <h1>Restaurant Information</h1>
+                <label for="openingTimes">Opening Times:</label>
+                <p id="openingTimes">Het restaurant is iedere dag van 17:00 tot 22:00 uur geopend. <br> De bar is van 22:00 tot
+                    0:00 open. <br></h1>
+
+                    <label for="tablePrices"><br>Table Prices:</label>
+                <p id="tablePrices">Maandag t/m donderdag: <br> 2 uur eten <br>
+                    Volwassenen: € 35,- <br>
+                    Kinderen: € 25,-
+                    <br>
+                    Op vrijdag, zaterdag en zondag: <br> 2 uur eten <br>
+                    Volwassenen: € 42,- <br>
+                    Kinderen: € 32,-</h1>
             </form>
-        </main>
-        <script src="../js/reservation.js"></script>
-    </body>
+        </div>
+    </div>
+    @include('footer')
+</body>
 
 </html>

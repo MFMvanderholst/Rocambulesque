@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <header>
+        @include('navbar')
+    </header>
     <div class="container">
         <h1>Reservering Overzicht</h1>
         @foreach ($data1 as $users)
@@ -32,10 +35,13 @@
             <p id="date">{{ $reservation->date }}</p>
 
             <label for="time">Tijd:</label>
-            <p id="time">{{ $reservation->time }}</p>
+            <p id="time">{{ $reservation->timeHour }}:{{ $reservation->timeMinutes }}</p>
 
-            <label for="numPeople">Aantal personen:</label>
-            <p id="numPeople">{{ $reservation->amount }}</p>
+            <label for="numPeople">Aantal volwassenen:</label>
+            <p id="numPeople">{{ $reservation->adults }}</p>
+
+            <label for="numPeople">Aantal kinderen:</label>
+            <p id="numPeople">{{ $reservation->children }}</p>
 
             <label for="notes">Opmerking:</label>
             <p id="notes">{{ $reservation->remark }}</p>
@@ -43,8 +49,14 @@
         @endforeach
 
         <div class="buttons">
-            <button class="edit">Wijzig</button>
-            <button class="delete">Verwijderen</button>
+            <button class="edit"><a href="/reservation/{{ $reservation->id }}/edit">Wijzig</a></button>
+            <form action="/reservation/{{ $reservation->id }}" method="post">
+                @csrf
+                @method('delete')
+                <button type="submit" class="delete" onclick="return confirm('Weet je het zeker om dit reservering te verwijderen?')">
+                    Verwijderen
+                </button>
+            </form>
         </div>
     </div>
 </body>

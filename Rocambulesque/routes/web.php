@@ -42,9 +42,9 @@ Route::get('/reservation', [ReservationController::class, "show"]);
 Route::get('/reservation/create', [ReservationController::class, "create"]);
 Route::post('/reservations', [ReservationController::class, "store"]);
 Route::get('/reservation/listing', [ReservationController::class, "index_listing"]);
-// Route::get('/reservation/{id}/edit', [ReservationController::class, "edit"]);
-// Route::put('/reservation/{id}', [ReservationController::class, "update"]);
-// Route::delete('/reservation/{id}', [ReservationController::class, "destroy"]);
+Route::get('/reservation/{id}/edit', [ReservationController::class, "edit"]);
+Route::put('/reservation/{id}', [ReservationController::class, "update"]);
+Route::delete('/reservation/{id}', [ReservationController::class, "destroy"]);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

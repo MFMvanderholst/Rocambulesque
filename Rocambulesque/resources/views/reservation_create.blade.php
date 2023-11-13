@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="{{ asset('css/reserveringmaken.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <title>Reservatie maken</title>
 </head>
 
@@ -14,7 +13,6 @@
     <header>
         @include('navbar')
     </header>
-
     <div class="form-container">
 
         @if ($errors->any())
@@ -59,7 +57,7 @@
                 <p>{{ $message }}</p>
                 @enderror
 
-                <label for="remark">EVT. opmerkingen:</label>
+                <label for="remark">EV. opmerkingen:</label>
                 <textarea name="remark" rows="4" placeholder="Kinderstoelen, allergieën etc..." cols="50"></textarea>
                 @error('remark')
                 <p>{{ $message }}</p>
@@ -69,12 +67,12 @@
         </form>
         <div class="form-container">
             <form>
-                <h1>Restaurant Informatie</h1>
-                <label for="openingTimes">Opening Tijden:</label>
+                <h1>Restaurant Information</h1>
+                <label for="openingTimes">Opening Times:</label>
                 <p id="openingTimes">Het restaurant is iedere dag van 17:00 tot 22:00 uur geopend. <br> De bar is van 22:00 tot
                     0:00 open. <br></h1>
 
-                    <label for="tablePrices"><br>Tafel prijzen:</label>
+                    <label for="tablePrices"><br>Table Prices:</label>
                 <p id="tablePrices">Maandag t/m donderdag: <br> 2 uur eten <br>
                     Volwassenen: € 35,- <br>
                     Kinderen: € 25,-
