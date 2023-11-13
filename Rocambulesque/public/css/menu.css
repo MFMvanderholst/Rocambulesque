@@ -5,11 +5,17 @@ body {
     background: rgb(188, 188, 188);
   }
 
-  
+
+.menu {
+  margin-top: 7rem;
+  border-radius: 100px;
+}
 
   nav {
     display: flex;
     justify-content: center;
+    margin-top: 4rem;
+    
   }
 
   nav a {
@@ -22,27 +28,37 @@ body {
     box-shadow: 0 0 10px rgba(4, 191, 157, 0.2);
     border-radius: 10px;
     font-size: large;
+    cursor: pointer;
 
   }
 
   nav a:hover {
-    background-color: #40261d;
-    color: #04BF9D;
+    background-color: #a6633c7d;
+    color: #40261d;
   }
 
   nav a.active {
-    background-color: #40261d;
-    color: #04BF9D;
+    background-color: #a6633c7d;
+    color: #40261d;
   }
 
 
-  section {
-    padding: 20px;
+  h1, h2 {
+    text-align: center;
+  }
+  
+  h2{
+    padding-top: 3rem;
   }
 
   .menu-container {
     display: none;
     animation: fade-in 0.5s ease-in-out;
+    border-radius: 100px;
+    box-shadow: 0 0 10px rgba(4, 191, 157, 0.9);
+    width: 90%;
+    margin-left: 5rem;
+    background-color:#a6633c7d;
   }
 
   .menu-container.active {
@@ -62,7 +78,8 @@ body {
     margin: 10px;
     width: 250px;
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(4, 191, 157, 06);
+    margin: 5rem;
   }
 
   .menu-item img {
@@ -78,3 +95,7 @@ body {
       opacity: 1;
     }
   }
+
+.menu-item .marks {
+  width: 10%;
+}
