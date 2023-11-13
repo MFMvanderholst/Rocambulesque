@@ -15,7 +15,8 @@ return new class extends Migration
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
             $table->date('date');
-            $table->time('time');
+            $table->tinyInteger('timeHour');
+            $table->tinyInteger('timeMinutes');
             $table->tinyInteger('adults');
             $table->tinyInteger('children');
             $table->string('remark', 300)->nullable();

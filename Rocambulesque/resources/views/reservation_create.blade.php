@@ -54,8 +54,21 @@
             @enderror
 
             <label for="time">Kies uw tijd:</label>
-            <input type="time" name="time">
-            @error('time')
+            <select name="timeHour" >
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+            </select>
+            <select name="timeMinutes">
+                <option value="00">00</option>
+                <option value="15">15</option>
+                <option value="30">30</option>
+                <option value="45">45</option>
+            </select>
+            @error('timeHour', 'timeMinutes')
                 <p>{{ $message }}</p>
             @enderror
 
