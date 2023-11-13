@@ -44,20 +44,23 @@ class ReservationController extends Controller
 
     public function store(Request $request)
     {
+        
         if ($request->isMethod('post')) {
             // Handle the POST request for form submission
             $validatedData = $request->validate([
-                'choice' => 'required',
-                'amount' => 'required|integer',
-                'date' => 'required|date',
-                'time' => 'required|date_format:H:i',
-                'remark' => 'nullable|string',
+                'mealType' => "required",
+                'adults' => "required",
+                'children' => "required",
+                'date' => "required",
+                'timeHour' => "required",
+                'timeMinutes' => "required",
+                'remark' => 'nullable',
             ]);
-
+            
             $reservation = new ReservationModel($validatedData);
             $reservation->save();
 
-            return redirect('/reservation')->with('success', 'Reservation has been successfully made');
+            return redirect('reservation')->with('success', 'Reservation has been successfully made');
         }
     }
 
@@ -70,19 +73,24 @@ class ReservationController extends Controller
     public function update(Request $request, $id)
     {
         $validatedData = $request->validate([
-            "choice" => "required",
-            "amount" => "integer",
-            "date" => "required",
-            "time" => "required"
+            'mealType' => "required",
+            'adults' => "required",
+            'children' => 'required',
+            'date' => 'required',
+            'timeHour' => 'required',
+            'timeMinutes' => 'required',
+            'remark' => 'nullable',
         ]);
 
         $reservation = ReservationModel::findOrFail($id);
 
         $reservation->update([
-            'choice' => $validatedData['choice'],
-            'amount' => $validatedData['amount'],
+            'mealType' => $validatedData['mealType'],
+            'adults' => $validatedData['adults'],
+            'children' => $validatedData['children'],
             'date' => $validatedData['date'],
-            'time' => $validatedData['time'],
+            'timeHour' => $validatedData['timeHour'],
+            'timeMinutes' => $validatedData['timeMinutes'],
             'remark' => 'remark'
         ]);
        

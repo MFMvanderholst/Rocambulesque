@@ -40,7 +40,7 @@
                             <td>{{ $users->name }}</td>
                             @endforeach
                             @foreach ($data2 as $reservations)
-                            <td>{{ $reservations->date }} {{ $reservations->time }}</td>
+                            <td>{{ $reservations->date }} {{ $reservations->timeHour }}:{{ $reservations->timeMinutes }}</td>
                             @endforeach
                             @foreach ($data1 as $users)
                             <td>{{ $users->phone }}</td>
