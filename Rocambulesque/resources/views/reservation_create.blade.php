@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="{{ asset('css/reserveringmaken.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <title>Reservatie maken</title>
 </head>
 
@@ -15,27 +16,54 @@
     </header>
 
     <div class="form-container">
-        <form class="" method="post" action="add">
+
+        @if ($errors->any())
+            <ul>
+            @foreach($errors->all() as $error)
+                <li>'{{ $error }}</li>
+            @endforeach
+            </ul>
+        @endif
+        <form method="post" action="/reservations">
+            @csrf
             <h1>Reservatie formulier</h1>
-            <label for="mealType">Uw keuze:</label>
-            <select required>
+            <label for="mealType"">Uw keuze:</label>
+            <select name="mealType" >
                 <option value="Dinner">Dinner</option>
                 <option value="Lunch">Lunch</option>
             </select>
+            @error('mealType')
+                <p>{{ $message }}</p>
+            @enderror
 
-            <label for="numberOfAdults">Aantal volwassenen (+12):</label>
-            <input type="number" min="1" max="4" required>
-            <label for="numberOfChildren">Aantal kinderen:</label>
-            <input type="number" min="1" max="2" required>
+            <label for="adults">Aantal volwassenen (+12):</label>
+            <input type="number" min="1" max="4" name="adults">
+            @error('adults')
+                <p>{{ $message }}</p>
+            @enderror
+            <label for="children">Aantal kinderen:</label>
+            <input type="number" min="0" max="2" name="children">
+            @error('children')
+                <p>{{ $message }}</p>
+            @enderror
 
-            <label for="reservationDate">Kies uw datum:</label>
-            <input type="date" required>
+            <label for="date">Kies uw datum:</label>
+            <input type="date" name="date" >
+            @error('date')
+                <p>{{ $message }}</p>
+            @enderror
 
-            <label for="reservationTime">Kies uw tijd:</label>
-            <input type="time" required>
+            <label for="time">Kies uw tijd:</label>
+            <input type="time" name="time">
+            @error('time')
+                <p>{{ $message }}</p>
+            @enderror
 
-            <label for="note">EVT. opmerkingen:</label>
-            <textarea rows="4" placeholder="Kinderstoelen, allergieën etc..." cols="50"></textarea>
+            <label for="remark">EVT. opmerkingen:</label>
+            <textarea name="remark" rows="4" placeholder="Kinderstoelen, allergieën etc..." cols="50"></textarea>
+            @error('remark')
+                <p>{{ $message }}</p>
+            @enderror
 
             <button type="submit">Plaats Reservering</button>
         </form>

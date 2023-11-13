@@ -11,6 +11,7 @@
 <body>
     <div class="container">
         <h1>Reservering Overzicht</h1>
+        @foreach ($data1 as $users)
         <div class="customer-info">
             <h2>Persoon gegevens</h2>
             <label for="name">Naam:</label>
@@ -22,7 +23,9 @@
             <label for="email">Email:</label>
             <p id="email">{{ $users->email }}</p>
         </div>
+        @endforeach
 
+        @foreach ($data2 as $reservation)
         <div class="reservation-info">
             <h2>Gereserveerde Tafel</h2>
             <label for="date">datum:</label>
@@ -37,6 +40,7 @@
             <label for="notes">Opmerking:</label>
             <p id="notes">{{ $reservation->remark }}</p>
         </div>
+        @endforeach
 
         <div class="buttons">
             <button class="edit">Wijzig</button>

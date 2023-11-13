@@ -9,5 +9,5 @@ class ReservationModel extends Model
 {
     use HasFactory;
     protected $table = "reservations";
-    protected $fillable = ["choice", "amount", "date", "time", "remark"];
+    protected $fillable = ["mealType", "adults", "children", "date", "time", "remark"];
 }
