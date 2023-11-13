@@ -77,6 +77,11 @@ class MenuControllerAdmin extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $result = menu::destroy($id);
+        if ($result) {
+            return redirect('admin/menus')->with("status", "De Rij is verwijderd");
+        } else {
+            return redirect('admin/menus')->with("status", "De Rij is niet verwijderd");
+        }
     }
 }
