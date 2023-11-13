@@ -34,7 +34,7 @@
             @error('mealType')
                 <p>{{ $message }}</p>
             @enderror
-
+    
             <label for="adults">Aantal volwassenen (+12):</label>
             <input type="number" min="1" max="4" name="adults" value="{{ $reservation->adults }}">
             @error('adults')
