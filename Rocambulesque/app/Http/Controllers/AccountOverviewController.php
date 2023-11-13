@@ -20,4 +20,14 @@ class AccountOverviewController extends Controller
             "data" => $user
         ]);
     }
+
+    public function listing()
+    {
+        return view('account_overview');
+    }
+
+    public function create()
+    {
+        return view('account_overview');
+    }
 }
