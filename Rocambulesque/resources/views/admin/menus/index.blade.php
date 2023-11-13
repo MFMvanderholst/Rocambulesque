@@ -1,30 +1,65 @@
-<x-admin-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-black-800 dark:text-black-200 leading-tight">
-            {{ __('Reservations') }}
-        </h2>
-    </x-slot>
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("Menu's") }}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Menu</title>
+    <link rel="stylesheet" href="{{ asset('css/adminmenu.css') }}">
+
+<body>
+    <x-admin-layout>
+        <x-slot name="header">
+            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+                {{ __('Reservations') }}
+            </h2>
+        </x-slot>
+
+        <div class="py-12">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                    <div class="p-6 text-gray-900 dark:text-gray-100">
+                        {{ __("Menus") }}
+                    </div>
                 </div>
+                @if(session('status'))
+                <div style="color: green;">
+                    {{session('status')}}
+                </div>
+                @endif
+                <table>
+                    <th>
+                        <p>naam</p>
+                    </th>
+                    <th>
+                        <p>beschrijving</p>
+                    </th>
+                    <th>
+                        <p>prijs</p>
+                    </th>
+                    <th>
+                        <p>wijzig</p>
+                    </th>
+                    @foreach ($data as $item)
+
+                    <tr>
+
+                    </tr>
+                    <tr>
+                        <td> {{$item->name}}</td>
+                        <td>{{$item->description}}</td>
+                        <td>{{$item->price}}</td>
+                        <td><a href="{{route('admin.menus.edit',$item->id)}}">wijzeg</a></td>
+                        <td><a href="{{route('admin.menus.update',$item->id)}}">test data </a></td>
+                    </tr>
+
+                    @endforeach
+
+
+                </table>
             </div>
-
-            <table>
-
-                @foreach ($data as $item)
-                <tr>
-                    <td> {{$item->name}}</td>
-                    <td>{{$item->description}}</td>
-                    <td>{{$item->price}}</td>
-                </tr>
-                @endforeach
-
-
-            </table>
         </div>
-    </div>
-</x-admin-layout>
+    </x-admin-layout>
+</body>
+
+</html>

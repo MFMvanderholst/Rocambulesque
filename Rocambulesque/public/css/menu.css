@@ -1,0 +1,30 @@
+/* Apply basic table styles */
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+/* Style table cells to look like menu items */
+td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Add hover effect to table cells */
+td:hover {
+    background-color: #ddd;
+}
+
+th {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}

@@ -47,7 +47,9 @@ class MenuControllerAdmin extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $data = menu::findorfail($id);
+
+        return view('admin.menus.edit', ['data' => $data]);
     }
 
     /**
@@ -55,7 +57,19 @@ class MenuControllerAdmin extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validate = $request->validate([
+            'naam' => "max:100",
+            'beschrijving' => 'max:255',
+            'prijs' => "integer|min:1|max:1000"
+        ]);
+
+        $data = menu::findorfail($id);
+        $data->name = $request->input('name');
+        $data->description = $request->input('description');
+        $data->price = $request->input('price');
+        $data->save();
+
+        return redirect("admin/menus")->with("status", 'Menu rij is aangepast');
     }
 
     /**

@@ -14,6 +14,8 @@ use App\Http\Controllers\RservationoverzichtController;
 use App\Http\Controllers\ReserveringklantController;
 use App\Http\Controllers\ReserveringmakenController;
 use App\Http\Controllers\WelcomeController;
+use Illuminate\Routing\RouteRegistrar;
+
 /*s
 |--------------------------------------------------------------------------
 | Web Routes
@@ -58,12 +60,19 @@ Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(fun
     Route::get('/', [AdminController::class, 'index'])->name('index');
     Route::resource('/categories', CategoryController::class);
     Route::resource('/menus', MenuControllerAdmin::class);
+    Route::get(('/menus/{id}/edit'), [MenuControllerAdmin::class, 'edit']);
+    Route::put('/menus/{id}', [MenuControllerAdmin::class, 'update']);
+
     Route::resource('/reservation', ReservationControllerAdmin::class);
     Route::resource('/tables', TableController::class);
 });
 
 require __DIR__ . '/auth.php';
 
-Route::get('/',[WelcomeController::class,'index']);
-Route::get('/menu',[MenuController::class,'show']);
+Route::get('/reserveren', function () {
+    return view('reserveren');
+});
+Route::get('/menu', [MenuController::class, 'show']);
+Route::get('/', [WelcomeController::class, 'index']);
+
 require __DIR__ . '/auth.php';
