@@ -25,21 +25,28 @@ body {
     margin: 0 10px;
     display: inline-block;
     background-color: #F2F2F2;
-    box-shadow: 0 0 10px rgba(4, 191, 157, 0.2);
+    box-shadow: 0 0 10px rgba(4, 191, 157, 0.3);
     border-radius: 10px;
+    border: 2px solid #04BF9D;
     font-size: large;
     cursor: pointer;
-
+    transition: all 0.3s ease 0s;
   }
 
   nav a:hover {
-    background-color: #a6633c7d;
-    color: #40261d;
+    background-color: #40261d ;
+    color:#04BF9D;
+    border-radius: 50px;
+    border-color: #04BF9D ;
+    transition: all 0.3s ease 0s;
   }
 
   nav a.active {
-    background-color: #a6633c7d;
-    color: #40261d;
+    background-color: #40261d ;
+    color:#04BF9D;
+    border-radius: 50px;
+    border-color: #04BF9D ;
+    transition: all 0.3s ease 0s;
   }
 
 
@@ -54,12 +61,26 @@ body {
   .menu-container {
     display: none;
     animation: fade-in 0.5s ease-in-out;
-    border-radius: 100px;
-    box-shadow: 0 0 10px rgba(4, 191, 157, 0.9);
     width: 90%;
     margin-left: 5rem;
-    background-color:#a6633c7d;
+
   }
+
+  .bg {
+    position: absolute;
+    top: 250px;
+    left: -190px;
+    width: 90%;
+    height: 75rem;
+    background-image: url(/images/bg.menu.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 100px; /* Adjust the border radius as needed */
+    z-index: -1;
+    margin: 17rem;
+    opacity: 0.4;
+}
+
 
   .menu-container.active {
     display: block;

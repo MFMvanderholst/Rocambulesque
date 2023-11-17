@@ -12,6 +12,10 @@
 
 @include('navbar')
 
+</div>
+  <div class="bg">
+  </div>
+
 
 <div class="menu">
 
