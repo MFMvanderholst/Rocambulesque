@@ -10,8 +10,6 @@
 
 <body class="rpoverzicht">
     <div class="homepage">
-
-
         <header>
             @include('navbar')
         </header>

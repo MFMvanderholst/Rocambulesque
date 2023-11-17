@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
 
         $this->call(Admin::class);
         $this->call(Medewerker::class);
+        $this->call(MenuSeeder::class);
     }
 }
