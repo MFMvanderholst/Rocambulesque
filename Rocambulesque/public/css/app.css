@@ -111,3 +111,24 @@ th {
     background-color: #fff;
     color: #333;
 }
+
+@media only screen and (max-width: 768px) {
+    .background-image {
+        width: 100%; /* Full width on smaller screens */
+        margin-left: 0; /* No margin on smaller screens */
+    }
+
+    .photo-column {
+        align-items: center; /* Center align items on smaller screens */
+    }
+
+    .photo2 img {
+        margin-left: 0; /* No margin on smaller screens */
+    }
+
+    .content1,
+    .content2 {
+        width: 100%; /* Full width on smaller screens */
+        left: 0; /* Left align on smaller screens */
+    }
+}
