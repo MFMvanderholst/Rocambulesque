@@ -13,6 +13,10 @@
     <header>
         @include('navbar')
     </header>
+
+    </div>
+        <div class="bg">
+    </div>
     <div class="form-container">
 
         @if ($errors->any())

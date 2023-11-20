@@ -30,4 +30,14 @@ class AccountOverviewController extends Controller
     {
         return view('account_overview');
     }
+
+    public function store()
+    {
+        return view('account_overview');
+    }
+
+    public function edit()
+    {
+        return view('account_overview');
+    }
 }
