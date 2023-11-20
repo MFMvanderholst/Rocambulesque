@@ -37,30 +37,48 @@ label {
     border-top: 1px solid #40261d;
     padding-top: 20px;
 }
-.buttons {
+
+.buttons{
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-button.edit {
-    background-color: #D99F6C;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
+a.edit {
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #F2F2F2;
+    border: 2px solid #04BF9D;
+    color: #40261d;
+    box-shadow: 0 0 10px rgba(4, 191, 157, 0.3);
+    transition: all 0.3s ease 0s;
 }
-button.delete {
-    background-color: #690a05;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    
+
+a.delete {
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #F2F2F2;
+    border: 2px solid #04BF9D;
+    color: #40261d;
+    box-shadow: 0 0 10px rgba(4, 191, 157, 0.3);
+    transition: all 0.3s ease 0s;
+}
+
+a.edit:hover {
+    background-color: rgb(134, 85, 0) ;
+    color:#04BF9D;
+    border-radius: 50px;
+    border-color: #04BF9D ;
+    transition: all 0.3s ease 0s;
+}
+a.delete:hover {
+    background-color: rgb(134, 20, 0) ;
+    color:#04BF9D;
+    border-radius: 50px;
+    border-color: #04BF9D ;
+    transition: all 0.3s ease 0s;
 }
 
 .footer {

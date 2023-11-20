@@ -50,8 +50,8 @@
         </div>
 
         <div class="buttons">
-            <button class="edit">Wijzig</button>
-            <button class="delete">Verwijderen</button>
+            <a href="#" class="edit">Wijzig</a>
+            <a href="#" class="delete">Verwijderen</a>
         </div>
     </div>
 
