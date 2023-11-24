@@ -97,11 +97,21 @@ class ReservationController extends Controller
         return redirect('/reservation')->with('status', 'Data is bijgewerkt');
     }
 
-    public function destroy($id)
-    {
-        $reservation = ReservationModel::findOrFail($id);
-        $reservation->delete();
+    // public function destroy($id)
+    // {
+    //     $reservation = ReservationModel::findOrFail($id);
+    //     $reservation->delete();
 
-        return redirect('/reservation')->with('status', 'Data is verwijderd');
+    //     return redirect('/reservation')->with('status', 'Data is verwijderd');
+    // }
+
+    public function destroy(string $id)
+    {
+        $reservation = ReservationModel::destroy($id);
+        if ($reservation) {
+            return redirect('/reservation')->with("status", "De Rij is verwijderd");
+        } else {
+            return redirect('admin/menus')->with("status", "De Rij is niet verwijderd");
+        }
     }
 }

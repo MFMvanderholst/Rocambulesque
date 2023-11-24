@@ -1,12 +1,33 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url(../images/bg.jpg);
+    background: rgb(188, 188, 188);
     margin: 0;
     padding: 0;
     text-align: center;
 }
+
+.bg {
+    position: absolute;
+    top: 30px;
+    left: -190px;
+    width: 90%;
+    height: 100%;
+    background-image: url(/images/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 100px; /* Adjust the border radius as needed */
+    z-index: -1;
+    margin: 17rem;
+    opacity: 0.4;
+}
+
 h1 {
     color: #40261d;
+}
+h3 {
+    margin: 30px 30px;
+    padding: 20px;
+    border-radius: 10px;    
 }
 
 .form-container {
