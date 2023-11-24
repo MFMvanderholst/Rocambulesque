@@ -1,0 +1,149 @@
+@import url('fonts.css');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(188, 188, 188);
+}
+
+.bg{
+        position: absolute;
+        top: 100px;
+        left: -190px;
+        width: 90%;
+        height: 130rem;
+        background-image: url(/images/hp.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 100px; /* Adjust the border radius as needed */
+        z-index: -1;
+        margin: 17rem;
+        opacity: 0.4;
+    
+}
+
+.background-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 20px ;
+    border-radius: 100px;
+
+}
+
+h1 {
+    font-family: 'goodbrush';
+    font-size: 40px;
+}
+
+h2 {
+    font-family: 'roboto';
+}
+
+.photo-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 80px;
+    position: relative;
+}
+
+
+.photo1 img,
+.photo2 img,
+.photo3 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    align-self: flex-start;
+    margin: 0 0 -2px 0;
+}
+
+.photo2 img {
+    margin-left: 38em;
+
+}
+
+.photo3 {
+    align-self: flex-start;
+    margin-bottom: 5em;
+}
+
+.content1,
+.content2 {
+    text-align: center;
+    position: absolute;
+    width: 40%;
+    font-weight: bold;
+}
+
+.content1 {
+    top: 8em;
+    left:48em;
+}
+
+.content2 {
+    bottom: 60em;
+
+}
+
+.rpoverzicht {
+    background-color: #04BF9D;
+}
+
+.main-content {
+    padding: 3%;
+    text-align: center;
+}
+
+
+.main-content h1 {
+    font-size: 24px;
+    color: #fff; 
+}
+
+
+.main-content p {
+    font-size: 18px;
+    color: #666; 
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+
+}
+
+th {
+    background-color: #fff;
+    color: #333;
+}
+
+@media only screen and (max-width: 768px) {
+    .background-image {
+        width: 100%; /* Full width on smaller screens */
+        margin-left: 0; /* No margin on smaller screens */
+    }
+
+    .photo-column {
+        align-items: center; /* Center align items on smaller screens */
+    }
+
+    .photo2 img {
+        margin-left: 0; /* No margin on smaller screens */
+    }
+
+    .content1,
+    .content2 {
+        width: 100%; /* Full width on smaller screens */
+        left: 0; /* Left align on smaller screens */
+    }
+}

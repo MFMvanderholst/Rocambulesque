@@ -1,5 +1,6 @@
+@import url('fonts.css');
+
 body {
-    font-family: Arial, sans-serif;
     background: rgb(188, 188, 188);
     margin: 0;
     padding: 0;
@@ -23,11 +24,13 @@ body {
 
 h1 {
     color: #40261d;
+    font-family: 'goodbrush';
 }
 h3 {
     margin: 30px 30px;
     padding: 20px;
-    border-radius: 10px;    
+    border-radius: 10px;   
+    font-family: 'roboto'; 
 }
 
 .form-container {
@@ -52,7 +55,14 @@ label {
     font-weight: bold;
     margin-bottom: 8px;
     color: #40261d;
+    font-family: 'roboto'; 
     font-size: larger;
+}
+
+h2{
+    font-family: 'roboto'; 
+    color: #40261d;
+
 }
 
 p{
@@ -67,10 +77,12 @@ select, input[type="number"], input[type="date"], input[type="time"], textarea {
     border: 1px solid #04BF9D;
     border-radius: 4px;
     font-size: 16px;
+    font-family: 'roboto';
 }
 
 textarea {
     height: 100px;
+    font-family: 'roboto';
 }
 
 input[type="submit"] {
@@ -92,6 +104,8 @@ button {
     border-radius: 10px;
     padding: 20px;
     cursor: pointer;
+    font-family: 'roboto'; 
+    font-size: larger;
 }
 
 button:hover {
