@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="{{ asset('css/app.css')}}">
     <title>Rservation Overzicht Page</title>
 </head>
 
@@ -34,16 +34,19 @@
                     </thead>
                     <tbody>
                         <tr>
-                            @foreach ($data1 as $users)
+                            <!-- @foreach ($data1 as $users)
                             <td>{{ $users->name }}</td>
-                            @endforeach
+                            @endforeach -->
+                            <td>Naam</td>
                             @foreach ($data2 as $reservations)
                             <td>{{ $reservations->date }} {{ $reservations->timeHour }}:{{ $reservations->timeMinutes }}</td>
                             @endforeach
-                            @foreach ($data1 as $users)
+                            <!-- @foreach ($data1 as $users)
                             <td>{{ $users->phone }}</td>
                             <td>{{ $users->email }}</td>
-                            @endforeach
+                            @endforeach -->
+                            <td>mobiel</td>
+                            <td>email</td>
                             @foreach ($data2 as $reservations)
                             <td>{{ $reservations->remark }}</td>
                             <td><a href="/reservation/{{ $reservations->id }}/edit">Wijzig</a></td>
