@@ -71,6 +71,6 @@ Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(fun
 
 require __DIR__ . '/auth.php';
 
-Route::get('/',[WelcomeController::class,'index']);
-Route::get('/menu',[MenuController::class,'index']);
+Route::get('/',[WelcomeController::class,'show']);
+Route::get('/menu',[MenuController::class,'show']);
 require __DIR__ . '/auth.php';
