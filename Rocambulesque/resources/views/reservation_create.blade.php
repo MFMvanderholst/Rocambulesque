@@ -19,13 +19,6 @@
     </div>
     <div class="form-container">
 
-        @if ($errors->any())
-            <ul>
-            @foreach($errors->all() as $error)
-                <li>'{{ $error }}</li>
-            @endforeach
-            </ul>
-        @endif
         <form method="post" action="/reservations">
             @csrf
             <h1>Reservatie formulier</h1>
@@ -35,24 +28,24 @@
                 <option value="Lunch">Lunch</option>
             </select>
             @error('mealType')
-                <p>{{ $message }}</p>
+                <p class="error">{{ $message }}</p>
             @enderror
 
             <label for="adults">Aantal volwassenen (+12):</label>
             <input type="number" min="1" max="4" name="adults">
             @error('adults')
-                <p>{{ $message }}</p>
+                <p class="error">{{ $message }}</p>
             @enderror
             <label for="children">Aantal kinderen:</label>
             <input type="number" min="0" max="2" name="children">
             @error('children')
-                <p>{{ $message }}</p>
+                <p class="error">{{ $message }}</p>
             @enderror
 
             <label for="date">Kies uw datum:</label>
             <input type="date" name="date" >
             @error('date')
-                <p>{{ $message }}</p>
+                <p class="error">{{ $message }}</p>
             @enderror
 
             <label for="time">Kies uw tijd:</label>
@@ -71,13 +64,13 @@
                 <option value="45">45</option>
             </select>
             @error('timeHour', 'timeMinutes')
-                <p>{{ $message }}</p>
+                <p class="error">{{ $message }}</p>
             @enderror
 
             <label for="remark">EV. opmerkingen:</label>
             <textarea name="remark" rows="4" placeholder="Kinderstoelen, allergieën etc..." cols="50"></textarea>
             @error('remark')
-                <p>{{ $message }}</p>
+                <p class="error">{{ $message }}</p>
             @enderror
 
             <button type="submit">Plaats Reservering</button>
