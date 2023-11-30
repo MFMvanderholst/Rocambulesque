@@ -1,13 +1,35 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Menu;
 
 use Illuminate\Http\Request;
 
 class MenuController extends Controller
 {
-    public function show() {
+    public function show()
+    {
+        $data = Menu::all();
+        return view('menu', ['data' => $data]);
+    }
 
-        return view('menu');
+    public function create() {
+        //
+    }
+
+    public function store() {
+        //
+    }
+
+    public function edit() {
+        //
+    }
+
+    public function update() {
+        //
+    }
+
+    public function destroy() {
+        //
     }
 }

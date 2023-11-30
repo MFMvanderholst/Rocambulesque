@@ -70,6 +70,10 @@ p{
     font-size: larger;
 }
 
+.error {
+    color: red;
+}
+
 select, input[type="number"], input[type="date"], input[type="time"], textarea {
     width: 100%;
     padding: 8px;
@@ -115,3 +119,4 @@ button:hover {
     border-color: #04BF9D;
     transition: all 0.3s ease 0s;
 }
+
