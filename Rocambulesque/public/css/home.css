@@ -6,20 +6,21 @@ body {
     background: rgb(188, 188, 188);
 }
 
-.bg{
-        position: absolute;
-        top: 100px;
-        left: -190px;
-        width: 90%;
-        height: 130rem;
-        background-image: url(/images/hp.jpg);
-        background-size: cover;
-        background-position: center;
-        border-radius: 100px; /* Adjust the border radius as needed */
-        z-index: -1;
-        margin: 17rem;
-        opacity: 0.4;
-    
+.bg {
+    position: absolute;
+    top: 100px;
+    left: -190px;
+    width: 90%;
+    height: 130rem;
+    background-image: url(/images/hp.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 100px;
+    /* Adjust the border radius as needed */
+    z-index: -1;
+    margin: 17rem;
+    opacity: 0.4;
+
 }
 
 .background-image {
@@ -27,10 +28,11 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 100px;
-    margin-left: 20px ;
+    margin-left: 5%;
     border-radius: 100px;
 
 }
+
 
 h1 {
     font-family: 'goodbrush';
@@ -81,7 +83,8 @@ h2 {
 
 .content1 {
     top: 8em;
-    left:48em;
+    left: 48em;
+
 }
 
 .content2 {
@@ -101,21 +104,23 @@ h2 {
 
 .main-content h1 {
     font-size: 24px;
-    color: #fff; 
+    color: #fff;
 }
 
 
 .main-content p {
     font-size: 18px;
-    color: #666; 
+    color: #666;
 }
+
 table {
     border-collapse: collapse;
     width: 100%;
     background-color: white;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
@@ -129,21 +134,27 @@ th {
 
 @media only screen and (max-width: 768px) {
     .background-image {
-        width: 100%; /* Full width on smaller screens */
-        margin-left: 0; /* No margin on smaller screens */
+        width: 100%;
+        /* Full width on smaller screens */
+        margin-left: 0;
+        /* No margin on smaller screens */
     }
 
     .photo-column {
-        align-items: center; /* Center align items on smaller screens */
+        align-items: center;
+        /* Center align items on smaller screens */
     }
 
     .photo2 img {
-        margin-left: 0; /* No margin on smaller screens */
+        margin-left: 0;
+        /* No margin on smaller screens */
     }
 
     .content1,
     .content2 {
-        width: 100%; /* Full width on smaller screens */
-        left: 0; /* Left align on smaller screens */
+        width: 100%;
+        /* Full width on smaller screens */
+        left: 0;
+        /* Left align on smaller screens */
     }
 }
