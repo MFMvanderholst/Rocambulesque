@@ -1,0 +1,30 @@
+header {
+    display: flex;
+    align-items: center;
+    top: -4em;
+    position: absolute;
+    margin: -12% 0em;
+    width: 60em;
+    padding: 0em 4em;
+    .logo {
+        width: 30%;
+        height: 30%;
+        position: relative;
+        left: 2%;
+    }
+    button {
+        font-size: 20px;
+        width: 13%;
+        height: 6%;
+        border-radius: 10px;
+        border: 1px solid #D99F6C;
+        position: relative;
+        left: 75%;
+    }
+    svg {
+        width: 8%;
+        height: 8%;
+        position: relative;
+        left: 85%;
+    }
+}

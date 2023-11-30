@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="css/menu.css">
     <title>Menu page</title>
 </head>
-
+<header>
+    @include('navbar')
+</header>
 <body>
 
-@include('navbar')
 
 </div>
   <div class="bg">

@@ -13,7 +13,7 @@
 <div class="bg"></div>
 
         <header>
-            @include('navbar')
+        @include('navbar')
         </header>
 
 
