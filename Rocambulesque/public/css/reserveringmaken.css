@@ -1,12 +1,36 @@
+@import url('fonts.css');
+
 body {
-    font-family: Arial, sans-serif;
-    background-image: url(../images/bg.jpg);
+    background: rgb(188, 188, 188);
     margin: 0;
     padding: 0;
     text-align: center;
 }
+
+.bg {
+    position: absolute;
+    top: 30px;
+    left: -190px;
+    width: 90%;
+    height: 100%;
+    background-image: url(/images/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 100px; /* Adjust the border radius as needed */
+    z-index: -1;
+    margin: 17rem;
+    opacity: 0.4;
+}
+
 h1 {
     color: #40261d;
+    font-family: 'goodbrush';
+}
+h3 {
+    margin: 30px 30px;
+    padding: 20px;
+    border-radius: 10px;   
+    font-family: 'roboto'; 
 }
 
 .form-container {
@@ -31,7 +55,14 @@ label {
     font-weight: bold;
     margin-bottom: 8px;
     color: #40261d;
+    font-family: 'roboto'; 
     font-size: larger;
+}
+
+h2{
+    font-family: 'roboto'; 
+    color: #40261d;
+
 }
 
 p{
@@ -46,10 +77,12 @@ select, input[type="number"], input[type="date"], input[type="time"], textarea {
     border: 1px solid #04BF9D;
     border-radius: 4px;
     font-size: 16px;
+    font-family: 'roboto';
 }
 
 textarea {
     height: 100px;
+    font-family: 'roboto';
 }
 
 input[type="submit"] {
@@ -71,6 +104,8 @@ button {
     border-radius: 10px;
     padding: 20px;
     cursor: pointer;
+    font-family: 'roboto'; 
+    font-size: larger;
 }
 
 button:hover {

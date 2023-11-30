@@ -4,42 +4,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/menu.css">
     <title>Menu page</title>
 </head>
 
 <body>
-    <div class="homepage">
+
+@include('navbar')
+
+</div>
+  <div class="bg">
+  </div>
 
 
-        <header>
-            <div class="logo">
-                <img src="images/restaurant-logo.png" alt="Restaurant Logo">
-            </div>
-            <div class="buttons">
-                <button class="logInBtn" onclick="location.href='loginPage'">Log In
-                </button>
-                <button class="svg-button">
-                    <svg viewBox="0 0 68 63" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g filter="url(#filter0_d_4_9)">
-                            <path d="M34 27.4141C29.875 27.4141 26.3438 26.0988 23.4062 23.4683C20.4688 20.8377 19 17.6754 19 13.9814C19 10.2875 20.4688 7.12519 23.4062 4.49462C26.3438 1.86405 29.875 0.548767 34 0.548767C38.125 0.548767 41.6563 1.86405 44.5938 4.49462C47.5313 7.12519 49 10.2875 49 13.9814C49 17.6754 47.5313 20.8377 44.5938 23.4683C41.6563 26.0988 38.125 27.4141 34 27.4141ZM4 54.2795V44.8766C4 42.9737 4.54688 41.2246 5.64063 39.6295C6.73438 38.0343 8.1875 36.817 10 35.9775C13.875 34.2424 17.8125 32.9411 21.8125 32.0736C25.8125 31.2061 29.875 30.7723 34 30.7723C38.125 30.7723 42.1875 31.2061 46.1875 32.0736C50.1875 32.9411 54.125 34.2424 58 35.9775C59.8125 36.817 61.2656 38.0343 62.3594 39.6295C63.4531 41.2246 64 42.9737 64 44.8766V54.2795H4ZM11.5 47.5632H56.5V44.8766C56.5 44.261 56.3281 43.7013 55.9844 43.1975C55.6406 42.6938 55.1875 42.302 54.625 42.0222C51.25 40.511 47.8438 39.3776 44.4062 38.622C40.9688 37.8664 37.5 37.4886 34 37.4886C30.5 37.4886 27.0313 37.8664 23.5938 38.622C20.1563 39.3776 16.75 40.511 13.375 42.0222C12.8125 42.302 12.3594 42.6938 12.0156 43.1975C11.6719 43.7013 11.5 44.261 11.5 44.8766V47.5632ZM34 20.6978C36.0625 20.6978 37.8281 20.0401 39.2969 18.7249C40.7656 17.4096 41.5 15.8284 41.5 13.9814C41.5 12.1345 40.7656 10.5533 39.2969 9.23803C37.8281 7.92275 36.0625 7.26511 34 7.26511C31.9375 7.26511 30.1719 7.92275 28.7031 9.23803C27.2344 10.5533 26.5 12.1345 26.5 13.9814C26.5 15.8284 27.2344 17.4096 28.7031 18.7249C30.1719 20.0401 31.9375 20.6978 34 20.6978Z" fill="#04BF9D" />
-                        </g>
-                        <defs>
-                            <filter id="filter0_d_4_9" x="0" y="0.548767" width="68" height="61.7307" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                <feOffset dy="4" />
-                                <feGaussianBlur stdDeviation="2" />
-                                <feComposite in2="hardAlpha" operator="out" />
-                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4_9" />
-                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4_9" result="shape" />
-                            </filter>
-                        </defs>
-                    </svg>
-                </button>
-            </div>
-        </header>
+<div class="menu">
+
+<h1>Restaurant Menu</h1>
+
+  <nav>
+    <a onclick="showMenu('pre')">Voorgerechten</a>
+    <a onclick="showMenu('main')">Hoofdgerechten</a>
+    <a onclick="showMenu('drinks')">Drankjes</a>
+    <a onclick="showMenu('desserts')">Nagerechten</a>
+  </nav>
+
+  <section>
+  <div id="pre-menu" class="menu-container active">
+      <h2>Voorgerechten</h2>
+      <div class="menu-category">
+        <div class="menu-item">
+          <img src="images/pre1.jpg">
+          <h3>Coquilles</h3>
+          <p>Sappige coquilles met een vleugje citrus en verse kruiden. Oceanische uitmuntendheid.</p>
+          <p>€11.00</p>
+          <img class="marks" src="images/veg.png">
+        </div>
+        <div class="menu-item">
+          <img src="images/pre2.jpg">
+          <h3>Escargots</h3>
+          <p>Geniet van Franse luxe met onze Escargots: dikke slakken in knoflook-peterselieboter. Een symfonie van smaken in elke hap.</p>
+          <p>€10.00</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/pre3.jpg">
+          <h3>Steak Tartare</h3>
+          <p>Eersteklas rauw rundvlees, kappertjes, uien en pittige mosterddressing. Een culinair genot voor uw zintuigen.</p>
+          <p>€13.00</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/pre4.avif">
+          <h3>Waterzooi</h3>
+          <p>Romige kip- of visstoofpot met groenten in een fluweelzachte bouillon.</p>
+          <p>€13.00</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/pre5.webp">
+          <h3>Moules Frites</h3>
+          <p>Mollige mosselen, aromatische bouillon en knapperige frietjes.</p>
+          <p>€14.00</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/pre6.jpg">
+          <h3>Franse uiensoep</h3>
+          <p>Gekarameliseerde uien, rijke runderbouillon, gesmolten Gruyère en geroosterd stokbrood.</p>
+          <p>€12.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="main-menu" class="menu-container">
+      <h2>Hoofdgerechten</h2>
+      <div class="menu-category">
+        <div class="menu-item">
+          <img src="images/main1.png">
+          <h3>Ratatouille</h3>
+          <p>Courgette, aubergine en paprika langzaam gegaard met kruiden en tomaten. Besprenkeld met olijfolie.</p>
+          <p>€19.00</p>
+          <img class="marks" src="images/veg.png">
+        </div>
+        <div class="menu-item">
+          <img src="images/main2.jpg">
+          <h3>Tonijn met groenten</h3>
+          <p>Schilferige tonijn ontmoet knapperige groenten voor een gezond genot.</p>
+          <p>€15.00</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/main3.jpg">
+          <h3>Coq au Vin</h3>
+          <p>Sappige kip in rode wijn met champignons en uien.</p>
+          <p>€16.00</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/main4.jpg">
+          <h3>Kip à la Normande</h3>
+          <p>Malse kip in een op Normandië geïnspireerde saus met appels, room en een vleugje Calvados.</p>
+          <p>€16.00</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/main5.jpg">
+          <h3>Quiche Lorraine</h3>
+          <p>Boterachtige korst gevuld met spek, room en eieren. Een Franse klassieker.</p>
+          <p>€14.00</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/main6.jpg">
+          <h3>Boeuf Bourguignon</h3>
+          <p>Mals rundvlees in rode wijnsaus met champignons en uien.</p>
+          <p>€15.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="drinks-menu" class="menu-container">
+      <h2>Drankjes</h2>
+      <div class="menu-category">
+        <div class="menu-item">
+          <img src="images/drink1.jpg">
+          <h3>Red Wine</h3>
+          <p>Een symfonie van gedurfde bessen en subtiele kruiden. Proost op een heerlijke eetervaring.</p>
+          <p>€5.00</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/drink2.webp">
+          <h3>Muscat Wine</h3>
+          <p>Muscatwijn met bloemige aroma's en fruitige gelukzaligheid. Proost op verwennerij.</p>
+          <p>€5.00</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/drink3.jpg">
+          <h3>Vice Cocktail</h3>
+          <p>Verleiding in drie smaken: tropische passievrucht, citrus-sinaasappel en verfrissende aardbei.</p>
+          <p>€4.00</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/drink4.jpg">
+          <h3>Frozen Mudslide</h3>
+          <p>Kies uit drie verleidelijke smaken: rijke chocolade, tropische kokosnoot of romige banaan.</p>
+          <p>€6.00</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/drink5.webp">
+          <h3>Soda</h3>
+          <p>Verfris met de klassieke bruis van Coca-Cola, de pittige kick van Sprite of het fruitige plezier van Fanta. Jouw keuze, jouw verfrissing.</p>
+          <p>€3.00</p>
+        </div>
+        <div class="menu-item">
+        <img src="images/drink6.webp">
+          <h3>Water 500ml</h3>
+          <p>Perfecte keuze voor een schone en hydraterende ervaring.</p>
+          <p>€2.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="desserts-menu" class="menu-container">
+      <h2>Nagerechten</h2>
+      <div class="menu-category">
+        <div class="menu-item">
+          <img src="images/dessert1.jpg">
+          <h3>Jésuite</h3>
+          <p>Amandelcrème en frambozenjam in bladerdeeg. Gewoon hemels.</p>
+          <p>€9.00</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/dessert2.jpg">
+          <h3>Île Flottante</h3>
+          <p>Met vanille gekuste meringuewolk op een custardzee: een tijdloos Frans genot.</p>
+          <p>€9.00</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/dessert3.jpg">
+          <h3>Nonnettes</h3>
+          <p>Zachte koeken gevuld met sinaasappelmarmelade.</p>
+          <p>€10.00</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/dessert4.jpg">
+          <h3>Kougloff</h3>
+          <p>Luchtige cake met amandelen en citrus, gewoonweg heerlijk</p>
+          <p>€14.00</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/dessert5.jpg">
+          <h3>Financier</h3>
+          <p>Rijke amandelcake, goudbruin en boterachtig.</p>
+          <p>€8.00</p>
+        </div>
+        <div class="menu-item">
+          <img src="images/dessert6.jpg">
+          <h3>Tarte Citron</h3>
+          <p>Pittige citroenwrongel in een knapperige boterkorst. Puur zonneschijn.</p>
+          <p>€12.00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+@include('footer')
+
+  <script>
+    function showMenu(category) {
+      // Hide all menu containers
+      var menuContainers = document.querySelectorAll('.menu-container');
+      menuContainers.forEach(function(container) {
+        container.classList.remove('active');
+      });
+
+      // Remove 'active' class from all navigation links
+      var navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach(function(link) {
+        link.classList.remove('active');
+      });
+
+      // Show the selected menu container
+      var selectedMenu = document.getElementById(category + '-menu');
+      selectedMenu.classList.add('active');
+
+      // Add 'active' class to the clicked navigation link
+      var clickedLink = document.querySelector('nav a[onclick*="' + category + '"]');
+      clickedLink.classList.add('active');
+    }
+  </script>
 
 </body>
 

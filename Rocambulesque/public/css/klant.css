@@ -1,20 +1,27 @@
+
 body {
-    font-family: 'Goodbrush';
-    background-image: url(../images/bg1.jpg);
+    font-family: Arial, sans-serif;
+    background: rgb(188, 188, 188);
     margin: 0;
     padding: 0;
     text-align: center;
 }
+
+p{
+    font-size: large;
+}
+
 h1 {
     color: #40261d;
 }
+
 .container {
-    background-color: rgba(255, 255, 255, 0.50);
+    background-color:#F2F2F2;
+    box-shadow: 0 0 10px rgba(4, 191, 157, 0.9);
     max-width: 900px;
     margin: 20px auto;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(4, 191, 157, 0.3);
     margin-top: 5rem;
 
 }
@@ -23,35 +30,72 @@ label {
 }
 .customer-info {
     margin-bottom: 3rem;
-    border-top: 1px solid #04BF9D;
+    border-top: 1px solid #40261d;
     padding-top: 20px;
 }
 .reservation-info {
-    border-top: 1px solid #04BF9D;
+    border-top: 1px solid #40261d;
     padding-top: 20px;
 }
-.buttons {
+
+.buttons{
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-button.edit {
-    background-color: #D99F6C;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
+a.edit {
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #F2F2F2;
+    border: 2px solid #04BF9D;
+    color: #40261d;
+    box-shadow: 0 0 10px rgba(4, 191, 157, 0.3);
+    transition: all 0.3s ease 0s;
 }
-button.delete {
-    background-color: #690a05;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
 
+a.delete {
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #F2F2F2;
+    border: 2px solid #04BF9D;
+    color: #40261d;
+    box-shadow: 0 0 10px rgba(4, 191, 157, 0.3);
+    transition: all 0.3s ease 0s;
+}
+
+a.edit:hover {
+    background-color: rgb(134, 85, 0) ;
+    color:#04BF9D;
+    border-radius: 50px;
+    border-color: #04BF9D ;
+    transition: all 0.3s ease 0s;
+}
+a.delete:hover {
+    background-color: rgb(134, 20, 0) ;
+    color:#04BF9D;
+    border-radius: 50px;
+    border-color: #04BF9D ;
+    transition: all 0.3s ease 0s;
+}
+
+.footer {
+    display: flex;
+    background-color: #F2F2F2;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(4, 191, 157, 0.3);
+    margin-left: 7rem;
+    margin-right: 7rem;
+    margin-top: 8rem;
+    margin-bottom: 3rem;
+    border-radius: 100px;
+    justify-content: space-around;
+}
+
+h3 {
+    margin: 30px 30px;
+    padding: 20px;
+    border-radius: 10px;    
 }

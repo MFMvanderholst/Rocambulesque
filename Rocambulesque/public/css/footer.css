@@ -1,12 +1,19 @@
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/roboto/RobotoSlab-VariableFont_wght.ttf') format('ttf'),
+  }
+  
 .footer {
     display: flex;
     background-color: #F2F2F2;
     padding: 10px;
-    box-shadow: 0 0 10px rgba(4, 191, 157, 0.3);
+    box-shadow: 0 0 10px rgba(4, 191, 157, 0.9);
     margin-left: 7rem;
     margin-right: 7rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    border-radius: 100px;
+    border-radius: 8px;
     justify-content: space-around;
+    text-align: center;
+    font-family: 'roboto';
 }
