@@ -25,7 +25,7 @@
     <a onclick="showMenu('pre')">Voorgerechten</a>
     <a onclick="showMenu('main')">Hoofdgerechten</a>
     <a onclick="showMenu('drinks')">Drankjes</a>
-    <a onclick="showMenu('desserts')">Desserts</a>
+    <a onclick="showMenu('desserts')">Nagerechten</a>
   </nav>
 
   <section>
@@ -158,7 +158,7 @@
     </div>
 
     <div id="desserts-menu" class="menu-container">
-      <h2>Desserts</h2>
+      <h2>Nagerechten</h2>
       <div class="menu-category">
         <div class="menu-item">
           <img src="images/dessert1.jpg">
