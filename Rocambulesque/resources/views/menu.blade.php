@@ -30,49 +30,20 @@
   </nav>
 
   <section>
+  
   <div id="pre-menu" class="menu-container active">
       <h2>Voorgerechten</h2>
       <div class="menu-category">
+        @foreach ($data as $item)
         <div class="menu-item">
-          <img src="images/pre1.jpg">
-          <h3>Coquilles</h3>
-          <p>Sappige coquilles met een vleugje citrus en verse kruiden. Oceanische uitmuntendheid.</p>
-          <p>€11.00</p>
-          <img class="marks" src="images/veg.png">
+          <img src="{{$item->image}}">
+          <h3> {{$item->name}}</h3>
+          <p>{{$item->description}}</p>
+          <p>Є{{$item->price}}</p>
         </div>
-        <div class="menu-item">
-          <img src="images/pre2.jpg">
-          <h3>Escargots</h3>
-          <p>Geniet van Franse luxe met onze Escargots: dikke slakken in knoflook-peterselieboter. Een symfonie van smaken in elke hap.</p>
-          <p>€10.00</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/pre3.jpg">
-          <h3>Steak Tartare</h3>
-          <p>Eersteklas rauw rundvlees, kappertjes, uien en pittige mosterddressing. Een culinair genot voor uw zintuigen.</p>
-          <p>€13.00</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/pre4.avif">
-          <h3>Waterzooi</h3>
-          <p>Romige kip- of visstoofpot met groenten in een fluweelzachte bouillon.</p>
-          <p>€13.00</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/pre5.webp">
-          <h3>Moules Frites</h3>
-          <p>Mollige mosselen, aromatische bouillon en knapperige frietjes.</p>
-          <p>€14.00</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/pre6.jpg">
-          <h3>Franse uiensoep</h3>
-          <p>Gekarameliseerde uien, rijke runderbouillon, gesmolten Gruyère en geroosterd stokbrood.</p>
-          <p>€12.00</p>
-        </div>
+        @endforeach
       </div>
     </div>
-
     <div id="main-menu" class="menu-container">
       <h2>Hoofdgerechten</h2>
       <div class="menu-category">

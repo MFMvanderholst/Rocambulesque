@@ -16,73 +16,45 @@ class MenuSeeder extends Seeder
         Menu::insert([
             [
                 'id' => 1,
-                'name' => 'Pizza Margherita',
-                'description' => 'Tomatensaus, kaas',
-                'image' => 'https://www.dominos.nl/ManagedAssets/FRANCHISE/_img/products/PIZZA/PIZZA_MARGHERITA.png',
-                'price' => '7.99'
+                'name' => 'Coquilles',
+                'description' => 'Sappige coquilles met een vleugje citrus en verse kruiden. Oceanische uitmuntendheid',
+                'image' => 'images/pre1.jpg',
+                'price' => '11'
             ],
             [
                 'id' => 2,
-                'name' => 'Pizza Pepperoni',
-                'description' => 'Tomatensaus, kaas, pepperoni',
-                'image' => 'https://www.dominos.nl/ManagedAssets/FRANCHISE/_img/products/PIZZA/PIZZA_PEPPERONI.png',
-                'price' => '8.99'
+                'name' => 'Escargots',
+                'description' => 'Geniet van Franse luxe met onze Escargots: dikke slakken in knoflook-peterselieboter. Een symfonie van smaken in elke hap.',
+                'image' => 'images/pre2.jpg',
+                'price' => '10'
             ],
             [
                 'id' => 3,
-                'name' => 'Pizza BBQ Chicken',
-                'description' => 'Tomatensaus, kaas, kip, ui, paprika, mais, BBQ saus',
-                'image' => 'https://www.dominos.nl/ManagedAssets/FRANCHISE/_img/products/PIZZA/PIZZA_BBQ_CHICKEN.png',
-                'price' => '9.99'
+                'name' => 'Steak Tartare',
+                'description' => 'Eersteklas rauw rundvlees, kappertjes, uien en pittige mosterddressing. Een culinair genot voor uw zintuigen.',
+                'image' => 'images/pre3.jpg',
+                'price' => '13'
             ],
             [
                 'id' => 4,
-                'name' => 'Pizza Shoarma',
-                'description' => 'Tomatensaus, kaas, shoarma, ui, paprika, knoflooksaus',
-                'image' => 'https://www.dominos.nl/ManagedAssets/FRANCHISE/_img/products/PIZZA/PIZZA_SHOARMA.png',
-                'price' => '10.99'
+                'name' => 'Waterzooi',
+                'description' => 'Romige kip- of visstoofpot met groenten in een fluweelzachte bouillon.',
+                'image' => 'images/pre4.avif',
+                'price' => '13'
             ],
             [
                 'id' => 5,
-                'name' => 'Pizza Hawaii',
-                'description' => 'Tomatensaus, kaas, ham, ananas',
-                'image' => 'https://www.dominos.nl/ManagedAssets/FRANCHISE/_img/products/PIZZA/PIZZA_HAWAII.png',
-                'price' => '11.99'
+                'name' => 'Moules Frites',
+                'description' => 'Mollige mosselen, aromatische bouillon en knapperige frietjes.',
+                'image' => 'images/pre5.webp',
+                'price' => '14'
             ],
             [
                 'id' => 6,
-                'name' => 'Pizza Veggi',
-                'description' => 'Tomatensaus, kaas, champignons, paprika, ui, mais, olijven',
-                'image' => 'https://www.dominos.nl/ManagedAssets/FRANCHISE/_img/products/PIZZA/PIZZA_VEGGI.png',
-                'price' => '12.99'
-            ],
-            [
-                'id' => 7,
-                'name' => 'Pizza Meatlovers',
-                'description' => 'Tomatensaus, kaas, pepperoni, ham, bacon, gehakt',
-                'image' => 'https://www.dominos.nl/ManagedAssets/FRANCHISE/_img/products/PIZZA/PIZZA_MEATLOVERS.png',
-                'price' => '13.99'
-            ],
-            [
-                'id' => 8,
-                'name' => 'Pizza BBQ Meatlovers',
-                'description' => 'Tomatensaus, kaas, pepperoni, ham, bacon, gehakt, BBQ saus',
-                'image' => 'https://www.dominos.nl/ManagedAssets/FRANCHISE/_img/products/PIZZA/PIZZA_BBQ_MEATLOVERS.png',
-                'price' => '14.99'
-            ],
-            [
-                'id' => 9,
-                'name' => 'Pizza BBQ Chicken Shoarma',
-                'description' => 'Tomatensaus, kaas, kip, shoarma, ui, paprika, mais, BBQ saus, knoflooksaus',
-                'image' => 'https://www.dominos.nl/ManagedAssets/FRANCHISE/_img/products/PIZZA/PIZZA_BBQ_CHICKEN_SHOARMA.png',
-                'price' => '15.99'
-            ],
-            [
-                'id' => 10,
-                'name' => 'Pizza BBQ Chicken Shoarma',
-                'description' => 'Tomatensaus, kaas, kip, shoarma, ui, paprika, mais, BBQ saus, knoflooksaus',
-                'image' => 'https://www.dominos.nl/ManagedAssets/FRANCHISE/_img/products/PIZZA/PIZZA_BBQ_CHICKEN_SHOARMA.png',
-                'price' => '15.99'
+                'name' => 'Franse uiensoep',
+                'description' => 'Gekarameliseerde uien, rijke runderbouillon, gesmolten Gruyère en geroosterd stokbrood.',
+                'image' => 'images/pre6.jpg',
+                'price' => '12'
             ]
         ]);
     }
