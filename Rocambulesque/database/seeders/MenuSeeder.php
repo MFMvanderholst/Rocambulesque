@@ -124,6 +124,116 @@ class MenuSeeder extends Seeder
                 'menu_category_id' => '2',
                 'dish_id' => '5'
             ],
+            // Dranken
+            [
+                'id' => 13,
+                'name' => 'Red Wine',
+                'description' => 'Een symfonie van gedurfde bessen en subtiele kruiden. Proost op een heerlijke eetervaring.',
+                'image' => 'images/drink1.jpg',
+                'price' => '5',
+                'menu_category_id' => '4',
+                'dish_id' => '5'
+            ],
+            [
+                'id' => 14,
+                'name' => 'Muscat Wine',
+                'description' => "Muscatwijn met bloemige aroma's en fruitige gelukzaligheid. Proost op verwennerij.",
+                'image' => 'images/drink2.webp',
+                'price' => '5',
+                'menu_category_id' => '4',
+                'dish_id' => '5'
+            ],
+            [
+                'id' => 15,
+                'name' => 'Vice Cocktail',
+                'description' => 'Verleiding in drie smaken: tropische passievrucht, citrus-sinaasappel en verfrissende aardbei.',
+                'image' => 'images/drink3.jpg',
+                'price' => '4',
+                'menu_category_id' => '4',
+                'dish_id' => '5'
+            ],
+            [
+                'id' => 16,
+                'name' => 'Frozen Mudslide',
+                'description' => 'Kies uit drie verleidelijke smaken: rijke chocolade, tropische kokosnoot of romige banaan.',
+                'image' => 'images/drink4.jpg',
+                'price' => '6',
+                'menu_category_id' => '4',
+                'dish_id' => '5'
+            ],
+            [
+                'id' => 17,
+                'name' => 'Soda',
+                'description' => 'Verfris met de klassieke bruis van Coca-Cola, de pittige kick van Sprite of het fruitige plezier van Fanta. Jouw keuze, jouw verfrissing.',
+                'image' => 'images/drink5.webp',
+                'price' => '3',
+                'menu_category_id' => '4',
+                'dish_id' => '5'
+            ],
+            [
+                'id' => 18,
+                'name' => 'Water 500ml',
+                'description' => 'Perfecte keuze voor een schone en hydraterende ervaring.',
+                'image' => 'images/drink6.webp',
+                'price' => '2',
+                'menu_category_id' => '4',
+                'dish_id' => '5'
+            ],
+            // Nagerechten
+            [
+                'id' => 19,
+                'name' => 'Jésuite',
+                'description' => 'Amandelcrème en frambozenjam in bladerdeeg. Gewoon hemels.',
+                'image' => 'images/dessert1.jpg',
+                'price' => '9',
+                'menu_category_id' => '3',
+                'dish_id' => '5'
+            ],
+            [
+                'id' => 20,
+                'name' => 'Île Flottante',
+                'description' => 'Met vanille gekuste meringuewolk op een custardzee: een tijdloos Frans genot.',
+                'image' => 'images/dessert2.jpg',
+                'price' => '9',
+                'menu_category_id' => '3',
+                'dish_id' => '5'
+            ],
+            [
+                'id' => 21,
+                'name' => 'Nonnettes',
+                'description' => 'Zachte koeken gevuld met sinaasappelmarmelade.',
+                'image' => 'images/dessert3.jpg',
+                'price' => '10',
+                'menu_category_id' => '3',
+                'dish_id' => '5'
+            ],
+            [
+                'id' => 22,
+                'name' => 'Kougloff',
+                'description' => 'Luchtige cake met amandelen en citrus, gewoonweg heerlijk.',
+                'image' => 'images/dessert4.jpg',
+                'price' => '14',
+                'menu_category_id' => '3',
+                'dish_id' => '5'
+            ],
+            [
+                'id' => 23,
+                'name' => 'Financier',
+                'description' => 'Rijke amandelcake, goudbruin en boterachtig.',
+                'image' => 'images/dessert5.jpg',
+                'price' => '8',
+                'menu_category_id' => '3',
+                'dish_id' => '5'
+            ],
+            [
+                'id' => 24,
+                'name' => 'Tarte Citron',
+                'description' => 'Pittige citroenwrongel in een knapperige boterkorst. Puur zonneschijn.',
+                'image' => 'images/dessert6.jpg',
+                'price' => '12',
+                'menu_category_id' => '3',
+                'dish_id' => '5'
+            ],
         ]);
     }
 }

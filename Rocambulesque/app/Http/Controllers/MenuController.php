@@ -15,7 +15,7 @@ class MenuController extends Controller
         $nagerecht = Menu::with('getCategory')->where('menu_category_id', 3)->get();
         $dranken = Menu::with('getCategory')->where('menu_category_id', 4)->get();
 
-        return view('menu', ['voorgerecht' => $voorgerecht, 'hoofdgecht' => $hoofdgerecht, 'nagerecht' => $nagerecht, 'dranken' => $dranken]);
+        return view('menu', ['voorgerecht' => $voorgerecht, 'hoofdgerecht' => $hoofdgerecht, 'nagerecht' => $nagerecht, 'dranken' => $dranken]);
     }
 
     public function create()
