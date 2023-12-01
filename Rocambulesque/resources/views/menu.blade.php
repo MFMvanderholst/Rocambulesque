@@ -34,7 +34,7 @@
   <div id="pre-menu" class="menu-container active">
       <h2>Voorgerechten</h2>
       <div class="menu-category">
-        @foreach ($data as $item)
+        @foreach ($voorgerecht as $item)
         <div class="menu-item">
           <img src="{{$item->image}}">
           <h3> {{$item->name}}</h3>
@@ -47,43 +47,14 @@
     <div id="main-menu" class="menu-container">
       <h2>Hoofdgerechten</h2>
       <div class="menu-category">
+        @foreach ($hoofdgerecht as $item)
         <div class="menu-item">
-          <img src="images/main1.png">
-          <h3>Ratatouille</h3>
-          <p>Courgette, aubergine en paprika langzaam gegaard met kruiden en tomaten. Besprenkeld met olijfolie.</p>
-          <p>€19.00</p>
-          <img class="marks" src="images/veg.png">
+          <img src="{{$item->image}}">
+          <h3> {{$item->name}}</h3>
+          <p>{{$item->description}}</p>
+          <p>Є{{$item->price}}</p>
         </div>
-        <div class="menu-item">
-          <img src="images/main2.jpg">
-          <h3>Tonijn met groenten</h3>
-          <p>Schilferige tonijn ontmoet knapperige groenten voor een gezond genot.</p>
-          <p>€15.00</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/main3.jpg">
-          <h3>Coq au Vin</h3>
-          <p>Sappige kip in rode wijn met champignons en uien.</p>
-          <p>€16.00</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/main4.jpg">
-          <h3>Kip à la Normande</h3>
-          <p>Malse kip in een op Normandië geïnspireerde saus met appels, room en een vleugje Calvados.</p>
-          <p>€16.00</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/main5.jpg">
-          <h3>Quiche Lorraine</h3>
-          <p>Boterachtige korst gevuld met spek, room en eieren. Een Franse klassieker.</p>
-          <p>€14.00</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/main6.jpg">
-          <h3>Boeuf Bourguignon</h3>
-          <p>Mals rundvlees in rode wijnsaus met champignons en uien.</p>
-          <p>€15.00</p>
-        </div>
+        @endforeach
       </div>
     </div>
 

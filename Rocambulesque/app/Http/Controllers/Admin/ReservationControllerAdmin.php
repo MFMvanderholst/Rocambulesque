@@ -12,9 +12,10 @@ class ReservationControllerAdmin extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.reservations.index');
+        $data = ReservationModel::all();
+        return view('admin.reservations.index', ['data' => $data]);
     }
     /**
      * Show the form for creating a new resource.
@@ -37,8 +38,8 @@ class ReservationControllerAdmin extends Controller
      */
     public function show(string $id)
     {
-        $reservation = ReservationModel::find($id);
-        dd($reservation);
+        $data = ReservationModel::find($id);
+        return view('admin.reservations.show', ['data' => $data]);
     }
 
     /**
