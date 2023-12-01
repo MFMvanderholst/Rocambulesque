@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Menu;
+use App\Models\menu_category;
 use Illuminate\Http\Request;
 use App\Models\menus;
 
@@ -60,13 +61,17 @@ class MenuControllerAdmin extends Controller
         $validate = $request->validate([
             'naam' => "max:100",
             'beschrijving' => 'max:255',
-            'prijs' => "integer|min:1|max:1000"
+            'prijs' => "integer|min:1|max:1000",
+            'menu_category_id' => 'integer|min:1|max:4',
+            'dish_id' => 'integer|min:1|max:4',
         ]);
 
         $data = menu::findorfail($id);
         $data->name = $request->input('name');
         $data->description = $request->input('description');
         $data->price = $request->input('price');
+        $data->menu_categrory_id = $request->input('menu_category_id');
+        $data->dish_id = $request->input('dish_id');
         $data->save();
 
         return redirect("admin/menus")->with("status", 'Menu rij is aangepast');
