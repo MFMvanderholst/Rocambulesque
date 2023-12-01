@@ -30,89 +30,31 @@
   </nav>
 
   <section>
+  
   <div id="pre-menu" class="menu-container active">
       <h2>Voorgerechten</h2>
       <div class="menu-category">
+        @foreach ($voorgerecht as $item)
         <div class="menu-item">
-          <img src="images/pre1.jpg">
-          <h3>Coquilles</h3>
-          <p>Sappige coquilles met een vleugje citrus en verse kruiden. Oceanische uitmuntendheid.</p>
-          <p>€11.00</p>
-          <img class="marks" src="images/veg.png">
+          <img src="{{$item->image}}">
+          <h3> {{$item->name}}</h3>
+          <p>{{$item->description}}</p>
+          <p>Є{{$item->price}}</p>
         </div>
-        <div class="menu-item">
-          <img src="images/pre2.jpg">
-          <h3>Escargots</h3>
-          <p>Geniet van Franse luxe met onze Escargots: dikke slakken in knoflook-peterselieboter. Een symfonie van smaken in elke hap.</p>
-          <p>€10.00</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/pre3.jpg">
-          <h3>Steak Tartare</h3>
-          <p>Eersteklas rauw rundvlees, kappertjes, uien en pittige mosterddressing. Een culinair genot voor uw zintuigen.</p>
-          <p>€13.00</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/pre4.avif">
-          <h3>Waterzooi</h3>
-          <p>Romige kip- of visstoofpot met groenten in een fluweelzachte bouillon.</p>
-          <p>€13.00</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/pre5.webp">
-          <h3>Moules Frites</h3>
-          <p>Mollige mosselen, aromatische bouillon en knapperige frietjes.</p>
-          <p>€14.00</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/pre6.jpg">
-          <h3>Franse uiensoep</h3>
-          <p>Gekarameliseerde uien, rijke runderbouillon, gesmolten Gruyère en geroosterd stokbrood.</p>
-          <p>€12.00</p>
-        </div>
+        @endforeach
       </div>
     </div>
-
     <div id="main-menu" class="menu-container">
       <h2>Hoofdgerechten</h2>
       <div class="menu-category">
+        @foreach ($hoofdgerecht as $item)
         <div class="menu-item">
-          <img src="images/main1.png">
-          <h3>Ratatouille</h3>
-          <p>Courgette, aubergine en paprika langzaam gegaard met kruiden en tomaten. Besprenkeld met olijfolie.</p>
-          <p>€19.00</p>
-          <img class="marks" src="images/veg.png">
+          <img src="{{$item->image}}">
+          <h3> {{$item->name}}</h3>
+          <p>{{$item->description}}</p>
+          <p>Є{{$item->price}}</p>
         </div>
-        <div class="menu-item">
-          <img src="images/main2.jpg">
-          <h3>Tonijn met groenten</h3>
-          <p>Schilferige tonijn ontmoet knapperige groenten voor een gezond genot.</p>
-          <p>€15.00</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/main3.jpg">
-          <h3>Coq au Vin</h3>
-          <p>Sappige kip in rode wijn met champignons en uien.</p>
-          <p>€16.00</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/main4.jpg">
-          <h3>Kip à la Normande</h3>
-          <p>Malse kip in een op Normandië geïnspireerde saus met appels, room en een vleugje Calvados.</p>
-          <p>€16.00</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/main5.jpg">
-          <h3>Quiche Lorraine</h3>
-          <p>Boterachtige korst gevuld met spek, room en eieren. Een Franse klassieker.</p>
-          <p>€14.00</p>
-        </div>
-        <div class="menu-item">
-          <img src="images/main6.jpg">
-          <h3>Boeuf Bourguignon</h3>
-          <p>Mals rundvlees in rode wijnsaus met champignons en uien.</p>
-          <p>€15.00</p>
-        </div>
+        @endforeach
       </div>
     </div>
 
