@@ -7,6 +7,7 @@ use App\Models\Menu;
 use App\Models\menu_category;
 use Illuminate\Http\Request;
 use App\Models\menus;
+use App\Models\dish_category;
 
 class MenuControllerAdmin extends Controller
 {
@@ -49,8 +50,9 @@ class MenuControllerAdmin extends Controller
     public function edit(string $id)
     {
         $data = menu::findorfail($id);
-
-        return view('admin.menus.edit', ['data' => $data]);
+        $dish = dish_category::all();
+        $caterogy = menu_category::all();
+        return view('admin.menus.edit', ['data' => $data, 'dish' => $dish, 'category' => $caterogy]);
     }
 
     /**
@@ -70,7 +72,7 @@ class MenuControllerAdmin extends Controller
         $data->name = $request->input('name');
         $data->description = $request->input('description');
         $data->price = $request->input('price');
-        $data->menu_categrory_id = $request->input('menu_category_id');
+        $data->menu_category_id = $request->input('menu_category_id');
         $data->dish_id = $request->input('dish_id');
         $data->save();
 
