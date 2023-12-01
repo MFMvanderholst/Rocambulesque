@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="css/menu.css">
     <title>Menu page</title>
 </head>
-<header>
-    @include('navbar')
-</header>
+
 <body>
 
+@include('navbar')
 
 </div>
   <div class="bg">
@@ -23,7 +22,7 @@
 <h1>Restaurant Menu</h1>
 
   <nav>
-    <a onclick="showMenu('pre')">Voorgerechten</a>
+    <a class="active" onclick="showMenu('pre')">Voorgerechten</a>
     <a onclick="showMenu('main')">Hoofdgerechten</a>
     <a onclick="showMenu('drinks')">Drankjes</a>
     <a onclick="showMenu('desserts')">Nagerechten</a>

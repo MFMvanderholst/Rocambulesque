@@ -55,6 +55,7 @@ body {
   h1, h2 {
     text-align: center;
     font-family: 'goodbrush';
+    color: #40261d;
   }
   
   h2{
@@ -108,10 +109,12 @@ body {
 
   .menu-item h3{
     font-family: 'goodbrush';
+    color: #40261d;
   }
 
   p{
     font-family: 'roboto';
+    color: #40261d;
   }
 
   .menu-item img {
