@@ -14,7 +14,7 @@ class MenuControllerAdmin extends Controller
      */
     public function index()
     {
-        $data = Menu::all();
+        $data = Menu::with('getCategory')->get();
         return view('admin.menus.index', ['data' => $data]);
     }
 
