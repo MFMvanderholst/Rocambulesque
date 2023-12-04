@@ -39,11 +39,12 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     align-self: flex-start;
-    margin: 0 0 -2px 0;
+    margin: 15px 0 -2px 0;
 }
 
 .photo2 img {
-    margin-left: 38em;
+    width: 55%;
+    margin-left: 33em;
 
 }
 
@@ -56,19 +57,19 @@ body {
 .content2 {
     text-align: center;
     position: absolute;
-    width: 30%;
+    width: 35%;
     font-weight: bold;
 }
 
 .content1 {
     top: 8em;
-    left: 50em;
+    left: 42em;
     font-family: 'GOOD BRUSH'; 
 }
 
 .content2 {
     bottom: 55em;
-    left: 10em;
+    left: 5em;
     font-family: 'GOOD BRUSH'; 
 
 }
@@ -110,4 +111,27 @@ th, td {
 th {
     background-color: #fff;
     color: #333;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .background-image {
+        width: 100%; /* Full width on smaller screens */
+        margin-left: 0; /* No margin on smaller screens */
+    }
+
+    .photo-column {
+        align-items: center; /* Center align items on smaller screens */
+    }
+
+    .photo2 img {
+        margin-left: 0; /* No margin on smaller screens */
+    }
+
+    .content1,
+    .content2 {
+        width: 100%; /* Full width on smaller screens */
+        left: 0; /* Left align on smaller screens */
+    }
 }

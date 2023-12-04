@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\ReservationModel;
@@ -24,10 +25,10 @@ class ReservationController extends Controller
         ]);
     }
 
-    public function show()
+    public function show($id, $user_id)
     {
-        $users = User::all();
-        $reservations = ReservationModel::all();
+        $users = User::findorfail($id);
+        $reservations = ReservationModel::findorfail($user_id);
         
         return view('reservation_overview', [
             "data1" => $users,
@@ -56,11 +57,13 @@ class ReservationController extends Controller
                 'timeMinutes' => "required",
                 'remark' => 'nullable',
             ]);
+
+            $validatedData['user_id'] = $request->user()->id;
             
             $reservation = new ReservationModel($validatedData);
             $reservation->save();
 
-            return redirect('reservation')->with('success', 'Reservation has been successfully made');
+            return redirect('reservation/listing')->with('success', 'Reservation has been successfully made');
         }
     }
 
@@ -97,11 +100,21 @@ class ReservationController extends Controller
         return redirect('/reservation')->with('status', 'Data is bijgewerkt');
     }
 
-    public function destroy($id)
-    {
-        $reservation = ReservationModel::findOrFail($id);
-        $reservation->delete();
+    // public function destroy($id)
+    // {
+    //     $reservation = ReservationModel::findOrFail($id);
+    //     $reservation->delete();
 
-        return redirect('/reservation')->with('status', 'Data is verwijderd');
+    //     return redirect('/reservation')->with('status', 'Data is verwijderd');
+    // }
+
+    public function destroy(string $id)
+    {
+        $reservation = ReservationModel::destroy($id);
+        if ($reservation) {
+            return redirect('/reservation')->with("status", "De Rij is verwijderd");
+        } else {
+            return redirect('admin/menus')->with("status", "De Rij is niet verwijderd");
+        }
     }
 }

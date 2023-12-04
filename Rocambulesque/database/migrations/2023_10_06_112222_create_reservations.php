@@ -16,11 +16,12 @@ return new class extends Migration
             $table->id();
             $table->date('date');
             $table->tinyInteger('timeHour');
-            $table->tinyInteger('timeMinutes');
+            $table->string('timeMinutes');
             $table->tinyInteger('adults');
             $table->tinyInteger('children');
             $table->string('remark', 300)->nullable();
             $table->string('mealType', 10);
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
     }

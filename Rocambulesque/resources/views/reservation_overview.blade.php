@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/klant.css">
     <title>Reservering Overzicht</title>
 </head>
@@ -20,7 +21,7 @@
             <label for="name">Naam:</label>
             <p id="name">{{ $users->name }}</p>
 
-            <label for="mobile">Mobile nummer:</label>
+            <label for="mobile">Mobiele nummer:</label>
             <p id="mobile">{{ $users->phone }}</p>
 
             <label for="email">Email:</label>
