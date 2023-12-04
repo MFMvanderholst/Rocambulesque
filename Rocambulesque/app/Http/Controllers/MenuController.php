@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class MenuController extends Controller
 {
-    public function show()
+    public function index()
     {
         $data = Menu::all();
         return view('menu', ['data' => $data]);

@@ -35,22 +35,12 @@
                         <tr>
                             
                             <td>{{ $users->name }}</td>
-                           
-                       
-                            
                             <td>{{ $reservations->date }} {{ $reservations->timeHour }}:{{ $reservations->timeMinutes }}</td>
-                            
-                       
-                            
                             <td>{{ $users->phone }}</td>
                             <td>{{ $users->email }}</td>
-                           
-                       
-                            
                             <td>{{ $reservations->remark }}</td>
                             <td><a href="/reservation/{{ $reservations->id }}/edit">Wijzig</a></td>
                             <td></td>
-                            
                         </tr>
                         @endforeach
                         @endforeach
