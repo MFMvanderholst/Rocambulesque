@@ -64,9 +64,10 @@ Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(fun
     Route::get(('/menus/{id}/edit'), [MenuControllerAdmin::class, 'edit']);
     Route::put('/menus/{id}', [MenuControllerAdmin::class, 'update']);
     Route::delete('/menus/{id}', [MenuControllerAdmin::class, 'destroy']);
-
+    Route::get('menu/create', [MenuControllerAdmin::class, 'create']);
     Route::resource('/reservation', ReservationControllerAdmin::class);
     Route::resource('/tables', TableController::class);
+    Route::POST('menus/menusC', [MenuControllerAdmin::class, 'store']);
 });
 
 require __DIR__ . '/auth.php';

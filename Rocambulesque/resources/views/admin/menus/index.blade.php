@@ -54,6 +54,7 @@
                         <td>{{$item->description}}</td>
                         <td>{{$item->price}}</td>
                         <td>{{$item->getCategory->name}}</td>
+                        <td><a href="{{route('admin.menus.create')}}">Nieuwe gerecht invoeren</a></td>
                         <td><a href="{{route('admin.menus.edit',$item->id)}}">wijzig</a></td>
                         <td>
                             <form action="{{route('admin.menus.destroy',$item->id)}}" method="post">

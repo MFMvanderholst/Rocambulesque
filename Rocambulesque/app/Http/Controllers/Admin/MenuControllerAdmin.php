@@ -25,7 +25,11 @@ class MenuControllerAdmin extends Controller
      */
     public function create()
     {
-        //
+
+        $data = menu::all();
+        $dish = dish_category::all();
+        $caterogy = menu_category::all();
+        return view('admin.menus.create', ['data' => $data, 'dish' => $dish, 'category' => $caterogy]);
     }
 
     /**
@@ -33,7 +37,29 @@ class MenuControllerAdmin extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $validate = $request->validate([
+        //     'naam' => "required|max:100",
+        //     'beschrijving' => 'required|max:255',
+        //     'prijs' => "required|integer|min:1|max:1000",
+        //     'image' => 'required',
+        //     'menu_category_id' => 'required|integer|min:1|max:4',
+        //     'dish_id' => 'required|integer|min:1|max:4',
+        // ]);
+        $menus = new Menu([
+            'name' => $request->input('name'),
+            'description' => $request->input('description'),
+            'price' => $request->input('price'),
+            'image' => $request->input('image'),
+            'menu_category_id' => $request->input('menu_category_id'),
+            'dish_id' => $request->input('dish_id'),
+        ]);
+
+        $menus->save();
+
+        $data = menu::all();
+        $dish = dish_category::all();
+        $caterogy = menu_category::all();
+        return view('admin.menus.index', ['data' => $data, 'dish' => $dish, 'category' => $caterogy]);
     }
 
     /**
