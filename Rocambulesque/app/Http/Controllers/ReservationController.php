@@ -16,12 +16,10 @@ class ReservationController extends Controller
 
     public function index_listing()
     {
-        $users = User::all();
-        $reservations = ReservationModel::all();
-        
+        $reservations = ReservationModel::with('user')->get();
+
         return view('reservation_listing', [
-            "data1" => $users,
-            "data2" => $reservations
+            "reservations" => $reservations
         ]);
     }
 
@@ -45,7 +43,7 @@ class ReservationController extends Controller
 
     public function store(Request $request)
     {
-        
+
         if ($request->isMethod('post')) {
             // Handle the POST request for form submission
             $validatedData = $request->validate([
@@ -96,7 +94,7 @@ class ReservationController extends Controller
             'timeMinutes' => $validatedData['timeMinutes'],
             'remark' => $validatedData['remark']
         ]);
-       
+
         return redirect('/reservation')->with('status', 'Data is bijgewerkt');
     }
 
