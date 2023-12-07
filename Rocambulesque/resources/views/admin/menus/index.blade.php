@@ -30,19 +30,22 @@
                 @endif
                 <table>
                     <th>
-                        <p>naam</p>
+                        <p>Naam</p>
                     </th>
                     <th>
-                        <p>beschrijving</p>
+                        <p>Beschrijving</p>
                     </th>
                     <th>
-                        <p>prijs</p>
+                        <p>Prijs</p>
                     </th>
                     <th>
-                        <p>wijzig</p>
+                        <p>Gangen</p>
                     </th>
                     <th>
-                        <p>Verwijder</p>
+                        <p>Wijzigen</p>
+                    </th>
+                    <th>
+                        <p>Verwijderen</p>
                     </th>
                     @foreach ($data as $item)
 
@@ -50,11 +53,11 @@
 
                     </tr>
                     <tr>
-                        <td> {{$item->name}}</td>
+                        <td>{{$item->name}}</td>
                         <td>{{$item->description}}</td>
                         <td>{{$item->price}}</td>
                         <td>{{$item->getCategory->name}}</td>
-                        <td><a href="{{route('admin.menus.edit',$item->id)}}">wijzig</a></td>
+                        <td><a href="{{route('admin.menus.edit',$item->id)}}">Wijzig</a></td>
                         <td>
                             <form action="{{route('admin.menus.destroy',$item->id)}}" method="post">
                                 @csrf
