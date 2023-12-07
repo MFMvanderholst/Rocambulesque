@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Menu</title>
     <link rel="stylesheet" href="{{ asset('css/adminmenu.css') }}">
+</head>
 
 <body>
     <x-admin-layout>
@@ -52,6 +53,7 @@
                         <td> {{$item->name}}</td>
                         <td>{{$item->description}}</td>
                         <td>{{$item->price}}</td>
+                        <td>{{$item->getCategory->name}}</td>
                         <td><a href="{{route('admin.menus.edit',$item->id)}}">wijzig</a></td>
                         <td>
                             <form action="{{route('admin.menus.destroy',$item->id)}}" method="post">

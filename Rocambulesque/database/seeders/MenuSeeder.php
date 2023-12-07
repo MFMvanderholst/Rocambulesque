@@ -14,76 +14,226 @@ class MenuSeeder extends Seeder
     public function run(): void
     {
         Menu::insert([
+            // Voorgerechten
             [
                 'id' => 1,
-                'name' => 'Pizza Margherita',
-                'description' => 'Tomatensaus, kaas',
-                'image' => 'https://www.dominos.nl/ManagedAssets/FRANCHISE/_img/products/PIZZA/PIZZA_MARGHERITA.png',
-                'price' => '7.99'
+                'name' => 'Coquilles',
+                'description' => 'Sappige coquilles met een vleugje citrus en verse kruiden. Oceanische uitmuntendheid',
+                'image' => 'images/pre1.jpg',
+                'price' => '11',
+                'menu_category_id' => '1',
+                'dish_id' => '5'
             ],
             [
                 'id' => 2,
-                'name' => 'Pizza Pepperoni',
-                'description' => 'Tomatensaus, kaas, pepperoni',
-                'image' => 'https://www.dominos.nl/ManagedAssets/FRANCHISE/_img/products/PIZZA/PIZZA_PEPPERONI.png',
-                'price' => '8.99'
+                'name' => 'Escargots',
+                'description' => 'Geniet van Franse luxe met onze Escargots: dikke slakken in knoflook-peterselieboter. Een symfonie van smaken in elke hap.',
+                'image' => 'images/pre2.jpg',
+                'price' => '10',
+                'menu_category_id' => '1',
+                'dish_id' => '5'
             ],
             [
                 'id' => 3,
-                'name' => 'Pizza BBQ Chicken',
-                'description' => 'Tomatensaus, kaas, kip, ui, paprika, mais, BBQ saus',
-                'image' => 'https://www.dominos.nl/ManagedAssets/FRANCHISE/_img/products/PIZZA/PIZZA_BBQ_CHICKEN.png',
-                'price' => '9.99'
+                'name' => 'Steak Tartare',
+                'description' => 'Eersteklas rauw rundvlees, kappertjes, uien en pittige mosterddressing. Een culinair genot voor uw zintuigen.',
+                'image' => 'images/pre3.jpg',
+                'price' => '13',
+                'menu_category_id' => '1',
+                'dish_id' => '5'
             ],
             [
                 'id' => 4,
-                'name' => 'Pizza Shoarma',
-                'description' => 'Tomatensaus, kaas, shoarma, ui, paprika, knoflooksaus',
-                'image' => 'https://www.dominos.nl/ManagedAssets/FRANCHISE/_img/products/PIZZA/PIZZA_SHOARMA.png',
-                'price' => '10.99'
+                'name' => 'Waterzooi',
+                'description' => 'Romige kip- of visstoofpot met groenten in een fluweelzachte bouillon.',
+                'image' => 'images/pre4.avif',
+                'price' => '13',
+                'menu_category_id' => '1',
+                'dish_id' => '5'
             ],
             [
                 'id' => 5,
-                'name' => 'Pizza Hawaii',
-                'description' => 'Tomatensaus, kaas, ham, ananas',
-                'image' => 'https://www.dominos.nl/ManagedAssets/FRANCHISE/_img/products/PIZZA/PIZZA_HAWAII.png',
-                'price' => '11.99'
+                'name' => 'Moules Frites',
+                'description' => 'Mollige mosselen, aromatische bouillon en knapperige frietjes.',
+                'image' => 'images/pre5.webp',
+                'price' => '14',
+                'menu_category_id' => '1',
+                'dish_id' => '5'
             ],
             [
                 'id' => 6,
-                'name' => 'Pizza Veggi',
-                'description' => 'Tomatensaus, kaas, champignons, paprika, ui, mais, olijven',
-                'image' => 'https://www.dominos.nl/ManagedAssets/FRANCHISE/_img/products/PIZZA/PIZZA_VEGGI.png',
-                'price' => '12.99'
+                'name' => 'Franse uiensoep',
+                'description' => 'Gekarameliseerde uien, rijke runderbouillon, gesmolten Gruyère en geroosterd stokbrood.',
+                'image' => 'images/pre6.jpg',
+                'price' => '12',
+                'menu_category_id' => '1',
+                'dish_id' => '5'
             ],
+            // Hoofdgerechten
             [
                 'id' => 7,
-                'name' => 'Pizza Meatlovers',
-                'description' => 'Tomatensaus, kaas, pepperoni, ham, bacon, gehakt',
-                'image' => 'https://www.dominos.nl/ManagedAssets/FRANCHISE/_img/products/PIZZA/PIZZA_MEATLOVERS.png',
-                'price' => '13.99'
+                'name' => 'Ratatouille',
+                'description' => 'Courgette, aubergine en paprika langzaam gegaard met kruiden en tomaten. Besprenkeld met olijfolie.',
+                'image' => 'images/main1.png',
+                'price' => '19',
+                'menu_category_id' => '2',
+                'dish_id' => '5'
             ],
             [
                 'id' => 8,
-                'name' => 'Pizza BBQ Meatlovers',
-                'description' => 'Tomatensaus, kaas, pepperoni, ham, bacon, gehakt, BBQ saus',
-                'image' => 'https://www.dominos.nl/ManagedAssets/FRANCHISE/_img/products/PIZZA/PIZZA_BBQ_MEATLOVERS.png',
-                'price' => '14.99'
+                'name' => 'Tonijn met groenten',
+                'description' => 'Schilferige tonijn ontmoet knapperige groenten voor een gezond genot.',
+                'image' => 'images/main2.jpg',
+                'price' => '15',
+                'menu_category_id' => '2',
+                'dish_id' => '5'
             ],
             [
                 'id' => 9,
-                'name' => 'Pizza BBQ Chicken Shoarma',
-                'description' => 'Tomatensaus, kaas, kip, shoarma, ui, paprika, mais, BBQ saus, knoflooksaus',
-                'image' => 'https://www.dominos.nl/ManagedAssets/FRANCHISE/_img/products/PIZZA/PIZZA_BBQ_CHICKEN_SHOARMA.png',
-                'price' => '15.99'
+                'name' => 'Coq au Vin',
+                'description' => 'Sappige kip in rode wijn met champignons en uien.',
+                'image' => 'images/main3.jpg',
+                'price' => '16',
+                'menu_category_id' => '2',
+                'dish_id' => '5'
             ],
             [
                 'id' => 10,
-                'name' => 'Pizza BBQ Chicken Shoarma',
-                'description' => 'Tomatensaus, kaas, kip, shoarma, ui, paprika, mais, BBQ saus, knoflooksaus',
-                'image' => 'https://www.dominos.nl/ManagedAssets/FRANCHISE/_img/products/PIZZA/PIZZA_BBQ_CHICKEN_SHOARMA.png',
-                'price' => '15.99'
-            ]
+                'name' => 'Kip à la Normande',
+                'description' => 'Malse kip in een op Normandië geïnspireerde saus met appels, room en een vleugje Calvados..',
+                'image' => 'images/main4.jpg',
+                'price' => '16',
+                'menu_category_id' => '2',
+                'dish_id' => '5'
+            ],
+            [
+                'id' => 11,
+                'name' => 'Quiche Lorraine',
+                'description' => 'Boterachtige korst gevuld met spek, room en eieren. Een Franse klassieker.',
+                'image' => 'images/main5.jpg',
+                'price' => '14',
+                'menu_category_id' => '2',
+                'dish_id' => '5'
+            ],
+            [
+                'id' => 12,
+                'name' => 'Boeuf Bourguignon',
+                'description' => 'Mals rundvlees in rode wijnsaus met champignons en uien.',
+                'image' => 'images/main6.jpg',
+                'price' => '15',
+                'menu_category_id' => '2',
+                'dish_id' => '5'
+            ],
+            // Dranken
+            [
+                'id' => 13,
+                'name' => 'Red Wine',
+                'description' => 'Een symfonie van gedurfde bessen en subtiele kruiden. Proost op een heerlijke eetervaring.',
+                'image' => 'images/drink1.jpg',
+                'price' => '5',
+                'menu_category_id' => '4',
+                'dish_id' => '5'
+            ],
+            [
+                'id' => 14,
+                'name' => 'Muscat Wine',
+                'description' => "Muscatwijn met bloemige aroma's en fruitige gelukzaligheid. Proost op verwennerij.",
+                'image' => 'images/drink2.webp',
+                'price' => '5',
+                'menu_category_id' => '4',
+                'dish_id' => '5'
+            ],
+            [
+                'id' => 15,
+                'name' => 'Vice Cocktail',
+                'description' => 'Verleiding in drie smaken: tropische passievrucht, citrus-sinaasappel en verfrissende aardbei.',
+                'image' => 'images/drink3.jpg',
+                'price' => '4',
+                'menu_category_id' => '4',
+                'dish_id' => '5'
+            ],
+            [
+                'id' => 16,
+                'name' => 'Frozen Mudslide',
+                'description' => 'Kies uit drie verleidelijke smaken: rijke chocolade, tropische kokosnoot of romige banaan.',
+                'image' => 'images/drink4.jpg',
+                'price' => '6',
+                'menu_category_id' => '4',
+                'dish_id' => '5'
+            ],
+            [
+                'id' => 17,
+                'name' => 'Soda',
+                'description' => 'Verfris met de klassieke bruis van Coca-Cola, de pittige kick van Sprite of het fruitige plezier van Fanta. Jouw keuze, jouw verfrissing.',
+                'image' => 'images/drink5.webp',
+                'price' => '3',
+                'menu_category_id' => '4',
+                'dish_id' => '5'
+            ],
+            [
+                'id' => 18,
+                'name' => 'Water 500ml',
+                'description' => 'Perfecte keuze voor een schone en hydraterende ervaring.',
+                'image' => 'images/drink6.webp',
+                'price' => '2',
+                'menu_category_id' => '4',
+                'dish_id' => '5'
+            ],
+            // Nagerechten
+            [
+                'id' => 19,
+                'name' => 'Jésuite',
+                'description' => 'Amandelcrème en frambozenjam in bladerdeeg. Gewoon hemels.',
+                'image' => 'images/dessert1.jpg',
+                'price' => '9',
+                'menu_category_id' => '3',
+                'dish_id' => '5'
+            ],
+            [
+                'id' => 20,
+                'name' => 'Île Flottante',
+                'description' => 'Met vanille gekuste meringuewolk op een custardzee: een tijdloos Frans genot.',
+                'image' => 'images/dessert2.jpg',
+                'price' => '9',
+                'menu_category_id' => '3',
+                'dish_id' => '5'
+            ],
+            [
+                'id' => 21,
+                'name' => 'Nonnettes',
+                'description' => 'Zachte koeken gevuld met sinaasappelmarmelade.',
+                'image' => 'images/dessert3.jpg',
+                'price' => '10',
+                'menu_category_id' => '3',
+                'dish_id' => '5'
+            ],
+            [
+                'id' => 22,
+                'name' => 'Kougloff',
+                'description' => 'Luchtige cake met amandelen en citrus, gewoonweg heerlijk.',
+                'image' => 'images/dessert4.jpg',
+                'price' => '14',
+                'menu_category_id' => '3',
+                'dish_id' => '5'
+            ],
+            [
+                'id' => 23,
+                'name' => 'Financier',
+                'description' => 'Rijke amandelcake, goudbruin en boterachtig.',
+                'image' => 'images/dessert5.jpg',
+                'price' => '8',
+                'menu_category_id' => '3',
+                'dish_id' => '5'
+            ],
+            [
+                'id' => 24,
+                'name' => 'Tarte Citron',
+                'description' => 'Pittige citroenwrongel in een knapperige boterkorst. Puur zonneschijn.',
+                'image' => 'images/dessert6.jpg',
+                'price' => '12',
+                'menu_category_id' => '3',
+                'dish_id' => '5'
+            ],
         ]);
     }
 }
