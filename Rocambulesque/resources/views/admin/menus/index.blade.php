@@ -42,6 +42,9 @@
                         <p>categorie</p>
                     </th>
                     <th>
+                        <p> Nieuw gerecht </p>
+                    </th>
+                    <th>
                         <p>wijzig</p>
                     </th>
                     <th>
