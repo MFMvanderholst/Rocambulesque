@@ -39,32 +39,6 @@
             window.location.href = '/';
     }
     </script>
-
-    <script>
-        // Get the current URL path
-var path = window.location.pathname;
-
-// Function to set the active link based on the current URL
-function setActiveLink() {
-    // Remove the "active" class from all links
-    var links = document.getElementsByClassName('acc');
-    for (var i = 0; i < links.length; i++) {
-        links[i].classList.remove('active');
-    }
-
-    // Get the corresponding link based on the current URL
-    var activeLink = document.getElementById(path.split('/')[1] + 'Link');
-
-    // Add the "active" class to the corresponding link
-    if (activeLink) {
-        activeLink.classList.add('active');
-    }
-}
-
-// Call the function when the page loads
-setActiveLink();
-
-    </script>
 </body>
 
 </html>

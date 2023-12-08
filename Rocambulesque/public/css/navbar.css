@@ -33,13 +33,6 @@
     transition: all 0.3s ease 0s;
 }
 
-.navbar a.active {
-    background-color: #40261d;
-    color: #04BF9D;
-    border-radius: 50px;
-    border-color: #04BF9D;
-}
-
 .logo {
     width: 200px;
     cursor: pointer;
