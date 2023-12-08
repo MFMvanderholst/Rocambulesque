@@ -39,6 +39,9 @@
                         <p>prijs</p>
                     </th>
                     <th>
+                        <p>categorie</p>
+                    </th>
+                    <th>
                         <p>wijzig</p>
                     </th>
                     <th>
