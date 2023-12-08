@@ -95,7 +95,7 @@ class ReservationController extends Controller
             'remark' => $validatedData['remark']
         ]);
 
-        return redirect('/reservation')->with('status', 'Data is bijgewerkt');
+        return redirect('/reservation/listing')->with('status', 'Data is bijgewerkt');
     }
 
     // public function destroy($id)
@@ -110,7 +110,7 @@ class ReservationController extends Controller
     {
         $reservation = ReservationModel::destroy($id);
         if ($reservation) {
-            return redirect('/reservation')->with("status", "De Rij is verwijderd");
+            return redirect('/reservation/listing')->with("status", "De Rij is verwijderd");
         } else {
             return redirect('admin/menus')->with("status", "De Rij is niet verwijderd");
         }
