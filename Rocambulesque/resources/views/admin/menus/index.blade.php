@@ -60,7 +60,7 @@
                             <form action="{{route('admin.menus.destroy',$item->id)}}" method="post">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" onclick="return confirm('weet je zeker dat je dit wilt verwijderen')">Verwijder</button>
+                                <button type="submit">Verwijder</button>
                         </td>
                         </form>
 
