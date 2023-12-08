@@ -32,19 +32,14 @@ use Illuminate\Routing\RouteRegistrar;
 //     return view('welcome');
 // });
 
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
 Route::get('/account_overzicht', [AccountOverviewController::class, "show"]);
 Route::get('/account_overview', [AccountOverviewController::class, "index"]);
 Route::get('/account_overzicht', [AccountOverviewController::class, "get"]);
 Route::get('/account_overview', [AccountOverviewController::class, "show"]);
-
-Route::get('/reservation', [ReservationController::class, "index"]);
-Route::get('/reservation', [ReservationController::class, "show"]);
-Route::get('/reservation/create', [ReservationController::class, "create"]);
-Route::post('/reservations', [ReservationController::class, "store"]);
-Route::get('/reservation/listing', [ReservationController::class, "index_listing"]);
-Route::get('/reservation/{id}/edit', [ReservationController::class, "edit"]);
-Route::put('/reservation/{id}', [ReservationController::class, "update"]);
-Route::delete('/reservation/{id}', [ReservationController::class, "destroy"]);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -55,6 +50,24 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+Route::middleware(['auth', 'user'])->group(function () 
+{
+    Route::get('/reservation', [ReservationController::class, "index"]);
+    Route::get('/reservation/{id}/{user_id}', [ReservationController::class, "show"]);
+    Route::get('/reservation/create', [ReservationController::class, "create"]);
+    Route::post('/reservations', [ReservationController::class, "store"]);
+    Route::get('/reservation/listing', [ReservationController::class, "index_listing"]);
+    Route::get('/reservations/{id}/edit', [ReservationController::class, 'edit']);
+    
+    Route::put('/reservation/{id}', [ReservationController::class, "update"]);
+    Route::delete('/reservation/{id}', [ReservationController::class, "destroy"]);
+});
+
+Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(function () 
+{
+    Route::get('/reservation/listing', [ReservationController::class, "index_listing"]);
 });
 
 Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(function () {
@@ -73,5 +86,5 @@ Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(fun
 require __DIR__ . '/auth.php';
 
 Route::get('/', [WelcomeController::class, 'index']);
-Route::get('/menu', [MenuController::class, 'show']);
+Route::get('/menu', [MenuController::class, 'index']);
 require __DIR__ . '/auth.php';

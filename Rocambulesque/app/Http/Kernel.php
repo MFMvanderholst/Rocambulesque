@@ -4,6 +4,7 @@ namespace App\Http;
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Middleware\Admin;
+use App\Http\Middleware\User;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -67,10 +68,12 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'admin' => Admin::class,
+        'user' => User::class,
 
     ];
 
     protected $routeMiddelware = [
         'admin' => Admin::class,
+        'user' => User::class,
     ];
 }

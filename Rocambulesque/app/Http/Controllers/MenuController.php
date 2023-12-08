@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class MenuController extends Controller
 {
-    public function show()
+    public function index()
     {
         $voorgerecht = Menu::with('getCategory')->where('menu_category_id', 1)->get();
         $hoofdgerecht = Menu::with('getCategory')->where('menu_category_id', 2)->get();

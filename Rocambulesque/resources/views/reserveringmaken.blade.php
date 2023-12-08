@@ -57,11 +57,11 @@
     <div class="form-container">
         <form>
             <h1>Restaurant Informatie</h1>
-            <label for="openingTimes">Openingstijden:</label>
+            <h2>Openingstijden:</h2>
             <p id="openingTimes">Het restaurant is iedere dag van 17:00 tot 22:00 uur geopend. <br> De bar is van 22:00 tot
                 0:00 open. <br></h1>
             
-            <label for="tablePrices"><br>Tafel prijzen:</label>
+            <h2><br>Tafel prijzen:</h2>
             <p id="tablePrices">Maandag t/m donderdag: <br> 2 uur eten <br>
                  Volwassenen: € 35,- <br>
                  Kinderen: € 25,-

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\ReservationModel;
@@ -15,20 +16,18 @@ class ReservationController extends Controller
 
     public function index_listing()
     {
-        $users = User::all();
-        $reservations = ReservationModel::all();
+        $reservations = ReservationModel::with('user')->get();
 
         return view('reservation_listing', [
-            "data1" => $users,
-            "data2" => $reservations
+            "reservations" => $reservations
         ]);
     }
 
-    public function show()
+    public function show($id, $user_id)
     {
-        $users = User::all();
-        $reservations = ReservationModel::all();
-
+        $users = User::findorfail($id);
+        $reservations = ReservationModel::findorfail($user_id);
+        
         return view('reservation_overview', [
             "data1" => $users,
             "data2" => $reservations
@@ -57,10 +56,12 @@ class ReservationController extends Controller
                 'remark' => 'nullable',
             ]);
 
+            $validatedData['user_id'] = $request->user()->id;
+            
             $reservation = new ReservationModel($validatedData);
             $reservation->save();
 
-            return redirect('reservation')->with('success', 'Reservation has been successfully made');
+            return redirect('reservation/listing')->with('success', 'Reservation has been successfully made');
         }
     }
 
@@ -94,7 +95,7 @@ class ReservationController extends Controller
             'remark' => $validatedData['remark']
         ]);
 
-        return redirect('/reservation')->with('status', 'Data is bijgewerkt');
+        return redirect('/reservation/listing')->with('status', 'Data is bijgewerkt');
     }
 
     // public function destroy($id)
@@ -109,7 +110,7 @@ class ReservationController extends Controller
     {
         $reservation = ReservationModel::destroy($id);
         if ($reservation) {
-            return redirect('/reservation')->with("status", "De Rij is verwijderd");
+            return redirect('/reservation/listing')->with("status", "De Rij is verwijderd");
         } else {
             return redirect('admin/menus')->with("status", "De Rij is niet verwijderd");
         }

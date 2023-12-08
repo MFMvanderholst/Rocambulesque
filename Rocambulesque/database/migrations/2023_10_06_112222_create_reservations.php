@@ -21,7 +21,7 @@ return new class extends Migration
             $table->tinyInteger('children');
             $table->string('remark', 300)->nullable();
             $table->string('mealType', 10);
-            // $table->string('user_id');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
     }

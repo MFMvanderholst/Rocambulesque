@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'goodbrush';
+    src: url('../fonts/goodbrush/Good\ Brush.woff') format('woff'),
+         url('../fonts/goodbrush/Good\ Brush.ttf') format('ttf'),
+         url('../fonts/goodbrush/Good\ Brush.otf') format('otf');
+    /* Add other font properties if needed, like font-weight, font-style, etc. */
+  }
+  
+  @font-face {
+    font-family: 'roboto';
+    src: url('../fonts/roboto/RobotoSlab-VariableFont_wght.ttf') format('ttf'),
+  }
