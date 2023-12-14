@@ -34,7 +34,8 @@
             @enderror
 
             <label for="date">Kies uw datum:</label>
-            <input type="date" name="date" >
+            <input id="datePickerId" type="date" name="date"
+            min="" >
             @error('date')
                 <p class="error">{{ $message }}</p>
             @enderror
@@ -85,6 +86,18 @@
         </div>
     </div>
     @include('footer')
+
+    <script>
+var currentDate = new Date();
+
+
+currentDate.setDate(currentDate.getDate() + 1);
+
+var minDate = currentDate.toISOString().split("T")[0];
+
+document.getElementById('datePickerId').min = minDate;
+
+    </script>
 </body>
 
 </html>
