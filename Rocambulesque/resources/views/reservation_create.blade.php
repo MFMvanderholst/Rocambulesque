@@ -22,15 +22,6 @@
         <form method="post" action="/reservations">
             @csrf
             <h1>Reservatie formulier</h1>
-            <label for="mealType"">Uw keuze:</label>
-            <select name=" mealType">
-                <option value="Dinner">Dinner</option>
-                <option value="Lunch">Lunch</option>
-            </select>
-            @error('mealType')
-                <p class="error">{{ $message }}</p>
-            @enderror
-
             <label for="adults">Aantal volwassenen (+12):</label>
             <input type="number" min="1" max="4" name="adults">
             @error('adults')
