@@ -20,5 +20,7 @@ class User
         }
 
         return $next($request);
+
+        
     }
 }
