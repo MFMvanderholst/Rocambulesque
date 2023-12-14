@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Menu</title>
     <link rel="stylesheet" href="{{ asset('css/adminmenu.css') }}">
-</head>
 
 <body>
     <x-admin-layout>
@@ -30,28 +29,19 @@
                 @endif
                 <table>
                     <th>
-                        <p>Naam</p>
+                        <p>naam</p>
                     </th>
                     <th>
-                        <p>Beschrijving</p>
+                        <p>beschrijving</p>
                     </th>
                     <th>
-                        <p>Prijs</p>
-                    </th>
-                    <th>
-                        <p>categorie</p>
-                    </th>
-                    <th>
-                        <p>Nieuw gerecht </p>
+                        <p>prijs</p>
                     </th>
                     <th>
                         <p>wijzig</p>
                     </th>
                     <th>
-                        <p>Wijzigen</p>
-                    </th>
-                    <th>
-                        <p>Verwijderen</p>
+                        <p>Verwijder</p>
                     </th>
                     @foreach ($data as $item)
 
@@ -59,17 +49,15 @@
 
                     </tr>
                     <tr>
-                        <td>{{$item->name}}</td>
+                        <td> {{$item->name}}</td>
                         <td>{{$item->description}}</td>
                         <td>{{$item->price}}</td>
-                        <td>{{$item->getCategory->name}}</td>
-                        <td><a href="{{route('admin.menus.create')}}">Nieuwe gerecht invoeren</a></td>
                         <td><a href="{{route('admin.menus.edit',$item->id)}}">wijzig</a></td>
                         <td>
                             <form action="{{route('admin.menus.destroy',$item->id)}}" method="post">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit">Verwijder</button>
+                                <button type="submit" onclick="return confirm('weet je zeker dat je dit wilt verwijderen')">Verwijder</button>
                         </td>
                         </form>
 

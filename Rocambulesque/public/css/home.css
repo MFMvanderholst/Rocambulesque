@@ -135,6 +135,8 @@ th {
     color: #333;
 }
 
+
+
 @media only screen and (max-width: 768px) {
     .background-image {
         width: 100%;
