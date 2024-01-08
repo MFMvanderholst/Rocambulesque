@@ -23,12 +23,12 @@
             @csrf
             <h1>Reservatie formulier</h1>
             <label for="adults">Aantal volwassenen (+12):</label>
-            <input type="number" min="1" max="4" name="adults">
+            <input type="number" min="1" max="4" name="adults" placeholder="min 1  max 4">
             @error('adults')
                 <p class="error">{{ $message }}</p>
             @enderror
             <label for="children">Aantal kinderen:</label>
-            <input type="number" min="0" max="2" name="children">
+            <input type="number" min="0" max="2" name="children" placeholder="max 2">
             @error('children')
                 <p class="error">{{ $message }}</p>
             @enderror
@@ -41,7 +41,7 @@
             @enderror
 
             <label for="time">Kies uw tijd:</label>
-            <select name="timeHour" >
+            <select name="timeHour">
                 <option value="17">17</option>
                 <option value="18">18</option>
                 <option value="19">19</option>
