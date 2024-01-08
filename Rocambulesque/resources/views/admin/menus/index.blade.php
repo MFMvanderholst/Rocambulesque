@@ -39,6 +39,9 @@
                         <p>Prijs</p>
                     </th>
                     <th>
+                        <p>Afbeelding</p>
+                    </th>
+                    <th>
                         <p>categorie</p>
                     </th>
                     <th>
@@ -62,6 +65,13 @@
                         <td>{{$item->name}}</td>
                         <td>{{$item->description}}</td>
                         <td>{{$item->price}}</td>
+                        <td>
+                            @if (isset($item->image))
+                            ✓
+                            @else
+                            𐄂
+                            @endif
+                        </td>
                         <td>{{$item->getCategory->name}}</td>
                         <td><a href="{{route('admin.menus.create')}}">Nieuwe gerecht invoeren</a></td>
                         <td><a href="{{route('admin.menus.edit',$item->id)}}">wijzig</a></td>
