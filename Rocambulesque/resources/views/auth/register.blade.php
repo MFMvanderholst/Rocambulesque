@@ -1,3 +1,10 @@
+<style>
+    body {
+    background-image: url(images/bg.login.jpg);
+    background-size:cover;
+  }
+</style>
+
 <x-guest-layout>
     <form method="POST" action="{{ route('register') }}">
         @csrf

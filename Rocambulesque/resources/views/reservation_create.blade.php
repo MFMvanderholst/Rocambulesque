@@ -29,6 +29,7 @@
         <form method="post" action="/reservations">
             @csrf
             <h1>Reservatie formulier</h1>
+<<<<<<< HEAD
             <label for="fname">Voornaam: </label>
             <input type="text" name="fname">
             @error('fname')
@@ -62,25 +63,28 @@
                 <p class="error">{{ $message }}</p>
             @enderror
 
+=======
+>>>>>>> 59ca050916d7c9cd6a2405c7f3d3ed3bcb753b24
             <label for="adults">Aantal volwassenen (+12):</label>
-            <input type="number" min="1" max="4" name="adults">
+            <input type="number" min="1" max="4" name="adults" placeholder="min 1  max 4">
             @error('adults')
                 <p class="error">{{ $message }}</p>
             @enderror
             <label for="children">Aantal kinderen:</label>
-            <input type="number" min="0" max="2" name="children">
+            <input type="number" min="0" max="2" name="children" placeholder="max 2">
             @error('children')
                 <p class="error">{{ $message }}</p>
             @enderror
 
             <label for="date">Kies uw datum:</label>
-            <input type="date" name="date" >
+            <input id="datePickerId" type="date" name="date"
+            min="" >
             @error('date')
                 <p class="error">{{ $message }}</p>
             @enderror
 
             <label for="time">Kies uw tijd:</label>
-            <select name="timeHour" >
+            <select name="timeHour">
                 <option value="17">17</option>
                 <option value="18">18</option>
                 <option value="19">19</option>
@@ -124,6 +128,18 @@
         </div>
     </div>
     @include('footer')
+
+    <script>
+var currentDate = new Date();
+
+
+currentDate.setDate(currentDate.getDate() + 1);
+
+var minDate = currentDate.toISOString().split("T")[0];
+
+document.getElementById('datePickerId').min = minDate;
+
+    </script>
 </body>
 
 </html>

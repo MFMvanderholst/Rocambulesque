@@ -58,7 +58,7 @@
     </div>
 
     <div id="drinks-menu" class="menu-container">
-      <h2>Drankjes</h2>
+      <h2>Dranken</h2>
       <div class="menu-category">
         @foreach ($dranken as $item)
         <div class="menu-item">
