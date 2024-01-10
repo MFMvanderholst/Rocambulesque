@@ -29,7 +29,6 @@
         <form method="post" action="/reservations">
             @csrf
             <h1>Reservatie formulier</h1>
-<<<<<<< HEAD
             <label for="fname">Voornaam: </label>
             <input type="text" name="fname">
             @error('fname')
@@ -63,8 +62,6 @@
                 <p class="error">{{ $message }}</p>
             @enderror
 
-=======
->>>>>>> 59ca050916d7c9cd6a2405c7f3d3ed3bcb753b24
             <label for="adults">Aantal volwassenen (+12):</label>
             <input type="number" min="1" max="4" name="adults" placeholder="min 1  max 4">
             @error('adults')
