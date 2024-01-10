@@ -74,7 +74,7 @@ p{
     color: red;
 }
 
-select, input[type="number"], input[type="date"], input[type="time"], textarea {
+select, input, textarea {
     width: 100%;
     padding: 8px;
     margin-bottom: 20px;
@@ -120,3 +120,14 @@ button:hover {
     transition: all 0.3s ease 0s;
 }
 
+.alert {
+    color: #ffffff;
+    background-color: #00ff2f;
+    font-family: 'roboto';
+    font-size: 18px;
+    width: 15em;
+    border-radius: 10px;
+    position: relative;
+    top: 5em;
+    left: 20em;
+}

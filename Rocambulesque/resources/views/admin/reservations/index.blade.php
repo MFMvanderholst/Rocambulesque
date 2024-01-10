@@ -27,7 +27,19 @@
         </div>
         <table>
 
-            @foreach ($data as $item)
+           
+
+            <th>
+                <p>Naam</p>
+            </th>
+
+            <th>
+                <p>Email</p>
+            </th>
+
+            <th>
+                <p>Telefoon nummer</p>
+            </th>
 
             <th>
                 <p>Datum</p>
@@ -48,7 +60,11 @@
             <th>
                 <p>verwijderd</p>
             </th>
+            @foreach ($data as $item)
             <tr>
+                <td> {{$item->fname}} {{$item->lname}}</td>
+                <td> {{$item->email}}</td>
+                <td> {{$item->phone}}</td>
                 <td> {{$item->date}}</td>
                 <td>{{$item->timeHour}}:{{$item->timeMinutes}}</td>
                 <td>{{$item->adults}}</td>

@@ -14,6 +14,10 @@ return new class extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
+            $table->string('fname');
+            $table->string('lname');
+            $table->string('email');
+            $table->string('phone');
             $table->date('date');
             $table->tinyInteger('timeHour');
             $table->string('timeMinutes');
@@ -21,7 +25,6 @@ return new class extends Migration
             $table->tinyInteger('children');
             $table->string('remark', 300)->nullable();
             $table->string('mealType', 10);
-            $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
     }

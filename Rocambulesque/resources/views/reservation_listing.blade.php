@@ -20,7 +20,8 @@
                     <tr>
                         <th>Naam</th>
                         <th>Datum en tijd</th>
-                        <th>Telefoon</th>
+                        <th>Volwassenen</th>
+                        <th>Kinderen</th>
                         <th>Email</th>
                         <th>Opmerking</th>
                         <th><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
@@ -36,7 +37,8 @@
 
                         <td>{{ $reservation->user->name }}</td>
                         <td>{{ $reservation->date }} {{ $reservation->timeHour }}:{{ $reservation->timeMinutes }}</td>
-                        <td>{{ $reservation->user->phone }}</td>
+                        <td>{{ $reservation->adults }}</td>
+                        <td>{{ $reservation->children }}</td>
                         <td>{{ $reservation->user->email }}</td>
                         <td>{{ $reservation->remark }}</td>
                         <td><a href="/reservations/{{$reservation->id}}/edit"><button>Wijzig</button></a></td>

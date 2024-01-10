@@ -52,6 +52,7 @@
 
             <label for="time">Kies uw tijd:</label>
             <select name="timeHour" >
+                <option value="{{ $reservation->timeHour }}">{{ $reservation->timeHour }}</option>
                 <option value="17">17</option>
                 <option value="18">18</option>
                 <option value="19">19</option>
@@ -60,6 +61,7 @@
                 <option value="22">22</option>
             </select>
             <select name="timeMinutes">
+                <option value="{{ $reservation->timeMinutes }}">{{ $reservation->timeMinutes }}</option>
                 <option value="00">00</option>
                 <option value="15">15</option>
                 <option value="30">30</option>
