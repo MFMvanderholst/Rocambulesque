@@ -52,21 +52,19 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::middleware(['auth', 'user'])->group(function () 
-{
+Route::middleware(['auth', 'user'])->group(function () {
     Route::get('/reservation', [ReservationController::class, "index"]);
     Route::get('/reservation/{id}/{user_id}', [ReservationController::class, "show"]);
     Route::get('/reservation/create', [ReservationController::class, "create"]);
     Route::post('/reservations', [ReservationController::class, "store"]);
     Route::get('/reservation/listing', [ReservationController::class, "index_listing"]);
     Route::get('/reservations/{id}/edit', [ReservationController::class, 'edit']);
-    
+
     Route::put('/reservation/{id}', [ReservationController::class, "update"]);
     Route::delete('/reservation/{id}', [ReservationController::class, "destroy"]);
 });
 
-Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(function () 
-{
+Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(function () {
     Route::get('/reservation/listing', [ReservationController::class, "index_listing"]);
 });
 
@@ -79,6 +77,9 @@ Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(fun
     Route::delete('/menus/{id}', [MenuControllerAdmin::class, 'destroy']);
     Route::get('menu/create', [MenuControllerAdmin::class, 'create']);
     Route::resource('/reservation', ReservationControllerAdmin::class);
+    Route::get('/reservation/{id}/edit', [ReservationControllerAdmin::class, 'edit']);
+    Route::put('/reservation/{id}', [ReservationControllerAdmin::class, 'update']);
+    Route::delete('/reservation/{id}', [ReservationControllerAdmin::class, 'destroy']);
     Route::resource('/tables', TableController::class);
     Route::POST('menus/menusC', [MenuControllerAdmin::class, 'store']);
 });

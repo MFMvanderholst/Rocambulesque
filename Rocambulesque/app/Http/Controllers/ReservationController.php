@@ -27,7 +27,7 @@ class ReservationController extends Controller
     {
         $users = User::findorfail($id);
         $reservations = ReservationModel::findorfail($user_id);
-        
+
         return view('reservation_overview', [
             "data1" => $users,
             "data2" => $reservations
@@ -57,7 +57,7 @@ class ReservationController extends Controller
             ]);
 
             $validatedData['user_id'] = $request->user()->id;
-            
+
             $reservation = new ReservationModel($validatedData);
             $reservation->save();
 

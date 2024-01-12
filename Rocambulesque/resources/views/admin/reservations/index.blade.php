@@ -27,8 +27,9 @@
         </div>
         <table>
 
-            @foreach ($data as $item)
-
+            <th>
+                <p>soort eten</p>
+            </th>
             <th>
                 <p>Datum</p>
             </th>
@@ -45,20 +46,33 @@
             <th>
                 <p>wijzig</p>
             </th>
+
             <th>
                 <p>verwijderd</p>
             </th>
+
+            <th>
+                <p>reservering aantal</p>
+            </th>
+
+            <?php $countReservations = 0; ?>
+            @foreach ($data as $item)
+            <?php $countReservations++; ?>
             <tr>
+                <td>{{$item->mealType}}</td>
                 <td> {{$item->date}}</td>
                 <td>{{$item->timeHour}}:{{$item->timeMinutes}}</td>
                 <td>{{$item->adults}}</td>
                 <td>{{$item->children}}</td>
-                <td><a href="{{route('admin.menus.edit',$item->id)}}">wijzig</a></td>
+                <td><a href="{{route('admin.reservation.edit',$item->id)}}">wijzig</a></td>
                 <td>
-                    <form action="{{route('admin.menus.destroy',$item->id)}}" method="post">
+                    <form action="{{route('admin.reservation.destroy',$item->id)}}" method="post">
                         @csrf
                         @method('DELETE')
                         <button type="submit" onclick="return confirm('weet je zeker dat je dit wilt verwijderen')">Verwijder</button>
+                </td>
+                <td>
+                    <p><?php echo $countReservations ?> / 8</p>
                 </td>
                 </form>
 
