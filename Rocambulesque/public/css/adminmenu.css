@@ -1,5 +1,7 @@
+@import url('fonts.css');
+
 body{
-    background-color:#F2F2F2;
+    background: linear-gradient(45deg, #40261d,  rgb(188, 188, 188), #04BF9D);
 }
 
 table {
@@ -7,11 +9,11 @@ table {
     width: 100%;
     margin-top: 2rem;
     background-color: rgb(188, 188, 188);
-    box-shadow: 0 0 10px rgba(4, 191, 157, 0.9);
 }
 
 /* Style table cells to look like menu items */
 td {
+    font-family: "roboto";
     border: 1px solid black;
     color: #40261d;
     padding: 10px;
@@ -31,6 +33,7 @@ td {
 
 
 th {
+    font-family: "roboto";
     border: 1px solid black;
     color: #40261d;
     padding: 10px;
@@ -42,6 +45,5 @@ th {
     background-color: #40261d;
     color: #F2F2F2;
     padding: 22px;
-    border: 1px solid #04BF9D;
-    
+    font-family: "goodbrush";
 }
