@@ -18,6 +18,20 @@ class ReservationController extends Controller
         ]);
     }
 
+<<<<<<< HEAD
+    public function show($id, $user_id)
+    {
+        $users = User::findorfail($id);
+        $reservations = ReservationModel::findorfail($user_id);
+
+        return view('reservation_overview', [
+            "data1" => $users,
+            "data2" => $reservations
+        ]);
+    }
+
+=======
+>>>>>>> f7142fc246054afc7e3b603284b3dfc604cd5438
     public function create()
     {
         // Handle the GET request to display the form
@@ -43,7 +57,13 @@ class ReservationController extends Controller
                 'timeMinutes' => "required",
                 'remark' => 'nullable',
             ]);
+<<<<<<< HEAD
+
+            $validatedData['user_id'] = $request->user()->id;
+
+=======
             
+>>>>>>> f7142fc246054afc7e3b603284b3dfc604cd5438
             $reservation = new ReservationModel($validatedData);
             $reservation->save();
 

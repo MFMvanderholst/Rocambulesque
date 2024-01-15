@@ -68,6 +68,9 @@ Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(fun
     Route::delete('/menus/{id}', [MenuControllerAdmin::class, 'destroy']);
     Route::get('menu/create', [MenuControllerAdmin::class, 'create']);
     Route::resource('/reservation', ReservationControllerAdmin::class);
+    Route::get('/reservation/{id}/edit', [ReservationControllerAdmin::class, 'edit']);
+    Route::put('/reservation/{id}', [ReservationControllerAdmin::class, 'update']);
+    Route::delete('/reservation/{id}', [ReservationControllerAdmin::class, 'destroy']);
     Route::resource('/tables', TableController::class);
     Route::POST('menus/menusC', [MenuControllerAdmin::class, 'store']);
 });

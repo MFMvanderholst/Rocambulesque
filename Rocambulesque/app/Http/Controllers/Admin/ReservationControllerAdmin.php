@@ -36,10 +36,11 @@ class ReservationControllerAdmin extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        $data = ReservationModel::find($id);
-        return view('admin.reservations.show', ['data' => $data]);
+        $reservations = ReservationModel::with('user')->get();
+
+        return view('admin.reservations.show', ['data' => $reservations]);
     }
 
     /**
@@ -47,7 +48,9 @@ class ReservationControllerAdmin extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $data = ReservationModel::findorfail($id);
+
+        return view('admin.reservations.edit', ['data' => $data]);
     }
 
     /**
@@ -55,7 +58,29 @@ class ReservationControllerAdmin extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validatedData = $request->validate([
+            'mealType' => "required",
+            'adults' => "required",
+            'children' => 'required',
+            'date' => 'required',
+            'timeHour' => 'required',
+            'timeMinutes' => 'required',
+            'remark' => 'nullable',
+        ]);
+
+        $reservation = ReservationModel::findOrFail($id);
+
+        $reservation->update([
+            'mealType' => $validatedData['mealType'],
+            'adults' => $validatedData['adults'],
+            'children' => $validatedData['children'],
+            'date' => $validatedData['date'],
+            'timeHour' => $validatedData['timeHour'],
+            'timeMinutes' => $validatedData['timeMinutes'],
+            'remark' => $validatedData['remark']
+        ]);
+
+        return redirect('admin/reservation');
     }
 
     /**
@@ -63,7 +88,12 @@ class ReservationControllerAdmin extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $result = ReservationModel::destroy($id);
+        if ($result) {
+            return redirect('admin/reservation')->with("status", "De Rij is verwijderd");
+        } else {
+            return redirect('admin/reservation')->with("status", "De Rij is niet verwijderd");
+        }
     }
     // public function view()
     // {

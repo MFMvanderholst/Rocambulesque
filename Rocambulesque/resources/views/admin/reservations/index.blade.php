@@ -32,6 +32,15 @@
         <div class="form-container">
             <table>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <th>
+                <p>soort eten</p>
+            </th>
+=======
+           
+>>>>>>> 1eb2adfc456f9ba047e680bfeee28a7bab72688a
 
 
                 <th>
@@ -42,6 +51,7 @@
                     <p>Email</p>
                 </th>
 
+<<<<<<< HEAD
                 <th>
                     <p>Telefoon nummer</p>
                 </th>
@@ -49,6 +59,62 @@
                 <th>
                     <p>Datum</p>
                 </th>
+=======
+>>>>>>> f7142fc246054afc7e3b603284b3dfc604cd5438
+            <th>
+                <p>Datum</p>
+            </th>
+
+            <th>
+                <p>Tijd</p>
+            </th>
+            <th>
+                <p>aantal volwassenen</p>
+            </th>
+            <th>
+                <p>aantal kinderen</p>
+            </th>
+            <th>
+                <p>wijzig</p>
+            </th>
+
+            <th>
+                <p>verwijderd</p>
+            </th>
+<<<<<<< HEAD
+
+            <th>
+                <p>reservering aantal</p>
+            </th>
+
+            <?php $countReservations = 0; ?>
+            @foreach ($data as $item)
+            <?php $countReservations++; ?>
+            <tr>
+                <td>{{$item->mealType}}</td>
+=======
+            @foreach ($data as $item)
+            <tr>
+                <td> {{$item->fname}} {{$item->lname}}</td>
+                <td> {{$item->email}}</td>
+                <td> {{$item->phone}}</td>
+>>>>>>> f7142fc246054afc7e3b603284b3dfc604cd5438
+                <td> {{$item->date}}</td>
+                <td>{{$item->timeHour}}:{{$item->timeMinutes}}</td>
+                <td>{{$item->adults}}</td>
+                <td>{{$item->children}}</td>
+                <td><a href="{{route('admin.reservation.edit',$item->id)}}">wijzig</a></td>
+                <td>
+                    <form action="{{route('admin.reservation.destroy',$item->id)}}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" onclick="return confirm('weet je zeker dat je dit wilt verwijderen')">Verwijder</button>
+                </td>
+                <td>
+                    <p><?php echo $countReservations ?> / 8</p>
+                </td>
+                </form>
+>>>>>>> 1eb2adfc456f9ba047e680bfeee28a7bab72688a
 
                 <th>
                     <p>Tijd</p>
