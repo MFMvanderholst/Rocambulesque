@@ -22,3 +22,9 @@ h4{
   color: #40261d ;
   font-size: larger;
 }
+
+img {
+  height: 7em;
+  position: relative;
+  top: 10px;
+}
