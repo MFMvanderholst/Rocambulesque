@@ -211,7 +211,7 @@ class MenuSeeder extends Seeder
                 'id' => 22,
                 'name' => 'Kougloff',
                 'description' => 'Luchtige cake met amandelen en citrus, gewoonweg heerlijk.',
-                'image' => 'images/dessert4.jpg',
+                'image' => null,
                 'price' => '14',
                 'menu_category_id' => '3',
                 'dish_id' => '5'
