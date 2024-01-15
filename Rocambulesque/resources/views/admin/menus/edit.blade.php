@@ -27,7 +27,7 @@
                 <form action="{{route('admin.menus.update',$data->id)}}" method="post">
                     @csrf
                     @method('PUT')
-                    <label for="name">Verander naam</label>
+                    <label for="name">naam</label>
                     <input type="text" name="name" value="{{$data->name}}"><br>
 
                     @error('name')
@@ -35,7 +35,7 @@
                     @enderror
 
 
-                    <label for="description">Verander beschrijving</label>
+                    <label for="description">beschrijving</label>
                     <input type="text" name="description" value="{{$data->description}}"><br>
 
                     @error('description')
@@ -63,6 +63,12 @@
                         <option value="{{$item->id}}">{{$item->name}}</option>
                         @endforeach
                     </select>
+
+                    {{-- <label for="image">Afbeelding</label>
+                    <select name="image" id="image">
+                        @foreach ($data as $item)
+                        <img value="{{$item->image}}"></img>
+                        @endforeach --}}
 
 
                     <button type="submit">Aanpassen</button>
