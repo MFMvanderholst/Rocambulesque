@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{{ asset('css/edit.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/reservation_listing.css') }}">
 
 <body>
     <x-admin-layout>
@@ -23,6 +25,9 @@
                     </div>
                 </div>
 
+                </div>
+                    <div class="bg">
+                </div>
 
                 <form action="{{route('admin.reservation.update',$data->id)}}" method="post">
                     @csrf
@@ -60,8 +65,6 @@
                             <option value="18">18</option>
                             <option value="19">19</option>
                             <option value="20">20</option>
-                            <option value="21">21</option>
-                            <option value="22">22</option>
                         </select>
                         <select name="timeMinutes">
                             <option value="00">00</option>

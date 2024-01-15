@@ -31,48 +31,18 @@
         
         <div class="form-container">
             <table>
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
             <th>
-                <p>soort eten</p>
+                <p>Naam</p>
             </th>
-=======
->>>>>>> a0619f8af5ecf121bd3741cbbeaa2b1889ca1da0
-           
->>>>>>> 1eb2adfc456f9ba047e680bfeee28a7bab72688a
 
-
-<<<<<<< HEAD
             <th>
                 <p>Email</p>
             </th>
+
             <th>
-                <p>Telefoon nummer</p>
+                <p>Mobiel</p>
             </th>
-=======
-                <th>
-                    <p>Naam</p>
-                </th>
-
-                <th>
-                    <p>Email</p>
-                </th>
-
-<<<<<<< HEAD
-                <th>
-                    <p>Telefoon nummer</p>
-                </th>
-
-                <th>
-                    <p>Datum</p>
-                </th>
-=======
->>>>>>> f7142fc246054afc7e3b603284b3dfc604cd5438
->>>>>>> a0619f8af5ecf121bd3741cbbeaa2b1889ca1da0
+           
             <th>
                 <p>Datum</p>
             </th>
@@ -80,16 +50,16 @@
                 <p>Tijd</p>
             </th>
             <th>
-                <p>aantal volwassenen</p>
+                <p>Aantal volwassenen</p>
             </th>
             <th>
-                <p>aantal kinderen</p>
+                <p>Aantal kinderen</p>
             </th>
             <th>
-                <p>wijzig</p>
+                <p>Wijzig</p>
             </th>
             <th>
-                <p>verwijderd</p>
+                <p>Verwijderd</p>
             </th>
             @foreach ($data as $item)
             <tr>
@@ -107,13 +77,11 @@
                         @method('DELETE')
                         <button type="submit" onclick="return confirm('weet je zeker dat je dit wilt verwijderen')">Verwijder</button>
                 </td>
-                <td>
-                    <p><?php echo $countReservations ?> / 8</p>
-                </td>
+                
                 </form>
->>>>>>> 1eb2adfc456f9ba047e680bfeee28a7bab72688a
+                @endforeach
 
-                <th>
+                <!-- <th>
                     <p>Tijd</p>
                 </th>
                 <th>
@@ -128,8 +96,9 @@
                 <th>
                     <p>verwijderd</p>
                 </th>
-                @foreach ($data as $item)
+                
                 <tr>
+                @foreach ($data as $item)
                     <td> {{$item->fname}} {{$item->lname}}</td>
                     <td> {{$item->email}}</td>
                     <td> {{$item->phone}}</td>
@@ -137,18 +106,21 @@
                     <td>{{$item->timeHour}}:{{$item->timeMinutes}}</td>
                     <td>{{$item->adults}}</td>
                     <td>{{$item->children}}</td>
+                    
                     <td><a href="{{route('admin.menus.edit',$item->id)}}">wijzig</a></td>
                     <td>
                         <form action="{{route('admin.menus.destroy',$item->id)}}" method="post">
                             @csrf
                             @method('DELETE')
                             <button type="submit" onclick="return confirm('weet je zeker dat je dit wilt verwijderen')">Verwijder</button>
+                        </form>
                     </td>
-                    </form>
+                    @endforeach
+                    
 
-                </tr>
+                </tr> -->
 
-                @endforeach
+                
             </table>
         </div>
 
