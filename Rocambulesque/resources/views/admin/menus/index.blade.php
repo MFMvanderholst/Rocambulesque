@@ -48,9 +48,6 @@
                         <p>Nieuw gerecht </p>
                     </th>
                     <th>
-                        <p>wijzig</p>
-                    </th>
-                    <th>
                         <p>Wijzigen</p>
                     </th>
                     <th>

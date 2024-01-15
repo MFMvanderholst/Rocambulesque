@@ -64,11 +64,11 @@
                         @endforeach
                     </select>
 
-                    <label for="image">Afbeelding</label>
+                    {{-- <label for="image">Afbeelding</label>
                     <select name="image" id="image">
                         @foreach ($data as $item)
                         <img value="{{$item->image}}"></img>
-                        @endforeach
+                        @endforeach --}}
 
 
                     <button type="submit">Aanpassen</button>
