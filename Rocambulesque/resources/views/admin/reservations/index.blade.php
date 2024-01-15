@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{{ asset('css/adminmenu.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/reservation_listing.css') }}">
 </head>
 
 <body>
@@ -15,7 +17,8 @@
                 {{ __('Dashboard') }}
             </h2>
         </x-slot>
-
+        <div class="bg"></div>
+        
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
@@ -25,63 +28,66 @@
                 </div>
             </div>
         </div>
-        <table>
+        
+        <div class="form-container">
+            <table>
 
-           
 
-            <th>
-                <p>Naam</p>
-            </th>
 
-            <th>
-                <p>Email</p>
-            </th>
+                <th>
+                    <p>Naam</p>
+                </th>
 
-            <th>
-                <p>Telefoon nummer</p>
-            </th>
+                <th>
+                    <p>Email</p>
+                </th>
 
-            <th>
-                <p>Datum</p>
-            </th>
+                <th>
+                    <p>Telefoon nummer</p>
+                </th>
 
-            <th>
-                <p>Tijd</p>
-            </th>
-            <th>
-                <p>aantal volwassenen</p>
-            </th>
-            <th>
-                <p>aantal kinderen</p>
-            </th>
-            <th>
-                <p>wijzig</p>
-            </th>
-            <th>
-                <p>verwijderd</p>
-            </th>
-            @foreach ($data as $item)
-            <tr>
-                <td> {{$item->fname}} {{$item->lname}}</td>
-                <td> {{$item->email}}</td>
-                <td> {{$item->phone}}</td>
-                <td> {{$item->date}}</td>
-                <td>{{$item->timeHour}}:{{$item->timeMinutes}}</td>
-                <td>{{$item->adults}}</td>
-                <td>{{$item->children}}</td>
-                <td><a href="{{route('admin.menus.edit',$item->id)}}">wijzig</a></td>
-                <td>
-                    <form action="{{route('admin.menus.destroy',$item->id)}}" method="post">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" onclick="return confirm('weet je zeker dat je dit wilt verwijderen')">Verwijder</button>
-                </td>
-                </form>
+                <th>
+                    <p>Datum</p>
+                </th>
 
-            </tr>
+                <th>
+                    <p>Tijd</p>
+                </th>
+                <th>
+                    <p>aantal volwassenen</p>
+                </th>
+                <th>
+                    <p>aantal kinderen</p>
+                </th>
+                <th>
+                    <p>wijzig</p>
+                </th>
+                <th>
+                    <p>verwijderd</p>
+                </th>
+                @foreach ($data as $item)
+                <tr>
+                    <td> {{$item->fname}} {{$item->lname}}</td>
+                    <td> {{$item->email}}</td>
+                    <td> {{$item->phone}}</td>
+                    <td> {{$item->date}}</td>
+                    <td>{{$item->timeHour}}:{{$item->timeMinutes}}</td>
+                    <td>{{$item->adults}}</td>
+                    <td>{{$item->children}}</td>
+                    <td><a href="{{route('admin.menus.edit',$item->id)}}">wijzig</a></td>
+                    <td>
+                        <form action="{{route('admin.menus.destroy',$item->id)}}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" onclick="return confirm('weet je zeker dat je dit wilt verwijderen')">Verwijder</button>
+                    </td>
+                    </form>
 
-            @endforeach
-        </table>
+                </tr>
+
+                @endforeach
+            </table>
+        </div>
 
 
     </x-admin-layout>
