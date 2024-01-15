@@ -64,11 +64,30 @@
                         @endforeach
                     </select>
 
-                    {{-- <label for="image">Afbeelding</label>
-                    <select name="image" id="image">
-                        @foreach ($data as $item)
-                        <img value="{{$item->image}}"></img>
-                        @endforeach --}}
+                    
+                    <div>
+                        <label for="image">Afbeelding</label>
+                        <input type="file" name="image" id="imageInput" onchange="displayImage()">
+                        <img id="displayedImage" src="{{$data->image}}" alt="Geselecteerde afbeelding">
+                    </div>
+
+                    <script>
+                        function displayImage() {
+                            var input = document.getElementById("imageInput");
+                            var displayedImage = document.getElementById("displayedImage");
+
+                            var file = input.files[0];
+
+                            if (file) {
+                                var reader = new FileReader();
+                                reader.onload = function (e) {
+                                    displayedImage.src = e.target.result;
+                                };
+                                reader.readAsDataURL(file);
+                            }
+                        }
+                    </script>
+                        
 
 
                     <button type="submit">Aanpassen</button>

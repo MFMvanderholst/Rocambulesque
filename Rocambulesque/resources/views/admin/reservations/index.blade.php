@@ -31,29 +31,9 @@
         
         <div class="form-container">
             <table>
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
             <th>
                 <p>soort eten</p>
             </th>
-=======
->>>>>>> a0619f8af5ecf121bd3741cbbeaa2b1889ca1da0
-           
->>>>>>> 1eb2adfc456f9ba047e680bfeee28a7bab72688a
-
-
-<<<<<<< HEAD
-            <th>
-                <p>Email</p>
-            </th>
-            <th>
-                <p>Telefoon nummer</p>
-            </th>
-=======
                 <th>
                     <p>Naam</p>
                 </th>
@@ -61,18 +41,9 @@
                 <th>
                     <p>Email</p>
                 </th>
-
-<<<<<<< HEAD
                 <th>
                     <p>Telefoon nummer</p>
                 </th>
-
-                <th>
-                    <p>Datum</p>
-                </th>
-=======
->>>>>>> f7142fc246054afc7e3b603284b3dfc604cd5438
->>>>>>> a0619f8af5ecf121bd3741cbbeaa2b1889ca1da0
             <th>
                 <p>Datum</p>
             </th>
