@@ -53,29 +53,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-<<<<<<< HEAD
-Route::middleware(['auth', 'user'])->group(function () {
-    Route::get('/reservation', [ReservationController::class, "index"]);
-    Route::get('/reservation/{id}/{user_id}', [ReservationController::class, "show"]);
-    Route::get('/reservation/create', [ReservationController::class, "create"]);
-    Route::post('/reservations', [ReservationController::class, "store"]);
-    Route::get('/reservation/listing', [ReservationController::class, "index_listing"]);
-    Route::get('/reservations/{id}/edit', [ReservationController::class, 'edit']);
-
-    Route::put('/reservation/{id}', [ReservationController::class, "update"]);
-    Route::delete('/reservation/{id}', [ReservationController::class, "destroy"]);
-});
-
-Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(function () {
-    Route::get('/reservation/listing', [ReservationController::class, "index_listing"]);
-});
-=======
     Route::get('/reservation/create', [ReservationController::class, "create"]);
     Route::post('/reservations', [ReservationController::class, "store"]);
     Route::get('/reservation/listing', [ReservationController::class, "index_listing"]);
 
     Route::get('/send', [MailController::class, 'index']);
->>>>>>> f7142fc246054afc7e3b603284b3dfc604cd5438
 
 Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('index');
