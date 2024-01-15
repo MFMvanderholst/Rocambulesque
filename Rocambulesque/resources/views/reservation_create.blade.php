@@ -14,6 +14,13 @@
         @include('navbar')
     </header>
 
+    {{-- Message --}}
+    @if (Session::has('success'))
+        <div class="alert" role="alert">
+            <strong>Success !</strong> {{ session('success') }}
+        </div>
+    @endif
+
     </div>
         <div class="bg">
     </div>
@@ -22,6 +29,30 @@
         <form method="post" action="/reservations">
             @csrf
             <h1>Reservatie formulier</h1>
+            <label for="fname">Voornaam: </label>
+            <input type="text" name="fname">
+            @error('fname')
+                <p class="error">{{ $message }}</p>
+            @enderror
+
+            <label for="lname">Achternaam: </label>
+            <input type="text" name="lname">
+            @error('lname')
+                <p class="error">{{ $message }}</p>
+            @enderror
+
+            <label for="email">Email: </label>
+            <input type="email" name="email">
+            @error('email')
+                <p class="error">{{ $message }}</p>
+            @enderror
+
+            <label for="phone">Telefoonnummer: </label>
+            <input type="text" name="phone">
+            @error('phone')
+                <p class="error">{{ $message }}</p>
+            @enderror
+
             <label for="mealType"">Uw keuze:</label>
             <select name=" mealType">
                 <option value="Dinner">Dinner</option>
@@ -32,30 +63,30 @@
             @enderror
 
             <label for="adults">Aantal volwassenen (+12):</label>
-            <input type="number" min="1" max="4" name="adults">
+            <input type="number" min="1" max="4" name="adults" placeholder="min 1  max 4">
             @error('adults')
                 <p class="error">{{ $message }}</p>
             @enderror
             <label for="children">Aantal kinderen:</label>
-            <input type="number" min="0" max="2" name="children">
+            <input type="number" min="0" max="2" name="children" placeholder="max 2">
             @error('children')
                 <p class="error">{{ $message }}</p>
             @enderror
 
             <label for="date">Kies uw datum:</label>
-            <input type="date" name="date" >
+            <input id="datePickerId" type="date" name="date"
+            min="" >
             @error('date')
                 <p class="error">{{ $message }}</p>
             @enderror
 
             <label for="time">Kies uw tijd:</label>
-            <select name="timeHour" >
+            <select name="timeHour">
                 <option value="17">17</option>
                 <option value="18">18</option>
                 <option value="19">19</option>
                 <option value="20">20</option>
                 <option value="21">21</option>
-                <option value="22">22</option>
             </select>
             <select name="timeMinutes">
                 <option value="00">00</option>
@@ -94,6 +125,18 @@
         </div>
     </div>
     @include('footer')
+
+    <script>
+var currentDate = new Date();
+
+
+currentDate.setDate(currentDate.getDate() + 1);
+
+var minDate = currentDate.toISOString().split("T")[0];
+
+document.getElementById('datePickerId').min = minDate;
+
+    </script>
 </body>
 
 </html>

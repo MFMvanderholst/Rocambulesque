@@ -10,7 +10,20 @@ class ReservationModel extends Model
 {
     use HasFactory;
     protected $table = "reservations";
-    protected $fillable = ["mealType", "adults", "children", "date", "timeHour", "timeMinutes", "remark", "user_id"];
+    protected $fillable = [
+        "fname", 
+        "lname", 
+        "email", 
+        "phone", 
+        "mealType", 
+        "adults", 
+        "children", 
+        "date", 
+        "timeHour", 
+        "timeMinutes", 
+        "remark", 
+        "user_id"
+    ];
 
     public function user()
     {

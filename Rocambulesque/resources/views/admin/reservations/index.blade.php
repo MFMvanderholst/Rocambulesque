@@ -27,9 +27,26 @@
         </div>
         <table>
 
+<<<<<<< HEAD
             <th>
                 <p>soort eten</p>
             </th>
+=======
+           
+
+            <th>
+                <p>Naam</p>
+            </th>
+
+            <th>
+                <p>Email</p>
+            </th>
+
+            <th>
+                <p>Telefoon nummer</p>
+            </th>
+
+>>>>>>> f7142fc246054afc7e3b603284b3dfc604cd5438
             <th>
                 <p>Datum</p>
             </th>
@@ -50,6 +67,7 @@
             <th>
                 <p>verwijderd</p>
             </th>
+<<<<<<< HEAD
 
             <th>
                 <p>reservering aantal</p>
@@ -60,6 +78,13 @@
             <?php $countReservations++; ?>
             <tr>
                 <td>{{$item->mealType}}</td>
+=======
+            @foreach ($data as $item)
+            <tr>
+                <td> {{$item->fname}} {{$item->lname}}</td>
+                <td> {{$item->email}}</td>
+                <td> {{$item->phone}}</td>
+>>>>>>> f7142fc246054afc7e3b603284b3dfc604cd5438
                 <td> {{$item->date}}</td>
                 <td>{{$item->timeHour}}:{{$item->timeMinutes}}</td>
                 <td>{{$item->adults}}</td>

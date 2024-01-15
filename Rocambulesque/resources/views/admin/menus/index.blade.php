@@ -30,13 +30,13 @@
                 @endif
                 <table>
                     <th>
-                        <p>naam</p>
+                        <p>Naam</p>
                     </th>
                     <th>
-                        <p>beschrijving</p>
+                        <p>Beschrijving</p>
                     </th>
                     <th>
-                        <p>prijs</p>
+                        <p>Prijs</p>
                     </th>
                     <th>
                         <p>Afbeelding</p>
@@ -45,13 +45,16 @@
                         <p>categorie</p>
                     </th>
                     <th>
-                        <p> Nieuw gerecht </p>
+                        <p>Nieuw gerecht </p>
                     </th>
                     <th>
                         <p>wijzig</p>
                     </th>
                     <th>
-                        <p>Verwijder</p>
+                        <p>Wijzigen</p>
+                    </th>
+                    <th>
+                        <p>Verwijderen</p>
                     </th>
                     @foreach ($data as $item)
 
@@ -59,7 +62,7 @@
 
                     </tr>
                     <tr>
-                        <td> {{$item->name}}</td>
+                        <td>{{$item->name}}</td>
                         <td>{{$item->description}}</td>
                         <td>{{$item->price}}</td>
                         <td>

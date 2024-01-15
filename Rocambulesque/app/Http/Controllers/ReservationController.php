@@ -9,11 +9,6 @@ use App\Models\ReservationModel;
 
 class ReservationController extends Controller
 {
-    public function index()
-    {
-        return view('reservation_overview');
-    }
-
     public function index_listing()
     {
         $reservations = ReservationModel::with('user')->get();
@@ -23,6 +18,7 @@ class ReservationController extends Controller
         ]);
     }
 
+<<<<<<< HEAD
     public function show($id, $user_id)
     {
         $users = User::findorfail($id);
@@ -34,6 +30,8 @@ class ReservationController extends Controller
         ]);
     }
 
+=======
+>>>>>>> f7142fc246054afc7e3b603284b3dfc604cd5438
     public function create()
     {
         // Handle the GET request to display the form
@@ -47,6 +45,10 @@ class ReservationController extends Controller
         if ($request->isMethod('post')) {
             // Handle the POST request for form submission
             $validatedData = $request->validate([
+                'fname' => "required",
+                'lname' => "required",
+                'email' => "required",
+                'phone' => "required",
                 'mealType' => "required",
                 'adults' => "required",
                 'children' => "required",
@@ -55,64 +57,17 @@ class ReservationController extends Controller
                 'timeMinutes' => "required",
                 'remark' => 'nullable',
             ]);
+<<<<<<< HEAD
 
             $validatedData['user_id'] = $request->user()->id;
 
+=======
+            
+>>>>>>> f7142fc246054afc7e3b603284b3dfc604cd5438
             $reservation = new ReservationModel($validatedData);
             $reservation->save();
 
-            return redirect('reservation/listing')->with('success', 'Reservation has been successfully made');
-        }
-    }
-
-    public function edit($id)
-    {
-        $reservation = ReservationModel::findorfail($id);
-        return view('edit', compact('reservation'));
-    }
-
-    public function update(Request $request, $id)
-    {
-        $validatedData = $request->validate([
-            'mealType' => "required",
-            'adults' => "required",
-            'children' => 'required',
-            'date' => 'required',
-            'timeHour' => 'required',
-            'timeMinutes' => 'required',
-            'remark' => 'nullable',
-        ]);
-
-        $reservation = ReservationModel::findOrFail($id);
-
-        $reservation->update([
-            'mealType' => $validatedData['mealType'],
-            'adults' => $validatedData['adults'],
-            'children' => $validatedData['children'],
-            'date' => $validatedData['date'],
-            'timeHour' => $validatedData['timeHour'],
-            'timeMinutes' => $validatedData['timeMinutes'],
-            'remark' => $validatedData['remark']
-        ]);
-
-        return redirect('/reservation/listing')->with('status', 'Data is bijgewerkt');
-    }
-
-    // public function destroy($id)
-    // {
-    //     $reservation = ReservationModel::findOrFail($id);
-    //     $reservation->delete();
-
-    //     return redirect('/reservation')->with('status', 'Data is verwijderd');
-    // }
-
-    public function destroy(string $id)
-    {
-        $reservation = ReservationModel::destroy($id);
-        if ($reservation) {
-            return redirect('/reservation/listing')->with("status", "De Rij is verwijderd");
-        } else {
-            return redirect('admin/menus')->with("status", "De Rij is niet verwijderd");
+            return redirect('reservation/create')->with('success', 'Reservation has been successfully made');
         }
     }
 }
