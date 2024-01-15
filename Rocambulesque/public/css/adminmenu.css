@@ -9,6 +9,8 @@ table {
     width: 100%;
     margin-top: 2rem;
     background-color: rgb(188, 188, 188);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
 }
 
 /* Style table cells to look like menu items */
@@ -23,10 +25,10 @@ td {
 }
 
 .option:hover {
-    background-color: #40261d;
-    color: rgb(188, 188, 188);
+    background-color: #40261d ;
+    color:#04BF9D;
+    border-radius: 50px;
     transition: all 0.3s ease 0s;
-    border-radius: 50%;
 }
 
 /* Add hover effect to table cells */

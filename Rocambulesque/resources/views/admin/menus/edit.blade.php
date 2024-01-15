@@ -18,7 +18,7 @@
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 text-gray-900 dark:text-gray-100">
+                    <div class="title">
                         {{ __("Edit menu") }}
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                 <form action="{{route('admin.menus.update',$data->id)}}" method="post">
                     @csrf
                     @method('PUT')
-                    <label for="name">naam</label>
+                    <label for="name">Naam</label>
                     <input type="text" name="name" value="{{$data->name}}"><br>
 
                     @error('name')
@@ -35,7 +35,7 @@
                     @enderror
 
 
-                    <label for="description">beschrijving</label>
+                    <label for="description">Beschrijving</label>
                     <input type="text" name="description" value="{{$data->description}}"><br>
 
                     @error('description')
@@ -50,14 +50,14 @@
                     <div style="color:red">{{$message}}</div><br>
                     @enderror
 
-                    <label for="menu_category_id">soort categorie</label>
+                    <label for="menu_category_id">Soort categorie</label>
                     <select name="menu_category_id" id="menu_category_id">
                         @foreach ($category as $item)
                         <option value="{{$item->id}}">{{$item->name}}</option>
                         @endforeach
                     </select>
 
-                    <label for="dish_id">soort gerecht</label>
+                    <label for="dish_id">Soort gerecht</label>
                     <select name="dish_id" id="dish_id">
                         @foreach ($dish as $item)
                         <option value="{{$item->id}}">{{$item->name}}</option>

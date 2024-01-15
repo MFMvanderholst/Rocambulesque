@@ -42,7 +42,7 @@
                         <p>Afbeelding</p>
                     </th>
                     <th>
-                        <p>categorie</p>
+                        <p>Categorie</p>
                     </th>
                     <th>
                         <p>Nieuw gerecht </p>
@@ -71,7 +71,7 @@
                         </td>
                         <td>{{$item->getCategory->name}}</td>
                         <td class="option"><a href="{{route('admin.menus.create')}}">Nieuwe gerecht invoeren</a></td>
-                        <td class="option"><a href="{{route('admin.menus.edit',$item->id)}}">wijzig</a></td>
+                        <td class="option"><a href="{{route('admin.menus.edit',$item->id)}}">Wijzig</a></td>
                         <td class="option">
                             <form action="{{route('admin.menus.destroy',$item->id)}}" method="post">
                                 @csrf
