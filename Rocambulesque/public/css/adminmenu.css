@@ -1,27 +1,47 @@
-/* Apply basic table styles */
+body{
+    background-color:#F2F2F2;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
+    margin-top: 2rem;
+    background-color: rgb(188, 188, 188);
+    box-shadow: 0 0 10px rgba(4, 191, 157, 0.9);
 }
 
 /* Style table cells to look like menu items */
 td {
     border: 1px solid black;
+    color: #40261d;
     padding: 10px;
     text-align: center;
     font-weight: bold;
-    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.option:hover {
+    background-color: #40261d;
+    color: rgb(188, 188, 188);
+    transition: all 0.3s ease 0s;
+    border-radius: 50%;
 }
 
 /* Add hover effect to table cells */
-td:hover {
-    background-color: #ddd;
-}
+
 
 th {
     border: 1px solid black;
+    color: #40261d;
     padding: 10px;
     text-align: center;
     font-weight: bold;
-    cursor: pointer;
+}
+
+.title {
+    background-color: #40261d;
+    color: #F2F2F2;
+    padding: 22px;
+    border: 1px solid #04BF9D;
+    
 }
