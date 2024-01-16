@@ -2,6 +2,7 @@
 
 body{
     background: linear-gradient(45deg, #40261d,  rgb(188, 188, 188), #04BF9D);
+    box-shadow: 0 0 20px rgb(0, 0, 0) inset;
 }
 
 table {
