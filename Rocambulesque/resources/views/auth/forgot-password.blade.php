@@ -1,3 +1,10 @@
+<style>
+    body {
+    background-image: url(images/bg.login.jpg);
+    background-size:cover;
+  }
+</style>
+
 <x-guest-layout>
     <div class="mb-4 text-sm text-black-600 dark:text-black-400">
         {{ __('Ben je je wachtwoord vergeten? Geen probleem. Laat ons gewoon weten welk e-mailadres je hebt gebruikt, en we sturen je een link voor het opnieuw instellen van het wachtwoord. Hiermee kun je een nieuw wachtwoord kiezen.') }}
