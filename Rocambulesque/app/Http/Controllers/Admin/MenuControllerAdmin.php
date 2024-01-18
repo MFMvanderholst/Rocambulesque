@@ -29,8 +29,8 @@ class MenuControllerAdmin extends Controller
 
         $data = menu::all();
         $dish = dish_category::all();
-        $caterogy = menu_category::all();
-        return view('admin.menus.create', ['data' => $data, 'dish' => $dish, 'category' => $caterogy]);
+        $category = menu_category::all();
+        return view('admin.menus.create', ['data' => $data, 'dish' => $dish, 'category' => $category]);
     }
 
     /**
@@ -87,13 +87,13 @@ class MenuControllerAdmin extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $validate = $request->validate([
+        $request->validate([
             'naam' => "max:100",
             'beschrijving' => 'max:255',
             'prijs' => "integer|min:1|max:1000",
             'menu_category_id' => 'integer|min:1|max:4',
             'dish_id' => 'integer|min:1|max:4',
-            // 'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'max:2048',
         ]);
 
         $data = menu::findorfail($id);
@@ -102,39 +102,16 @@ class MenuControllerAdmin extends Controller
         $data->price = $request->input('price');
         $data->menu_category_id = $request->input('menu_category_id');
         $data->dish_id = $request->input('dish_id');
-        $data->image = $request->input('image');
-        // if ($request->hasFile('image')) {
-        //     $imagePath = $request->file('image')->store('public/images');
-        //     $data->image = Storage::url($imagePath);
-        // }
+        if ($request->hasFile('image')) {
+            // Als er een nieuwe afbeelding is geüpload, sla deze op en update de 'image' kolom
+            $imagePath = $request->file('image')->store('public\images');
+            $data->image = Storage::url($imagePath);
+        }
         
         $data->save();
 
-        return redirect("admin/menus")->with("status", 'Menu rij is aangepast');
 
-        // $validate = $request->validate([
-        //     'name' => 'required|string|max:255',
-        //     'description' => 'required|string|max:255',
-        //     'price' => 'required|numeric',
-        //     'menu_category_id' => 'required|exists:menu_category,id',
-        //     'dish_id' => 'required|exists:dish_category,id',
-        //     'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048', 
-        // ]);
-    
-        // $data = menu::findorfail($id);
-        // $data->name = $request->input('name');
-        // $data->description = $request->input('description');
-        // $data->price = $request->input('price');
-        // $data->menu_category_id = $request->input('menu_category_id');
-        // $data->dish_id = $request->input('dish_id');
-        // $data->save();
-    
-        // if ($request->hasFile('image')) {
-        //     $imagePath = $request->file('image')->store('public/images');
-        //     $data->image = Storage::url($imagePath);
-        // }
-    
-        // return redirect("admin/menus")->with("status", 'Menu rij is aangepast');
+        return redirect("admin/menus")->with("status", 'Menu rij is aangepast');
     }
 
     /**

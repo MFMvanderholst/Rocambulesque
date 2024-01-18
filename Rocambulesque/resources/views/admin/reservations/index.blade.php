@@ -27,6 +27,72 @@
 
         <div class="form-container">
             <table>
+                <th>
+                    <p>Naam</p>
+                </th>
+
+                <th>
+                    <p>Email</p>
+                </th>
+
+                <th>
+                    <p>Mobiel</p>
+                </th>
+
+                <th>
+                    <p>Datum</p>
+                </th>
+                <th>
+                    <p>Tijd</p>
+                </th>
+                <th>
+                    <p>Aantal volwassenen</p>
+                </th>
+                <th>
+                    <p>Aantal kinderen</p>
+                </th>
+                <th>
+                    <p>Wijzig</p>
+                </th>
+                <th>
+                    <p>Verwijderd</p>
+                </th>
+                @foreach ($data as $item)
+                <tr>
+                    <td> {{$item->fname}} {{$item->lname}}</td>
+                    <td> {{$item->email}}</td>
+                    <td> {{$item->phone}}</td>
+                    <td> {{$item->date}}</td>
+                    <td>{{$item->timeHour}}:{{$item->timeMinutes}}</td>
+                    <td>{{$item->adults}}</td>
+                    <td>{{$item->children}}</td>
+                    <td class="option"><a href="{{route('admin.reservation.edit',$item->id)}}">wijzig</a></td>
+                    <td class="option">
+                        <form action="{{route('admin.reservation.destroy',$item->id)}}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" onclick="return confirm('weet je zeker dat je dit wilt verwijderen')">Verwijder</button>
+                    </td>
+
+                    </form>
+                    @endforeach
+
+                    <!-- <th>
+                    <p>Tijd</p>
+                </th>
+                <th>
+                    <p>aantal volwassenen</p>
+                </th>
+                <th>
+                    <p>aantal kinderen</p>
+                </th>
+                <th>
+                    <p>wijzig</p>
+                </th>
+                <th>
+                    <p>verwijderd</p>
+                </th>
+                
                 <tr>
                     <th>
                         <p>Naam</p>
@@ -82,6 +148,10 @@
                     
                 </tr>
                 @endforeach
+
+                </tr> -->
+
+
             </table>
         </div>
 
