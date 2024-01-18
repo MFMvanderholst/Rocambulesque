@@ -1,10 +1,16 @@
+@import url('fonts.css');
+
+body{
+    background: linear-gradient(45deg, #40261d,  rgb(188, 188, 188), #04BF9D);  
+}
 /* Target the form element */
 form {
+    font-family: "roboto";
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    margin-top: 4rem;
     max-width: 500px;
 }
 
@@ -23,32 +29,50 @@ select {
 
 /* Style the form submit button */
 input[type="submit"] {
-    background-color: #4caf50;
-    color: white;
+    background-color: #F2F2F2;
+    color: #40261d;
+    margin-top: 4rem;
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease-in-out;
+    font-size: 20px;
+    box-shadow: 0 0 10px rgba(4, 191, 157, 0.3);
+    transition: all 0.3s ease 0s;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #40261d ;
+    color:#04BF9D;
+    border-radius: 50px;
+    border-color: #04BF9D ;
+    transition: all 0.3s ease 0s;
 }
 
 button[type="submit"] {
-    background-color: #4caf50;
-    color: white;
-    margin: 5%;
+    background-color: #F2F2F2;
+    color: #40261d;
+    margin-top: 4rem;
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease-in-out;
+    font-size: 20px;
+    box-shadow: 0 0 10px rgba(4, 191, 157, 0.3);
+    transition: all 0.3s ease 0s;
 }
 
 button[type="submit"]:hover {
-    background-color: #3f8b43;
+    background-color: #40261d ;
+    color:#04BF9D;
+    border-radius: 50px;
+    border-color: #04BF9D ;
+    transition: all 0.3s ease 0s;
+}
+
+.title {
+    background-color: #40261d;
+    color: #F2F2F2;
+    padding: 22px;
+    font-family: "goodbrush";
 }
