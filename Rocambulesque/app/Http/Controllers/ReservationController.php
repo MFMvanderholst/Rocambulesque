@@ -43,7 +43,7 @@ class ReservationController extends Controller
                 'timeMinutes' => "required",
                 'remark' => 'nullable',
             ]);
-            
+
             $reservation = new ReservationModel($validatedData);
             $reservation->save();
 
