@@ -80,47 +80,7 @@
 
                     </form>
                     @endforeach
-
-                    <!-- <th>
-                    <p>Tijd</p>
-                </th>
-                <th>
-                    <p>aantal volwassenen</p>
-                </th>
-                <th>
-                    <p>aantal kinderen</p>
-                </th>
-                <th>
-                    <p>wijzig</p>
-                </th>
-                <th>
-                    <p>verwijderd</p>
-                </th>
-                
-                <tr>
-                @foreach ($data as $item)
-                    <td> {{$item->fname}} {{$item->lname}}</td>
-                    <td> {{$item->email}}</td>
-                    <td> {{$item->phone}}</td>
-                    <td> {{$item->date}}</td>
-                    <td>{{$item->timeHour}}:{{$item->timeMinutes}}</td>
-                    <td>{{$item->adults}}</td>
-                    <td>{{$item->children}}</td>
-                    
-                    <td><a href="{{route('admin.menus.edit',$item->id)}}">wijzig</a></td>
-                    <td>
-                        <form action="{{route('admin.menus.destroy',$item->id)}}" method="post">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" onclick="return confirm('weet je zeker dat je dit wilt verwijderen')">Verwijder</button>
-                        </form>
-                    </td>
-                    @endforeach
-                    
-
-                </tr> -->
-
-
+                </tr>
             </table>
         </div>
 
