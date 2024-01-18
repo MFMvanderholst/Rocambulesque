@@ -20,7 +20,7 @@
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 text-gray-900 dark:text-gray-100">
+                    <div class="title">
                         {{ __("Edit menu") }}
                     </div>
                 </div>
@@ -29,10 +29,9 @@
                     <div class="bg">
                 </div>
 
-                <form action="{{route('admin.reservation.update',$data->id)}}" method="post">
+                <form class="form-styling" action="{{route('admin.reservation.update',$data->id)}}" method="post">
                     @csrf
                     @method('put')
-                    <h1>Reservatie formulier</h1>
                     <label for="mealType"">Uw keuze:</label>
             <select name=" mealType">
                         <option value="Dinner">Dinner</option>

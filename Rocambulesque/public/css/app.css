@@ -99,6 +99,7 @@ table {
     border-collapse: collapse;
     width: 100%;
     background-color: white;
+    border-radius: 10px;
 }
 
 th, td {

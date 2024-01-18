@@ -1,9 +1,17 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
 .bg {
     position: absolute;
     top: -275px;
     left: -80px;
     width: 90%;
-    height: 102%;
+    height: 65em;
     background-image: url(/images/img1.png);
     background-size: cover;
     background-position: center;
@@ -30,4 +38,40 @@ label {
     color: #40261d;
     font-family: 'roboto'; 
     font-size: larger;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 10px;
+}
+
+select, input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #04BF9D;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'roboto';
+}
+
+textarea {
+    height: 100px;
+    font-family: 'roboto';
+}
+
+.form-styling {
+    background-color: rgba(255, 255, 255, 0.50);
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(4, 191, 157, 0.3);
+}
+
+main {
+    padding: 2rem 15rem;
+    
+    
 }
