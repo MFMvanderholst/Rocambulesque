@@ -1,0 +1,14 @@
+.bg {
+    position: absolute;
+    top: -275px;
+    left: -80px;
+    width: 90%;
+    height: 102%;
+    background-image: url(/images/img1.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 100px; /* Adjust the border radius as needed */
+    z-index: -1;
+    margin: 17rem;
+    opacity: 0.4;
+}

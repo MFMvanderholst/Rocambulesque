@@ -33,7 +33,7 @@
                         @endforeach
                     </ul>
                     @endif
-                    <label for="name">name:</label>
+                    <label for="name">Name:</label>
 
                     <input type="text" name="name">
                     @error('name')
@@ -41,25 +41,25 @@
                     @enderror
 
                     <br><br>
-                    <label for="description">beschrijving</label>
+                    <label for="description">Beschrijving</label>
                     <input type="text" name="description">
                     @error('description')
                     <div style="color: red;">{{$message}}</div>
                     @enderror
                     <br><br>
-                    <label for="image">image:</label>
+                    <label for="image">Image:</label>
                     <input type="file" name="image">
                     @error('image')
                     <div style="color: red;">{{$message}}</div>
                     @enderror
                     <br><br>
-                    <label for="price">prijs:</label>
+                    <label for="price">Prijs:</label>
                     <input type="text" name="price">
                     @error('price')
                     <div style="color: red;">{{$message}}</div>
                     @enderror
                     <br><br>
-                    <label for="menu_category_id">soort categorie</label>
+                    <label for="menu_category_id">Soort categorie</label>
                     <select name="menu_category_id" id="menu_category_id">
                         @foreach ($category as $item)
                         <option value="{{$item->id}}">{{$item->name}}</option>
@@ -67,7 +67,7 @@
                     </select>
 
                     <br>
-                    <label for="dish_id">soort gerecht</label>
+                    <label for="dish_id">Soort gerecht</label>
                     <select name="dish_id" id="dish_id">
                         @foreach ($dish as $item)
                         <option value="{{$item->id}}">{{$item->name}}</option>
