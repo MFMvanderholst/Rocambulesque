@@ -35,7 +35,7 @@
       <div class="menu-category">
         @foreach ($voorgerecht as $item)
         <div class="menu-item">
-          <img src="{{$item->image}}">
+          <img src="{{ asset($item->image) }}">
           <h3> {{$item->name}}</h3>
           <p>{{$item->description}}</p>
           <p>Є{{$item->price}}</p>
@@ -48,7 +48,7 @@
       <div class="menu-category">
         @foreach ($hoofdgerecht as $item)
         <div class="menu-item">
-          <img src="{{$item->image}}">
+          <img src="{{ asset($item->image) }}">
           <h3> {{$item->name}}</h3>
           <p>{{$item->description}}</p>
           <p>Є{{$item->price}}</p>
@@ -62,7 +62,7 @@
       <div class="menu-category">
         @foreach ($dranken as $item)
         <div class="menu-item">
-          <img src="{{$item->image}}">
+          <img src="{{ asset($item->image) }}">
           <h3> {{$item->name}}</h3>
           <p>{{$item->description}}</p>
           <p>Є{{$item->price}}</p>
@@ -76,7 +76,7 @@
       <div class="menu-category">
         @foreach ($nagerecht as $item)
         <div class="menu-item">
-          <img src="{{$item->image}}">
+          <img src="{{ asset($item->image) }}">
           <h3> {{$item->name}}</h3>
           <p>{{$item->description}}</p>
           <p>Є{{$item->price}}</p>
