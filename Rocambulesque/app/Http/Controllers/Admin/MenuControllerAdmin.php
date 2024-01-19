@@ -102,10 +102,9 @@ class MenuControllerAdmin extends Controller
         $data->price = $request->input('price');
         $data->menu_category_id = $request->input('menu_category_id');
         $data->dish_id = $request->input('dish_id');
-        if ($request->hasFile('image')) {
-            // Als er een nieuwe afbeelding is geüpload, sla deze op en update de 'image' kolom
-            $imagePath = $request->file('image')->store('public\images');
-            $data->image = Storage::url($imagePath);
+        if ($request->hasFile('imagew')) {
+            $image = file_get_contents($request->file('image')->getRealPath());
+            $data->image = $image;
         }
         
         $data->save();

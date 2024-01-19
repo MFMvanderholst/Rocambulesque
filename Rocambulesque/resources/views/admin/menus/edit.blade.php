@@ -24,7 +24,7 @@
                 </div>
 
 
-                <form action="{{route('admin.menus.update',$data->id)}}" method="post">
+                <form action="{{route('admin.menus.update',$data->id)}}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <label for="name">Naam</label>

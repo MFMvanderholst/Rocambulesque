@@ -47,3 +47,11 @@ th {
     padding: 22px;
     font-family: "goodbrush";
 }
+
+.newdish {
+    background-color: rgb(124, 128, 127);
+    color: #F2F2F2;
+    padding: 15px;
+    font-family: "roboto";
+    border-radius: 10px;
+}

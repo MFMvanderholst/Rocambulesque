@@ -45,19 +45,18 @@
                         <p>Categorie</p>
                     </th>
                     <th>
-                        <p>Nieuw gerecht </p>
-                    </th>
-                    <th>
                         <p>Wijzigen</p>
                     </th>
                     <th>
                         <p>Verwijderen</p>
                     </th>
+                    <a class="newdish" href="{{route('admin.menus.create')}}">Nieuwe gerecht invoeren</a>
                     @foreach ($data as $item)
 
                     <tr>
-
+                        
                     </tr>
+                    
                     <tr>
                         <td>{{$item->name}}</td>
                         <td>{{$item->description}}</td>
@@ -70,7 +69,7 @@
                             @endif
                         </td>
                         <td>{{$item->getCategory->name}}</td>
-                        <td class="option"><a href="{{route('admin.menus.create')}}">Nieuwe gerecht invoeren</a></td>
+                        {{-- <td class="option"><a href="{{route('admin.menus.create')}}">Nieuwe gerecht invoeren</a></td> --}}
                         <td class="option"><a href="{{route('admin.menus.edit',$item->id)}}">wijzig</a></td>
                         <td class="option">
                             <form action="{{route('admin.menus.destroy',$item->id)}}" method="post">
@@ -83,7 +82,7 @@
                     </tr>
 
                     @endforeach
-
+                    
 
                 </table>
             </div>
